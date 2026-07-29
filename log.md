@@ -58,6 +58,7 @@
   - `SCHEMA.md`
   - `index.md`
   - `log.md`
+
 - Navigation: the eight-page graph uses only resolvable canonical wikilinks, with at least two distinct non-self links per page.
 - Provenance: every source and claim marker resolves to an existing repository-relative raw Markdown path.
 
@@ -74,3 +75,103 @@
 - Correction: the immediately preceding lint entry reports 27 source references, but the measured canonical frontmatter total is 30.
 - Unchanged measurements: 17 claim-level markers, 33 canonical links, 8 canonical pages, and 0 lint errors or warnings.
 - Updated: `log.md` only; no raw or canonical page was changed.
+
+## [2026-07-29] ingest | ISO·IEC·KS 표준 PDF 37개 배치
+
+- Capture: 37 local PDFs, 2,386 pages, and 722,868,839 source bytes were converted into immutable Markdown source records; absolute user paths and PDF attachments were not copied into the repository.
+- Extraction: 35 PDFs used reviewed embedded-text extraction; image-based `ISOIEC 27701 2025.pdf` and `ISOIEC 42001 2023(en).pdf` used reviewed 250 dpi Tesseract OCR.
+- Integrity: all 37 source-PDF SHA-256 values and all 37 exact post-frontmatter raw body SHA-256 values matched after capture.
+- Curation: related editions and language versions were consolidated into nine standards-family concepts plus one 37-source portfolio comparison; ISO/IEC 27001:2022 and KS X ISO/IEC 27001:2014 remain explicitly distinguished.
+- Created raw records:
+  - `raw/papers/iso-iec-27001-2022-en.md`
+  - `raw/papers/iso-iec-27701-2019-en.md`
+  - `raw/papers/iso-iec-27701-2025-en.md`
+  - `raw/papers/iso-iec-42001-2023-en.md`
+  - `raw/papers/ks-a-iso-37001-20260420-ko.md`
+  - `raw/papers/ks-c-iec-61508-1-20251118-ko.md`
+  - `raw/papers/ks-i-iso-14001-20210928-ko.md`
+  - `raw/papers/ks-i-iso-14002-1-20211027-ko.md`
+  - `raw/papers/ks-m-iso-22716-20250703-ko.md`
+  - `raw/papers/ks-p-iso-13485-20231228-ko.md`
+  - `raw/papers/ks-q-iso-9000-20210330-ko.md`
+  - `raw/papers/ks-q-iso-9001-20241213-ko.md`
+  - `raw/papers/ks-q-iso-9004-20220630-ko.md`
+  - `raw/papers/ks-q-iso-10006-20241213-ko.md`
+  - `raw/papers/ks-q-iso-22000-20210804-ko.md`
+  - `raw/papers/ks-q-iso-31000-20210804-ko.md`
+  - `raw/papers/ks-q-iso-45001-20241004-ko.md`
+  - `raw/papers/ks-q-iso-45002-20241231-ko.md`
+  - `raw/papers/ks-q-iso-ts-9002-20231017-ko.md`
+  - `raw/papers/ks-r-iso-26262-1-20240524-ko.md`
+  - `raw/papers/ks-x-iso-27799-20230605-ko.md`
+  - `raw/papers/ks-x-iso-iec-22989-20231214-ko.md`
+  - `raw/papers/ks-x-iso-iec-25000-20230421-ko.md`
+  - `raw/papers/ks-x-iso-iec-25010-20210819-ko.md`
+  - `raw/papers/ks-x-iso-iec-27001-20241030-ko.md`
+  - `raw/papers/ks-x-iso-iec-27002-20251223-ko.md`
+  - `raw/papers/ks-x-iso-iec-27017-20241030-ko.md`
+  - `raw/papers/ks-x-iso-iec-27018-20241030-ko.md`
+  - `raw/papers/ks-x-iso-iec-27032-20241030-ko.md`
+  - `raw/papers/ks-x-iso-iec-27701-20220225-ko.md`
+  - `raw/papers/ks-x-iso-iec-42001-20251030-ko.md`
+  - `raw/papers/ks-x-iso-iec-ieee-29119-1-20231208-ko.md`
+  - `raw/papers/ks-x-iso-iec-ieee-29119-2-20231208-ko.md`
+  - `raw/papers/ks-x-iso-iec-ieee-29119-3-20231208-ko.md`
+  - `raw/papers/ks-x-iso-iec-ieee-29119-4-20231208-ko.md`
+  - `raw/papers/ks-x-iso-iec-tr-24028-20231214-ko.md`
+  - `raw/papers/ks-x-iso-iec-tr-24029-1-20231214-ko.md`
+- Created canonical pages:
+  - `concepts/iso-ai-standards.md`
+  - `concepts/iso-environmental-management-standards.md`
+  - `concepts/iso-health-product-and-food-standards.md`
+  - `concepts/iso-information-security-and-privacy-standards.md`
+  - `concepts/iso-management-system-standards.md`
+  - `concepts/iso-occupational-and-functional-safety-standards.md`
+  - `concepts/iso-quality-management-standards.md`
+  - `concepts/iso-risk-and-compliance-standards.md`
+  - `concepts/iso-software-quality-and-testing-standards.md`
+  - `comparisons/iso-standards-portfolio-map.md`
+- Updated:
+  - `SCHEMA.md`
+  - `index.md`
+  - `log.md`
+
+## [2026-07-29] lint | 0 issues found
+
+- PDF batch: 37 local-PDF raw records and 2,386 page markers; all 37 source-PDF hashes, byte counts, and new post-frontmatter body hashes matched.
+- Canonical state: 18 pages total (14 concepts, 2 comparisons, and 2 queries), 18 exact alphabetical index entries, 77 unique canonical links, and minimum 2 outbound and 2 inbound links per page.
+- Provenance: 112 canonical source references and 100 claim-level markers resolve; every marker appears in its page source list.
+- Taxonomy and formatting: 21 registered tags; required frontmatter, type-directory fit, dates, confidence, contestation fields, contradiction lists, UTF-8, LF, final newlines, filenames, and 200-line limits all pass.
+- Raw integrity: 50 Markdown records checked and 45 recorded body hashes matched; the five importer-preserved legacy web/video records retain their previously documented missing-hash and missing-final-LF coverage gaps.
+- Duplicate slugs, broken links, self-links, orphan pages, source drift, index mismatches, and lint errors or warnings: 0.
+- Updated: `log.md` only.
+
+## [2026-07-29] repair | lint log entry ordering
+
+- Correction: the ISO PDF batch lint entry had been inserted inside the 2026-07-21 canonical-create entry instead of after the 2026-07-29 ingest entry.
+- Restored the original create entry's navigation and provenance lines to the same contiguous entry and relocated the unchanged lint block to chronological order.
+- Updated: `log.md` only; no raw or canonical page was changed.
+
+## [2026-07-29] map | Understand Anything wiki knowledge graph
+
+- Precondition: all 18 canonical pages and index entries passed frontmatter, provenance, and link validation with 77 unique canonical links, 112 source references, and 100 claim markers.
+- Detection: the Karpathy-wiki scan found 73 Markdown articles, 50 raw sources, 4 index topics, and 100 wikilinks; all 23 unresolved detector links are examples in README, schema, manual, or raw records rather than canonical links.
+- Analysis: five complete article-analyzer batches added 33 deduplicated entities, 50 claims, and implicit relationships; merge dropped 0 dangling edges.
+- Graph: `kind: knowledge`, 210 nodes, 186 edges, 5 layers, and 4 tour steps; every node has `id`, `type`, `name`, `summary`, `tags`, and `complexity`.
+- Created derived state:
+  - `.understand-anything/knowledge-graph.json`
+  - `.understand-anything/meta.json`
+- Updated:
+  - `.gitignore`
+  - `log.md`
+- Cleanup: `.understand-anything/intermediate/` was removed after validation.
+
+## [2026-07-30] lint | 0 issues found
+
+- Review branch: `review/compile-wiki-2026-07-30`; no merge or push was performed.
+- Intake: all 50 raw Markdown records are already represented by prior ingest entries; no additional unlogged raw record was promoted or processed.
+- Canonical state: 18 pages and 18 exact alphabetical index entries; 77 unique canonical links with minimum 2 outbound and 2 inbound links per page.
+- Provenance: 112 canonical source references and 100 claim-level markers resolve; every marker appears in its page source list.
+- Raw integrity: 45 recorded post-frontmatter body hashes match, including all 37 pending PDF records and 2,386 page markers; five previously documented legacy web/video records remain hash-coverage and final-LF format gaps rather than drift.
+- Contract checks: frontmatter, registered tags, type-directory fit, dates, confidence and contestation fields, canonical filenames, UTF-8/LF/BOM rules, final newlines, page-size limits, source paths, links, orphans, index count, raw drift, and log rotation all pass with 0 errors and 0 warnings.
+- Updated: `log.md` only.

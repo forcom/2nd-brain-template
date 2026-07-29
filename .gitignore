@@ -44,6 +44,7 @@ raw/assets/*
 # NotebookLM, Understand Anything, and other generated output
 output/
 .ua/
+.understand-anything/
 /.codegraph
 
 # Local databases, runtime logs, and tool caches

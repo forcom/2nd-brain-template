@@ -28,6 +28,7 @@ contains no raw source record and no canonical page.
 | `inbox/` | Temporary intake awaiting classification and capture; not canonical evidence. |
 | `raw/articles/` | Immutable captured article or clipping Markdown. |
 | `raw/notebooklm/` | Immutable importer-preserved NotebookLM source records and source identifiers. |
+| `raw/papers/` | Immutable text captures of local or imported papers and standards, with source-file and extraction metadata. |
 | `raw/papers/files/` | Optional copied paper attachments; initially only the empty `.gitkeep` placeholder is allowed. |
 | `raw/transcripts/` | Immutable captured transcript Markdown. |
 | `raw/web/` | Immutable importer-preserved web captures whose existing provenance paths must remain stable. |
@@ -68,14 +69,26 @@ a valid source record or canonical page.
 
 ### Registered tags
 
+- `artificial-intelligence`: AI concepts, systems, governance, and assurance.
 - `automation`: deterministic or agent-driven workflow automation.
+- `compliance`: organizational obligations, controls, and conformity practices.
 - `comparison`: explicit side-by-side analysis of tools or methods.
+- `environmental-management`: environmental aspects and management systems.
+- `healthcare`: health, medical-device, and health-information contexts.
+- `information-security`: information security and cybersecurity governance or controls.
 - `knowledge-base`: durable, structured knowledge systems.
 - `knowledge-graph`: graph-derived relationship analysis.
+- `management-system`: organization-wide policy, objective, process, and review systems.
 - `notebooklm`: source-scoped NotebookLM workflows.
 - `pkm`: personal knowledge management.
+- `privacy`: privacy information management and personally identifiable information protection.
 - `provenance`: source traceability and claim lineage.
+- `quality-management`: quality systems, models, practices, and improvement.
 - `research`: research collection, synthesis, and verification.
+- `risk-management`: risk principles, frameworks, and treatment.
+- `safety`: occupational, functional, product, or food safety.
+- `software-engineering`: software quality, lifecycle, and testing practices.
+- `standards`: formal standards, technical specifications, and technical reports.
 - `workflow`: ordered operational processes and feedback loops.
 
 ## Raw source integrity
@@ -92,6 +105,15 @@ comparison in `log.md`, and report the missing field as a hash-coverage gap rath
 than source drift. Do not add frontmatter merely to normalize a legacy capture.
 A trusted legacy copy may also retain its original missing final LF. Treat that as
 a documented format gap, not permission to alter the immutable raw bytes.
+
+A local PDF capture under `raw/papers/` records `source_type`, the source basename
+without a user-specific absolute path, document identifier, language, page and byte
+counts, source-PDF SHA-256, extraction method and quality, extracted-text SHA-256,
+`ingested`, and the post-frontmatter body `sha256`. Text-layer extraction and OCR
+are both permitted when their method is explicit. Normalize only during initial
+capture: use LF, replace PDF form feeds with numbered page markers, remove NUL and
+backspace controls, and end with one LF. Do not copy the PDF into
+`raw/papers/files/` unless attachment preservation is explicitly required.
 
 Only these raw-record mutations are allowed:
 
