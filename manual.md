@@ -210,6 +210,53 @@ hermes gateway install
 hermes cron status
 ```
 
+### Gate A→B→C와 그래프 자동 재생성
+
+세 Gate는 다음 순서로 통과해야 합니다.
+
+| Gate | 통과 조건 | 실패 시 동작 |
+|---|---|---|
+| Gate A — Evidence | raw UTF-8/LF, 기록된 본문 SHA-256, frontmatter와 문서화된 legacy gap이 정상 | canonical과 그래프를 건드리지 않고 중단 |
+| Gate B — Canonical | frontmatter·태그·출처·claim marker·wikilink·index 수가 `SCHEMA.md`와 일치 | 기존 그래프를 유지하고 중단 |
+| Gate C — Graph | `kind: knowledge`, 현재 Git HEAD의 freshness, canonical node coverage, 필수 node 필드, layer·tour, dangling edge 0건 | 새 그래프로 교체하지 않고 실패 보고 |
+
+Gate A/B와 생성 후 Gate C는 저장소에 포함된 결정론적 검사기로 확인합니다.
+
+```bash
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py \
+  --gate a --gate b --require-clean-main
+
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py \
+  --gate c --require-clean-main
+```
+
+Hermes가 프로젝트의 Understand Anything 스킬을 읽도록 외부 스킬 경로를 등록합니다.
+
+```bash
+hermes config set skills.external_dirs \
+  /Users/y/.understand-anything/repo/understand-anything-plugin/skills
+```
+
+이 경로는 Understand Anything 스킬만 추가합니다. 프로젝트 전체 `.agents/skills`를
+등록하면 Hermes 내장 `llm-wiki`와 프로젝트 스킬 이름이 충돌하므로 사용하지 않습니다.
+
+`compile-wiki` 다음 시간인 매일 03:00에 그래프 job을 실행합니다. 이 job은 clean `main`만
+대상으로 하며 Gate A/B 실패 시 중단합니다. 기존 Gate C가 현재 HEAD에서 이미 통과하면
+재생성을 건너뛰고, stale일 때만 모든 analyzer batch를 완료한 뒤 새 그래프를 검증합니다.
+
+```bash
+hermes cron create "0 3 * * *" \
+  "Operate only on the clean main branch. Run python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate a --gate b --require-clean-main. If Gate A or B fails, stop and preserve the last valid graph. Then run Gate C. If Gate C already passes for the current HEAD, report an unchanged skip. If it fails only because the graph is missing or stale, snapshot the presence and contents of the existing graph and metadata to a temporary directory, then use understand-knowledge to regenerate them. Require every article-analyzer batch to complete. Tell analyzers to write final analysis-batch-N.json files directly and validate them with jq; do not create helper scripts or extra analysis-batch files. Do not open the dashboard. After generation, first clean temporary and intermediate files with individually targeted file operations and verify the intermediate directory is absent; avoid recursive deletion and inline script commands because cron blocks them. Only then run the validator with --gate c --require-clean-main. If any batch, merge, save, cleanup, or the post-cleanup Gate C fails, restore the previous graph and metadata (or remove partial new files when none existed), clean any remaining temporary files, and report failure. Only report success after the post-cleanup Gate C passes. Do not edit any tracked file, including log.md. Do not commit, merge, or push." \
+  --workdir /Users/y/dev/2nd-brain-template \
+  --skill llm-wiki \
+  --skill understand-knowledge \
+  --name "refresh-knowledge-graph"
+```
+
+`compile-wiki`는 검토 브랜치만 만들고 자동 병합하지 않습니다. 따라서 03:00 job은 사람이
+승인해 `main`에 들어온 상태만 그래프로 반영하며, 아직 review 브랜치에 있는 변경은 다음
+실행까지 기다립니다. `.understand-anything/`은 파생 상태로 계속 Git에서 제외됩니다.
+
 ## 지금 권장하는 실제 순서
 
 1. 웹 URL 한 개로 수동 `llm-wiki` ingest 테스트
@@ -217,4 +264,4 @@ hermes cron status
 3. 검토된 변경을 커밋한 뒤 `understand-knowledge`로 그래프 재생성
 4. `understand-dashboard`로 시각 확인
 5. Hermes `compile-wiki`를 리뷰 브랜치 작업으로 예약
-6. 이후 Gate A→B→C가 확실해지면 그래프 재생성까지 자동화
+6. Gate A→B→C 검사와 `refresh-knowledge-graph` job 상태를 `hermes cron list`로 확인

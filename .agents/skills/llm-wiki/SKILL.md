@@ -107,7 +107,17 @@ Do not file trivial lookups or unsupported speculation.
 
 ## Validate the wiki
 
-Check the contract directly because the template may not include an executable linter:
+Run the bundled deterministic gate validator:
+
+```bash
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate a --gate b
+```
+
+Use `--require-clean-main` for scheduled graph generation. Run `--gate c` after graph generation
+to verify freshness, canonical coverage, required node fields, layers, tour steps, and dangling
+edges.
+
+The validator checks:
 
 1. Validate UTF-8, LF, no BOM, final-newline policy, canonical filenames, and byte-zero
    frontmatter.
@@ -139,6 +149,9 @@ For Hermes or another scheduler:
 - Return the diff and validation report.
 - Do not merge or push unless the user explicitly authorizes that external change.
 - Do not auto-promote graph output into canonical Markdown.
+- Regenerate a graph only after deterministic Gate A and Gate B pass.
+- Require every analysis batch to finish before replacing the last valid graph, then require
+  deterministic Gate C to pass.
 
 ## Use Obsidian and graph tools
 

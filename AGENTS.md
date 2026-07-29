@@ -121,9 +121,17 @@ after 50 entries and add thematic navigation after 200 total entries.
 
 ## COMMANDS AND VALIDATION
 
-No repository-local build, test, lint, CI, release, or executable checker is
-configured. Recorded lint entries are outcomes, not reproducible commands; validate
-the contract directly:
+Run the shared deterministic gate checker before graph generation and again after
+the graph is built:
+
+```bash
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate a --gate b
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate c
+```
+
+No build, CI, or release pipeline is configured. The checker covers the deterministic
+contract below; still inspect semantic contradictions and batch-analysis outcomes
+directly:
 
 - UTF-8, LF, no BOM, final newline, and correct leading frontmatter; documented
   byte-identical legacy raw imports may retain their original missing final LF.
