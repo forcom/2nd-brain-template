@@ -45,8 +45,8 @@
 ```
 
 `raw/papers/files/`, `templates/`, and `_archive/` are schema-defined, on-demand
-paths. `.obsidian/` is shared editor configuration; ignored `.ua/` is derived
-knowledge-graph state, never canonical evidence.
+paths. Ignored `.obsidian/` is local editor configuration; ignored `.ua/` is
+derived knowledge-graph state, never canonical evidence.
 
 ## WHERE TO LOOK
 
@@ -60,7 +60,7 @@ knowledge-graph state, never canonical evidence.
 | Preserve source evidence | Registered source directories under `raw/` | Body integrity boundary; preserve importer paths |
 | Curate reusable knowledge | `entities/`, `concepts/`, `comparisons/`, `queries/` | Folder and frontmatter `type` must agree |
 | Inspect architecture and diagrams | `docs/` | Deliverables only; not raw or canonical evidence |
-| Inspect editor behavior | `.obsidian/` | Wikilinks enabled; attachments use `raw/assets` |
+| Inspect local editor behavior | `.obsidian/` | Git-ignored; wikilinks enabled and attachments use `raw/assets` |
 
 ## CONTENT CONTRACT
 

@@ -104,7 +104,7 @@ The repository root is both the wiki root and the Obsidian vault. All paths are 
 │   └── workflow/
 ├── templates/                # Validated note templates, created only when needed
 ├── _archive/                 # Fully superseded canonical knowledge, created only when needed
-├── .obsidian/                # Shareable Obsidian configuration
+├── .obsidian/                # Local Obsidian configuration (Git-ignored)
 ├── SCHEMA.md                 # Authoritative directory, metadata, and integrity contract
 ├── index.md                  # Complete catalog of active canonical knowledge
 └── log.md                    # Append-only wiki operation history
@@ -120,7 +120,7 @@ The repository root is both the wiki root and the Obsidian vault. All paths are 
 | Layer 1: source evidence | `raw/` | Preserves captured bodies and provenance metadata. After initial capture, the body is generally immutable; corrections and interpretation belong in canonical knowledge. |
 | Layer 2: canonical knowledge | `entities/`, `concepts/`, `comparisons/`, `queries/` | Synthesizes reusable knowledge from source evidence. The directory name must match the frontmatter `type`. |
 | Layer 3: operational metadata | `SCHEMA.md`, `index.md`, `log.md` | Defines the schema contract, active knowledge navigation, and change history. Apply their rules as one transaction whenever canonical knowledge changes. |
-| Supporting and derived artifacts | `docs/`, `.obsidian/`, `.ua/` | Supports documentation, editing, and graph exploration but does not serve as evidence. In particular, graph-proposed relationships remain hypotheses until verified against source material. |
+| Supporting and derived artifacts | `docs/`, local `.obsidian/`, `.ua/` | Supports documentation, editing, and graph exploration but does not serve as evidence. `.obsidian/` and `.ua/` are excluded from Git; graph-proposed relationships remain hypotheses until verified against source material. |
 
 ## Quick Start
 

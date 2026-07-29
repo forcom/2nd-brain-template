@@ -1,5 +1,6 @@
 # Local integration configuration and credential or authentication state
 config/integrations.local.toml
+.agents/
 .env
 .env.*
 !.env.example
@@ -30,17 +31,8 @@ cookies*.json
 *.p12
 *.pfx
 
-# Obsidian machine-private state
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/workspaces.json
-.obsidian/sync.json
-.obsidian/publish.json
-.obsidian/cache
-.obsidian/.trash/
-.obsidian/plugins/
-.obsidian/themes/
-.obsidian/snippets/
+# Obsidian vault configuration and machine-private state
+.obsidian/
 .trash/
 
 # Copied attachments; retain only repository placeholders
