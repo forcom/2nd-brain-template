@@ -171,7 +171,12 @@ hermes mcp add zotero \
   --args serve
 ```
 
-Hermes에는 내장 `llm-wiki`가 이미 활성화되어 있으므로 같은 이름의 커뮤니티 스킬을
+공유용 `llm-wiki` 원본은
+[`.agents/skills/llm-wiki`](.agents/skills/llm-wiki/SKILL.md)에 포함되어 있습니다.
+프로젝트 스킬을 지원하는 에이전트는 clone 후 바로 사용할 수 있고, 다른 환경에서는
+해당 디렉터리를 그 에이전트의 공식 절차로 등록하거나 복사합니다.
+
+Hermes에는 내장 `llm-wiki`도 활성화되어 있으므로 같은 이름의 커뮤니티 스킬을
 `--force`로 중복 설치하지 않습니다.
 
 ```bash
@@ -179,11 +184,12 @@ hermes skills list
 hermes skills diff llm-wiki
 ```
 
-이 Mac의 내장본에는 프로젝트 루트를 현재 작업 디렉터리로 고정하고 Zotero 부모 항목의
-서지정보를 먼저 보존하도록 로컬 보강을 적용했습니다. `hermes skills diff llm-wiki`는 이
-보강 때문에 변경 사항을 표시하는 것이 정상입니다. 커뮤니티판 보안 검사에서 탐지된
-`obsidian-headless`, systemd 상주 서비스, `sudo loginctl` 절차는 macOS 로컬 vault에
-필요하지 않아 포함하지 않았습니다. Hermes의 기본 스킬 위치와 외부 디렉터리 설정은
+저장소 공유본과 이 Mac의 Hermes 내장본에는 프로젝트 루트를 현재 작업 디렉터리로
+고정하고 Zotero 부모 항목의 서지정보를 먼저 보존하도록 보강했습니다.
+`hermes skills diff llm-wiki`는 로컬 내장본의 보강 때문에 변경 사항을 표시하는 것이
+정상입니다. 커뮤니티판 보안 검사에서 탐지된 `obsidian-headless`, systemd 상주 서비스,
+`sudo loginctl` 절차는 macOS 로컬 vault에 필요하지 않아 공유본에도 포함하지 않았습니다.
+Hermes의 기본 스킬 위치와 외부 디렉터리 설정은
 [공식 Skills 문서](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)에
 설명돼 있습니다.
 

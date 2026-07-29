@@ -1,7 +1,7 @@
 # PROJECT KNOWLEDGE BASE
 
-**Generated:** 2026-07-21
-**Commit:** 28d815e
+**Generated:** 2026-07-30
+**Commit:** bb25df8
 **Branch:** main
 
 ## OVERVIEW
@@ -10,7 +10,7 @@
 - The repository root is the wiki root; no database, service, or build system exists.
 - `SCHEMA.md` is the operational contract. `README.md` covers optional tool setup
   but describes a generic PARA layout that is not the current repository structure.
-- Current curated state: 13 raw Markdown records and 8 canonical pages.
+- Current curated state: 50 raw Markdown records and 18 canonical pages.
 
 ## START HERE
 
@@ -23,10 +23,13 @@
 
 ```text
 ./
+├── .agents/
+│   └── skills/llm-wiki/ # Shared, audited project skill; other agent state stays ignored
 ├── inbox/                 # Temporary intake; neither evidence nor canonical
 ├── raw/
 │   ├── articles/          # Immutable captured article Markdown
 │   ├── notebooklm/        # Immutable NotebookLM-imported source records
+│   ├── papers/            # Immutable extracted paper and standards records
 │   ├── transcripts/       # Immutable captured transcript Markdown
 │   ├── web/               # Importer-preserved web captures
 │   ├── youtube/           # Importer-preserved video transcript captures
@@ -45,8 +48,8 @@
 ```
 
 `raw/papers/files/`, `templates/`, and `_archive/` are schema-defined, on-demand
-paths. Ignored `.obsidian/` is local editor configuration; ignored `.ua/` is
-derived knowledge-graph state, never canonical evidence.
+paths. Ignored `.obsidian/` is local editor configuration; ignored `.ua/` and
+`.understand-anything/` are derived knowledge-graph state, never canonical evidence.
 
 ## WHERE TO LOOK
 
@@ -54,6 +57,7 @@ derived knowledge-graph state, never canonical evidence.
 | --- | --- | --- |
 | Learn the rules | `SCHEMA.md` | Wins over README examples |
 | Install optional tools | `README.md` | Obsidian, Zotero, MCP, CLI, and agent skills |
+| Use or maintain the shared skill | `.agents/skills/llm-wiki/` | Versioned project skill; keep unrelated local agent links ignored |
 | Find existing knowledge | `index.md` | Count must equal active canonical files |
 | Understand recent work | `log.md` | Read the tail; never rewrite history |
 | Stage unclassified input | `inbox/` | Capture properly before canonical use |
@@ -83,6 +87,9 @@ derived knowledge-graph state, never canonical evidence.
 ## RAW INTEGRITY AND PROVENANCE
 
 - Treat captured raw bodies as immutable.
+- Keep the GitHub repository private while licensed standards source records are
+  present; never make it public or redistribute those records without explicit
+  owner authorization and an access-rights review.
 - Compute raw `sha256` over the exact post-frontmatter body bytes.
 - Preserve byte-identical legacy imports with missing `sha256` or final LF;
   report coverage/format gaps instead of normalizing paths, frontmatter, or EOF.
@@ -136,10 +143,12 @@ the contract directly:
 - Do not edit raw bodies, invent provenance paths, or treat attachments as evidence.
 - Do not create passing-mention, isolated, free-form-tag, or duplicate canonical pages.
 - Do not rewrite prior `log.md` entries or silently omit index/log synchronization.
-- Do not treat `docs/` or `.ua/` as evidence, auto-promote graph output, or
+- Do not treat `docs/`, `.ua/`, or `.understand-anything/` as evidence, auto-promote graph output, or
   overwrite canonical Markdown from graph hypotheses; verify against raw sources.
-- Do not commit credentials, personal data, Obsidian workspace state, local plugins,
-  automation tokens/log URLs, copied assets, `.ua/`, `output/`, or QA artifacts.
+- Do not commit credentials, personal data, Obsidian workspace state, local plugin
+  symlinks, automation tokens/log URLs, copied assets, graph caches, `output/`, or
+  QA artifacts. The audited `.agents/skills/llm-wiki/` directory is the sole
+  allowlisted project skill; keep other `.agents/` contents ignored.
 
 ## NOTES
 

@@ -1,6 +1,12 @@
 # Local integration configuration and credential or authentication state
 config/integrations.local.toml
-.agents/
+
+# Keep machine-local agent links/state private; version only the project llm-wiki skill
+.agents/*
+!.agents/skills/
+.agents/skills/*
+!.agents/skills/llm-wiki/
+!.agents/skills/llm-wiki/**
 .env
 .env.*
 !.env.example

@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Wiki"
+  short_description: "Maintain an evidence-first, provenance-safe Markdown wiki"
+  default_prompt: "Use $llm-wiki to ingest this source and validate the wiki contract."

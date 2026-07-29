@@ -4,6 +4,11 @@
 
 > A Markdown-based knowledge management template for collecting scattered thoughts and information, connecting them, and turning them into action.
 
+> [!CAUTION]
+> This private repository contains access-restricted standards text under `raw/papers/`. Keep the
+> repository private, grant access only to authorized collaborators, and review distribution rights
+> before copying those records elsewhere or changing repository visibility.
+
 ## Project Overview
 
 This project goes beyond simply storing notes. It is designed around a continuous **capture → organize → connect → act → review** workflow. Every note is stored as a plain Markdown file, so the system is not tied to a particular application and can be used with Obsidian, VS Code, GitHub, or any other Markdown-compatible tool.
@@ -61,7 +66,7 @@ The following tools allow an agent to retrieve captured material, organize it in
 | Tool | Role | Installation guidance |
 | --- | --- | --- |
 | [Zotero MCP](https://github.com/54yyyu/zotero-mcp) | Gives an agent access to Zotero bibliographic metadata, attachments, notes, and full text. | Follow the official repository instructions to install and register the server with your MCP client. Verify the Zotero local API configuration as described in the official guide. |
-| [`llm-wiki`](https://github.com/ains-lab/harness/tree/main/skills/llm-wiki) | Compiles captured source material into an interlinked Markdown knowledge base with traceable provenance and validates the result. | Read the linked skill documentation together with your agent's skill installation guide, then install it in a supported local or project skill location. |
+| [`llm-wiki`](.agents/skills/llm-wiki/SKILL.md) | Compiles captured source material into an interlinked Markdown knowledge base with traceable provenance and validates the result. | This repository includes an audited project skill under `.agents/skills/llm-wiki`. Agents that support project skills can load it directly; otherwise register or copy that directory using the agent's official skill installation procedure. |
 | [notebooklm-py](https://github.com/teng-lin/notebooklm-py) | Manages NotebookLM notebooks and sources through a CLI and automates grounded questions and artifact generation. | Follow the official installation and authentication documentation for your Python and browser environment. If an agent will invoke it, also configure CLI access according to that agent's integration model. |
 | [Understand Anything](https://github.com/Egonex-AI/Understand-Anything) | Analyzes relationships in code and knowledge bases and creates an interactive knowledge graph. | Select the installation and integration method for your agent or development environment from the official repository, then use its verification procedure to confirm that the skill or plugin is recognized. |
 
@@ -74,7 +79,7 @@ The following tools allow an agent to retrieve captured material, organize it in
 2. Install the Zotero desktop application, Zotero Connector, and Obsidian Web Clipper.
 3. Review the supported environments and prerequisites at each official link above.
 4. Follow the Zotero MCP documentation to connect Zotero to your current MCP client.
-5. Install `llm-wiki` and Understand Anything according to both their official documentation and your agent's skill or plugin installation rules.
+5. Use the bundled `.agents/skills/llm-wiki` project skill and install Understand Anything according to your agent's skill or plugin rules.
 6. If needed, install `notebooklm-py` and complete authentication using its official documentation.
 
 After installation, use your environment's MCP server list, skill or plugin list, or CLI verification procedure to confirm that each tool is recognized. Follow the official documentation for exact verification commands and restart requirements.
