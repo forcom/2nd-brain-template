@@ -47,10 +47,12 @@ raw/papers/files/*
 raw/assets/*
 !raw/assets/.gitkeep
 
-# NotebookLM, Understand Anything, and other generated output
+# NotebookLM, legacy graph paths, graph intermediates, and other generated output
 output/
 .ua/
-.understand-anything/
+.understand-anything/*
+!.understand-anything/knowledge-graph.json
+!.understand-anything/meta.json
 /.codegraph
 
 # Local databases, runtime logs, and tool caches

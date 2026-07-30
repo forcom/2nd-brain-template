@@ -41,7 +41,10 @@ Canonical Memory는 원본 전체를 복사한 저장소가 아니다. 자주 �
 
 ### 2.4 재생성 가능한 파생 상태
 
-`.ua/knowledge-graph.json`, NotebookLM 대화, 검색 색인, 대시보드와 내보낸 산출물은 원본과 canonical Markdown에서 다시 만들 수 있는 파생 상태다. 이 상태를 정본으로 취급하거나 canonical 문서를 역으로 덮어쓰지 않는다.
+`.understand-anything/knowledge-graph.json`, NotebookLM 대화, 검색 색인, 대시보드와
+내보낸 산출물은 원본과 canonical Markdown에서 다시 만들 수 있는 파생 상태다. 권한
+있는 clone이 같은 확장 그래프를 바로 열 수 있도록 검증된 graph/meta snapshot만
+버전 관리하지만, 이 상태를 정본으로 취급하거나 canonical 문서를 역으로 덮어쓰지 않는다.
 
 ### 2.5 사람 승인 관문
 
@@ -83,7 +86,7 @@ Canonical Memory는 원본 전체를 복사한 저장소가 아니다. 자주 �
 | Canonical Memory | 지식을 선별·요약·비교·연결 | raw 레코드 | `entities/`, `concepts/`, `comparisons/`, `queries/` | 재사용 가능한 Markdown | 출처·링크·스키마 검증 필요 |
 | Governance | 형식과 변경 이력 통제 | 저장소 변경 | `SCHEMA.md`, `index.md`, `log.md` | 유효성 판정과 감사 이력 | `SCHEMA.md`가 최종 계약 |
 | Automation Control Plane | 수집, 예약 실행, 단계 전환과 결과 전달 | 허용 소스, 스케줄, 검증 상태 | vault 외부의 Hermes 작업 정의·실행 이력 | raw 후보, wiki 변경안, 그래프 재생성 | 품질 관문과 사람 승인을 우회할 수 없음 |
-| Discovery | 관계와 가설 탐색 | 선택한 원본, canonical 문서 | NotebookLM 작업공간, `.ua/**` | 질의 결과, 군집·브리지·공백 후보 | 결과는 가설이며 재검증 필요 |
+| Discovery | 관계와 가설 탐색 | 선택한 원본, canonical 문서 | NotebookLM 작업공간, `.understand-anything/**` | 질의 결과, 군집·브리지·공백 후보 | 결과는 가설이며 재검증 필요 |
 | Decision & Reuse | 승인, 보류, 산출물화 | 탐색 결과와 원문 | 승인된 canonical 갱신, `docs/` 산출물 | 의사결정, 글, 슬라이드, 다이어그램 | 사람이 최종 승인 |
 
 ### 3.2 제어 평면과 데이터 평면
@@ -131,7 +134,7 @@ raw/**            ── 근거 ───────────────┴
 | 장기 canonical | `concepts/*.md`, `queries/*.md` | 검증된 트랜잭션으로 갱신 | 최상 |
 | 거버넌스 | `SCHEMA.md`, `index.md`, `log.md` | 규칙에 따라 동기화, log는 append-only | 최상 |
 | 임시 입력 | `inbox/` | 처리 후 보존·승격·폐기 결정 | 중간 |
-| 파생 상태 | `.ua/**`, 검색 색인, 대시보드 | 원천 데이터에서 재생성 | 낮음 |
+| 파생 상태 | `.understand-anything/**`, 검색 색인, 대시보드 | 원천 데이터에서 재생성; 검증된 graph/meta만 공유 | 낮음 |
 | 전달 산출물 | `docs/*.md`, 이미지, 슬라이드 | 원천과 생성 시점 기록 | 요구에 따라 결정 |
 
 ### 4.3 Canonical 문서 계약
@@ -191,7 +194,10 @@ Hermes Agent는 수집기와 스케줄러를 하나의 에이전트 실행 환�
 
 [Hermes Cron](https://hermes-agent.nousresearch.com/docs/user-guide/features/cron)은 예약 시각마다 격리된 새 에이전트 세션을 만들고, 프로젝트 `workdir`와 하나 이상의 스킬을 연결할 수 있다. 따라서 예약 작업은 저장소 루트를 `workdir`로 고정하고, 매 실행마다 `SCHEMA.md`, `index.md`, 최근 `log.md`를 다시 읽는 자기완결적 작업이어야 한다. Hermes의 작업 정의, 실행 이력과 전달 출력은 운영 상태이며 canonical 지식으로 취급하지 않는다.
 
-`llm-wiki`와 UA는 같은 저장소를 다루지만 쓰기 권한은 다르게 제한한다. `llm-wiki` 작업은 canonical·`index.md`·`log.md`만 스키마 계약에 따라 변경하고, UA 작업은 lint를 통과한 revision을 읽어 `.ua/` 파생 상태만 재생성한다.
+`llm-wiki`와 UA는 같은 저장소를 다루지만 쓰기 권한은 다르게 제한한다. `llm-wiki`
+작업은 canonical·`index.md`·`log.md`만 스키마 계약에 따라 변경하고, UA 작업은 lint를
+통과한 입력을 읽어 `.understand-anything/knowledge-graph.json`과 `meta.json`만
+재생성한다. intermediate와 cache는 공유하지 않는다.
 
 운영 전에 Hermes 실행 환경에서 `llm-wiki`와 UA 연동이 각각 스킬 또는 호출 가능한 도구로 인식되는지 검증한다. 하나라도 사용할 수 없으면 해당 Cron 작업은 실패로 종료하며, 이름이 비슷한 다른 도구나 일반 코드 분석으로 대체하지 않는다.
 
@@ -257,7 +263,7 @@ Hermes Cron 실행 또는 수동 요청
 lint를 통과한 동일 Git revision
   → canonical Markdown + index.md + wikilink
   → understand-knowledge
-  → .ua/knowledge-graph.json + .ua/meta.json
+  → .understand-anything/knowledge-graph.json + meta.json
   → 구조 검증
   → dashboard·chat·domain 탐색
   → 후보를 원문과 대조
@@ -338,7 +344,8 @@ Hermes Gateway Scheduler
   │
   └─ build-knowledge-graph
        ├─ Gate B를 통과한 동일 revision에서 UA 실행
-       └─ Gate C: kind·batch·freshness·dangling edge 검증
+       ├─ 모든 analyzer batch 완료·JSON 구조 검증
+       └─ Gate C: kind·coverage·freshness·dangling edge 검증
                               │
                               └→ 사람에게 diff·lint·graph 보고
 ```
@@ -351,7 +358,7 @@ Hermes Gateway Scheduler
 | --- | --- | --- | --- | --- |
 | `collect-evidence` | 짧은 주기의 예약 또는 수동 실행 | 허용된 검색어·사이트·Zotero 컬렉션 | `inbox/`, 등록된 `raw/` 하위 경로, 해당 ingest `log.md` 항목 | 중복 확인, 필수 메타데이터와 원문 무결성 검증 완료 |
 | `compile-wiki` | 수집 창 종료 후 또는 검증된 raw 변경 감지 | Gate A를 통과한 raw와 현재 canonical | 전용 브랜치의 canonical 디렉터리, `index.md`, `log.md` | `llm-wiki` 트랜잭션과 전체 wiki lint 통과 |
-| `build-knowledge-graph` | Gate B 통과 revision 감지 | 검증된 canonical·index·wikilink | `.ua/` 파생 상태 | knowledge graph 구조, 분석 배치, freshness와 edge 검증 통과 |
+| `build-knowledge-graph` | Gate B 통과 revision 감지 | 검증된 canonical·index·wikilink | versioned `.understand-anything/` graph/meta review diff | knowledge graph 구조, 분석 배치, input fingerprint와 edge 검증 통과 |
 | `deliver-review` | 전체 또는 일부 단계 종료 | 변경 diff, lint, graph 검증 결과 | vault 외부 Hermes 전달 채널 또는 로컬 실행 출력 | 성공·실패 단계, revision, 사람 조치가 구분된 보고 전달 |
 
 스케줄 시각은 데이터 유입량과 모델 비용에 맞춰 정한다. 예를 들어 수집은 자주 실행하되 변경이 없으면 종료하고, 위키 컴파일은 검증된 새 raw가 있을 때만, 그래프 생성은 canonical revision이 바뀌고 lint가 통과했을 때만 실행한다.
@@ -376,9 +383,18 @@ Hermes Gateway Scheduler
 
 ### 7.5 재실행, 동시성 제어와 실패 격리
 
-각 단계는 동일 입력에 안전하게 재실행할 수 있어야 한다. 수집은 URL·외부 식별자·본문 해시로 중복을 제거하고, 컴파일은 기준 revision과 처리한 raw 집합을 보고하며, 그래프는 입력 revision과 생성 시각을 기록한다.
+각 단계는 동일 입력에 안전하게 재실행할 수 있어야 한다. 수집은 URL·외부 식별자·본문
+해시로 중복을 제거하고, 컴파일은 기준 revision과 처리한 raw 집합을 보고하며, 그래프는
+generation base commit, 결정론적 입력 content fingerprint와 생성 시각을 기록한다.
+graph/meta를 commit하면 HEAD가 바뀌므로 freshness는 HEAD 동일성이 아니라 graph 입력
+파일의 상대 경로·크기·바이트 hash로 판단한다.
 
-Hermes scheduler의 자체 lock은 같은 tick의 중복 실행을 막지만, 서로 다른 작업이 같은 저장소를 동시에 수정하는 문제까지 해결하는 저장소 lock은 아니다. `compile-wiki`에는 단일 writer 원칙과 전용 Git 브랜치 또는 worktree를 적용한다. raw 검증 실패 시 canonical 갱신을 중단하고, canonical lint 실패 시 UA를 실행하지 않는다. 그래프 생성이 실패해도 raw와 canonical은 손상되지 않아야 한다.
+Hermes scheduler의 자체 lock은 같은 tick의 중복 실행을 막지만, 서로 다른 작업이 같은
+저장소를 동시에 수정하는 문제까지 해결하는 저장소 lock은 아니다. `compile-wiki`에는
+단일 writer 원칙과 전용 Git 브랜치 또는 worktree를 적용한다. raw 검증 실패 시 canonical
+갱신을 중단하고, canonical lint 실패 시 UA를 실행하지 않는다. 그래프 작업은 두
+versioned snapshot 파일 이외의 변경을 거부하고, 실패 시 이전 graph/meta를 복원한다.
+성공한 두 파일의 diff는 사람이 commit하며 raw와 canonical은 손상되지 않아야 한다.
 
 결정론적인 변경 감지와 해시 검사는 필요하면 Hermes의 script-only 예약 작업으로 분리할 수 있지만, 출처 판단과 `llm-wiki` 컴파일은 스킬을 로드한 에이전트 세션에서 수행한다. 자동화 로그에는 비밀, 토큰, 로컬 서비스 URL과 개인 식별 정보를 남기지 않는다.
 
@@ -412,7 +428,9 @@ Hermes scheduler의 자체 lock은 같은 tick의 중복 실행을 막지만, �
 - API 키, OAuth 토큰, 쿠키와 개인 식별자는 vault에 저장하지 않는다.
 - Zotero MCP와 외부 에이전트에는 필요한 최소 읽기 범위만 제공한다.
 - 민감한 원본을 NotebookLM 같은 외부 서비스로 보내기 전에 데이터 정책을 확인한다.
-- `.obsidian/workspace.json`, 로컬 플러그인, 검색 색인, `.ua/`와 임시 QA 자산은 공개 템플릿에 포함하지 않는다.
+- `.obsidian/workspace.json`, 로컬 플러그인, 검색 색인, graph intermediate·cache와 임시
+  QA 자산은 공유하지 않는다. 검증된 `.understand-anything/` graph/meta snapshot에는
+  dashboard token이나 로컬 경로가 없어야 한다.
 - Hermes Cron prompt, 작업 정의와 실행 출력에 자격증명이나 개인 식별자를 직접 넣지 않는다.
 - 예약 작업별 도구와 쓰기 경로를 최소화하고 수집 세션이 canonical 디렉터리를 직접 수정하지 못하게 한다.
 - Git remote로 보내기 전 raw와 docs에 개인정보 또는 비공개 원문이 없는지 검토한다.
@@ -491,7 +509,9 @@ Hermes scheduler의 자체 lock은 같은 tick의 중복 실행을 막지만, �
 
 ## 부록 A. 아키텍처 근거가 된 지식그래프
 
-이 설계는 `pkm-study/.ua/knowledge-graph.json`의 관련 부분 그래프를 기준으로 도출했다. 분석 시점의 그래프는 `kind: knowledge`이며, 핵심 관계는 다음 문서 노드에 집중되어 있었다.
+이 설계는 `pkm-study/.understand-anything/knowledge-graph.json`의 관련 부분 그래프를
+기준으로 도출했다. 분석 시점의 그래프는 `kind: knowledge`이며, 핵심 관계는 다음 문서
+노드에 집중되어 있었다.
 
 - `concepts/ai-personal-knowledge-management.md`: 전체 시스템의 계층 원칙과 사람 검증 관문
 - `concepts/ai-knowledge-workflow.md`: 수집부터 검증·산출까지의 단계적 흐름

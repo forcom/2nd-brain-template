@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the deterministic Gate A, B, and C contracts for an LLM wiki."""
+"""Validate deterministic wiki gates and stamp shared graph input metadata."""
 
 from __future__ import annotations
 
@@ -44,6 +44,12 @@ ALLOWED_LOG_ACTIONS = {
     "repair",
 }
 REQUIRED_GRAPH_NODE_FIELDS = {"id", "type", "name", "summary", "tags", "complexity"}
+GRAPH_INFRA_FILES = {"index.md", "log.md", "claude.md", "agents.md", "soul.md"}
+GRAPH_OUTPUT_PATHS = {
+    ".understand-anything/knowledge-graph.json",
+    ".understand-anything/meta.json",
+}
+GRAPH_INPUT_HASH_ALGORITHM = "sha256-path-size-bytes-v1"
 
 
 def relative(path: Path, root: Path) -> str:
@@ -204,15 +210,151 @@ def git_output(root: Path, *args: str) -> str:
     return completed.stdout.strip()
 
 
-def validate_repository_state(root: Path, gate: dict[str, Any]) -> None:
+def git_succeeds(root: Path, *args: str) -> bool:
+    completed = subprocess.run(
+        ["git", "-C", str(root), *args],
+        check=False,
+        capture_output=True,
+    )
+    return completed.returncode == 0
+
+
+def git_paths(root: Path, *args: str) -> set[str]:
+    completed = subprocess.run(
+        ["git", "-C", str(root), *args],
+        check=False,
+        capture_output=True,
+    )
+    if completed.returncode != 0:
+        return set()
+    return {
+        value.decode("utf-8", errors="surrogateescape")
+        for value in completed.stdout.split(b"\0")
+        if value
+    }
+
+
+def repository_candidate_paths(root: Path) -> set[str]:
+    return git_paths(
+        root,
+        "ls-files",
+        "-z",
+        "--cached",
+        "--others",
+        "--exclude-standard",
+    )
+
+
+def graph_article_paths(root: Path) -> set[str]:
+    paths: set[str] = set()
+    for value in repository_candidate_paths(root):
+        relative_path = Path(value)
+        if relative_path.suffix != ".md" or not (root / relative_path).is_file():
+            continue
+        if (
+            relative_path.parent == Path(".")
+            and relative_path.name.casefold() in GRAPH_INFRA_FILES
+        ):
+            continue
+        paths.add(relative_path.as_posix())
+    return paths
+
+
+def graph_source_paths(root: Path) -> set[str]:
+    paths: set[str] = set()
+    for value in repository_candidate_paths(root):
+        relative_path = Path(value)
+        if (
+            relative_path.parts
+            and relative_path.parts[0] == "raw"
+            and not relative_path.name.startswith(".")
+            and (root / relative_path).is_file()
+        ):
+            paths.add(relative_path.as_posix())
+    return paths
+
+
+def graph_input_fingerprint(root: Path) -> tuple[str, list[str]]:
+    input_paths = graph_article_paths(root) | graph_source_paths(root)
+    for infrastructure_file in ("index.md", "log.md"):
+        if (root / infrastructure_file).is_file():
+            input_paths.add(infrastructure_file)
+
+    digest = hashlib.sha256()
+    digest.update(f"{GRAPH_INPUT_HASH_ALGORITHM}\0".encode("utf-8"))
+    ordered_paths = sorted(input_paths, key=lambda value: value.encode("utf-8"))
+    for relative_path in ordered_paths:
+        data = (root / relative_path).read_bytes()
+        digest.update(relative_path.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(str(len(data)).encode("ascii"))
+        digest.update(b"\0")
+        digest.update(data)
+        digest.update(b"\0")
+    return f"sha256:{digest.hexdigest()}", ordered_paths
+
+
+def write_graph_input_metadata(root: Path) -> dict[str, Any]:
+    meta_path = root / ".understand-anything" / "meta.json"
+    if not meta_path.is_file():
+        raise ValueError("knowledge graph metadata file is missing")
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        raise ValueError(f"graph metadata parse failed: {exc}") from exc
+    if not isinstance(meta, dict):
+        raise ValueError("graph metadata must be a JSON object")
+
+    input_hash, input_paths = graph_input_fingerprint(root)
+    meta["inputHash"] = input_hash
+    meta["inputHashAlgorithm"] = GRAPH_INPUT_HASH_ALGORITHM
+    meta["inputFiles"] = len(input_paths)
+    meta_path.write_text(
+        json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    return {
+        "ok": True,
+        "meta": relative(meta_path, root),
+        "inputHash": input_hash,
+        "inputHashAlgorithm": GRAPH_INPUT_HASH_ALGORITHM,
+        "inputFiles": len(input_paths),
+    }
+
+
+def validate_repository_state(
+    root: Path,
+    gate: dict[str, Any],
+    allow_graph_output_changes: bool = False,
+) -> None:
     branch = git_output(root, "branch", "--show-current")
-    status = git_output(root, "status", "--porcelain")
+    status = git_output(root, "status", "--porcelain", "--untracked-files=all")
     gate["metrics"]["git_branch"] = branch
     gate["metrics"]["git_head"] = git_output(root, "rev-parse", "HEAD")
     if branch != "main":
         add_error(gate, f"automation requires branch 'main'; current branch is {branch!r}")
-    if status:
+    if not status:
+        return
+    if not allow_graph_output_changes:
         add_error(gate, "automation requires a clean worktree")
+        return
+
+    changed_paths = set()
+    changed_paths.update(git_paths(root, "diff", "--name-only", "-z"))
+    changed_paths.update(git_paths(root, "diff", "--cached", "--name-only", "-z"))
+    changed_paths.update(
+        git_paths(root, "ls-files", "-z", "--others", "--exclude-standard")
+    )
+    unexpected = sorted(changed_paths - GRAPH_OUTPUT_PATHS, key=str.casefold)
+    if unexpected or not changed_paths:
+        add_error(
+            gate,
+            "automation permits dirty state only for versioned graph outputs; "
+            f"unexpected={unexpected}",
+        )
+        return
+    gate["metrics"]["allowed_graph_output_changes"] = sorted(changed_paths)
 
 
 def validate_gate_a(root: Path) -> dict[str, Any]:
@@ -520,6 +662,9 @@ def validate_gate_c(root: Path) -> dict[str, Any]:
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         add_error(gate, f"graph JSON parse failed: {exc}")
         return gate
+    if not isinstance(graph, dict) or not isinstance(meta, dict):
+        add_error(gate, "graph and metadata must be JSON objects")
+        return gate
 
     if graph.get("kind") != "knowledge":
         add_error(gate, "graph kind must be 'knowledge'")
@@ -534,7 +679,8 @@ def validate_gate_c(root: Path) -> dict[str, Any]:
         add_error(gate, "graph tour must be a non-empty list")
 
     node_ids: set[str] = set()
-    article_nodes = 0
+    article_node_ids: set[str] = set()
+    source_node_ids: set[str] = set()
     for index, node in enumerate(nodes):
         if not isinstance(node, dict):
             add_error(gate, f"node {index}: must be an object")
@@ -550,7 +696,9 @@ def validate_gate_c(root: Path) -> dict[str, Any]:
             add_error(gate, f"duplicate graph node id: {node_id}")
         node_ids.add(node_id)
         if node.get("type") == "article":
-            article_nodes += 1
+            article_node_ids.add(node_id)
+        if node.get("type") == "source":
+            source_node_ids.add(node_id)
         if not isinstance(node.get("tags"), list):
             add_error(gate, f"node {node_id}: tags must be a list")
 
@@ -577,17 +725,87 @@ def validate_gate_c(root: Path) -> dict[str, Any]:
     if missing_canonical:
         add_error(gate, f"graph is missing canonical article nodes: {missing_canonical}")
 
-    head = git_output(root, "rev-parse", "HEAD")
-    if meta.get("gitCommitHash") != head:
+    expected_article_ids = {
+        f"article:{Path(path).with_suffix('').as_posix()}"
+        for path in graph_article_paths(root)
+    }
+    missing_articles = sorted(expected_article_ids - article_node_ids)
+    unexpected_articles = sorted(article_node_ids - expected_article_ids)
+    if missing_articles or unexpected_articles:
         add_error(
             gate,
-            f"graph is stale: meta gitCommitHash={meta.get('gitCommitHash')!r}, HEAD={head!r}",
+            "graph article coverage mismatch: "
+            f"missing={missing_articles}, unexpected={unexpected_articles}",
         )
-    analyzed_files = meta.get("analyzedFiles")
-    if analyzed_files != article_nodes:
+
+    expected_source_ids = {
+        f"source:{Path(path).relative_to('raw').with_suffix('').as_posix()}"
+        for path in graph_source_paths(root)
+    }
+    missing_sources = sorted(expected_source_ids - source_node_ids)
+    unexpected_sources = sorted(source_node_ids - expected_source_ids)
+    if missing_sources or unexpected_sources:
         add_error(
             gate,
-            f"meta analyzedFiles={analyzed_files!r} does not equal article nodes={article_nodes}",
+            "graph source coverage mismatch: "
+            f"missing={missing_sources}, unexpected={unexpected_sources}",
+        )
+
+    head = git_output(root, "rev-parse", "HEAD")
+    graph_base_commit = meta.get("gitCommitHash")
+    if (
+        not isinstance(graph_base_commit, str)
+        or not re.fullmatch(r"[0-9a-f]{40}", graph_base_commit)
+        or not git_succeeds(root, "cat-file", "-e", f"{graph_base_commit}^{{commit}}")
+    ):
+        add_error(gate, f"invalid graph base commit: {graph_base_commit!r}")
+    elif head and not git_succeeds(
+        root, "merge-base", "--is-ancestor", graph_base_commit, head
+    ):
+        add_error(
+            gate,
+            f"graph base commit {graph_base_commit!r} is not an ancestor of HEAD {head!r}",
+        )
+    graph_project = graph.get("project")
+    if (
+        not isinstance(graph_project, dict)
+        or graph_project.get("gitCommitHash") != graph_base_commit
+    ):
+        add_error(
+            gate,
+            "graph project gitCommitHash must equal meta gitCommitHash",
+        )
+
+    try:
+        expected_input_hash, graph_input_paths = graph_input_fingerprint(root)
+    except OSError as exc:
+        expected_input_hash, graph_input_paths = "", []
+        add_error(gate, f"graph input fingerprint failed: {exc}")
+    if meta.get("inputHashAlgorithm") != GRAPH_INPUT_HASH_ALGORITHM:
+        add_error(
+            gate,
+            "graph input hash algorithm mismatch: "
+            f"{meta.get('inputHashAlgorithm')!r}",
+        )
+    if meta.get("inputHash") != expected_input_hash:
+        add_error(
+            gate,
+            f"graph is stale: meta inputHash={meta.get('inputHash')!r}, "
+            f"expected={expected_input_hash!r}",
+        )
+    if meta.get("inputFiles") != len(graph_input_paths):
+        add_error(
+            gate,
+            f"meta inputFiles={meta.get('inputFiles')!r} does not equal "
+            f"graph inputs={len(graph_input_paths)}",
+        )
+
+    analyzed_files = meta.get("analyzedFiles")
+    if analyzed_files != len(article_node_ids):
+        add_error(
+            gate,
+            f"meta analyzedFiles={analyzed_files!r} does not equal "
+            f"article nodes={len(article_node_ids)}",
         )
     analyzed_at = meta.get("lastAnalyzedAt")
     normalized_analyzed_at = str(analyzed_at)
@@ -604,12 +822,18 @@ def validate_gate_c(root: Path) -> dict[str, Any]:
     gate["metrics"].update(
         {
             "nodes": len(nodes),
-            "article_nodes": article_nodes,
+            "article_nodes": len(article_node_ids),
+            "source_nodes": len(source_node_ids),
             "edges": len(edges),
             "dangling_edges": dangling_edges,
             "layers": len(graph.get("layers", [])),
             "tour_steps": len(graph.get("tour", [])),
             "canonical_nodes_expected": len(expected_canonical_ids),
+            "article_nodes_expected": len(expected_article_ids),
+            "source_nodes_expected": len(expected_source_ids),
+            "graph_input_files": len(graph_input_paths),
+            "graph_input_hash": expected_input_hash,
+            "graph_base_commit": graph_base_commit,
             "git_head": head,
             "last_analyzed_at": analyzed_at,
         }
@@ -631,12 +855,44 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Require the current branch to be clean main for scheduled automation",
     )
+    parser.add_argument(
+        "--allow-graph-output-changes",
+        action="store_true",
+        help=(
+            "With --require-clean-main, permit changes only to the two versioned "
+            "graph output files"
+        ),
+    )
+    parser.add_argument(
+        "--write-graph-input-metadata",
+        action="store_true",
+        help="Write the current deterministic graph input fingerprint to meta.json",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     root = args.wiki.expanduser().resolve()
+    if args.allow_graph_output_changes and not args.require_clean_main:
+        raise SystemExit(
+            "--allow-graph-output-changes requires --require-clean-main"
+        )
+    if args.write_graph_input_metadata:
+        try:
+            report = write_graph_input_metadata(root)
+        except (OSError, ValueError) as exc:
+            print(
+                json.dumps(
+                    {"ok": False, "wiki": str(root), "error": str(exc)},
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+            return 1
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+
     selected = args.gate or ["a", "b", "c"]
     gates = []
     if "a" in selected:
@@ -646,7 +902,11 @@ def main() -> int:
     if "c" in selected:
         gates.append(validate_gate_c(root))
     if args.require_clean_main and gates:
-        validate_repository_state(root, gates[0])
+        validate_repository_state(
+            root,
+            gates[0],
+            allow_graph_output_changes=args.allow_graph_output_changes,
+        )
     report = {
         "ok": all(gate["ok"] for gate in gates),
         "wiki": str(root),

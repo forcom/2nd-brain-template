@@ -1,7 +1,7 @@
 ---
 title: UA 위키 지식그래프 전체 워크플로
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-07-30
 type: query
 tags:
   - knowledge-base
@@ -30,7 +30,8 @@ Karpathy 패턴의 [[llm-wiki]]가 이미 존재한다면 시작점은 일반 �
 
     LLM Wiki 문서·index.md·wikilink
       → understand-knowledge
-      → .ua/knowledge-graph.json
+      → .understand-anything/knowledge-graph.json
+      → input fingerprint·Gate C
       → dashboard·chat·domain 분석
       → 위키 보강
       → understand-knowledge 재실행
@@ -45,15 +46,25 @@ Karpathy 패턴의 [[llm-wiki]]가 이미 존재한다면 시작점은 일반 �
 ## 권장 실행 순서
 
 1. 위키의 `index.md`, canonical 문서와 wikilink가 유효한지 lint한다.
-2. `understand-knowledge`로 `.ua/knowledge-graph.json`과 메타데이터를 생성한다.
-3. 노드·관계 수, 미해결 링크, 고립 문서, 과도한 허브와 출처 없는 주장을 점검한다.
-4. `understand-dashboard`로 주제 군집, 브리지와 학습 순서를 탐색한다.
-5. `understand-chat`으로 관계와 근거가 약한 부분을 질의한다.
-6. `understand-domain`으로 도메인·흐름·단계를 별도 그래프로 파생한다.
-7. 검증된 공백·중복·약한 연결만 위키에 반영한다.
-8. 위키가 바뀌면 `understand-knowledge`를 다시 실행한다.
+2. `understand-knowledge`로 `.understand-anything/knowledge-graph.json`과 `meta.json`을
+   생성한다.
+3. 모든 analyzer batch의 완료와 JSON 구조를 확인한 뒤 결정론적 입력 fingerprint를
+   `meta.json`에 기록하고, Gate C로 article/source coverage, 최종 node·edge 구조와
+   dangling edge를 검사한다.
+4. 검증된 graph/meta snapshot 두 파일만 Git으로 공유하고 intermediate·cache는
+   제외한다.
+5. `understand-dashboard`로 주제 군집, 브리지와 학습 순서를 탐색한다.
+6. `understand-chat`으로 관계와 근거가 약한 부분을 질의한다.
+7. `understand-domain`으로 도메인·흐름·단계를 별도 그래프로 파생한다.
+8. 검증된 공백·중복·약한 연결만 위키에 반영한다.
+9. 위키 입력이 바뀌면 `understand-knowledge`를 다시 실행한다.
 
 그래프에서 보이는 빈 공간은 곧바로 연구 공백을 뜻하지 않는다. 자료 누락, 링크 부족, 추출 실패 또는 엔티티 중복일 수 있으므로 원문과 대조한다. ^[raw/notebooklm/2026-07-16-all-notes.md]
+
+공유 snapshot은 clone 직후 같은 탐색 상태를 제공하지만 canonical 지식이나 출처
+증거가 아니다. `meta.gitCommitHash`는 생성 기반 revision의 provenance로 남기고,
+그래프 파일을 commit할 때 HEAD가 바뀌어도 자기모순이 생기지 않도록 실제 freshness는
+graph 입력 파일의 content fingerprint로 판정한다.
 
 ## 역할 분담과 환류
 

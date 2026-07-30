@@ -175,3 +175,26 @@
 - Raw integrity: 45 recorded post-frontmatter body hashes match, including all 37 pending PDF records and 2,386 page markers; five previously documented legacy web/video records remain hash-coverage and final-LF format gaps rather than drift.
 - Contract checks: frontmatter, registered tags, type-directory fit, dates, confidence and contestation fields, canonical filenames, UTF-8/LF/BOM rules, final newlines, page-size limits, source paths, links, orphans, index count, raw drift, and log rotation all pass with 0 errors and 0 warnings.
 - Updated: `log.md` only.
+
+## [2026-07-30] update | versioned shared knowledge graph snapshot
+
+- Sharing policy: only `.understand-anything/knowledge-graph.json` and `.understand-anything/meta.json` are versioned for authorized clones; analyzer batches, intermediate files, caches, tokens, legacy `.ua/`, and other runtime state remain ignored.
+- Freshness contract: Gate C now verifies a deterministic `sha256-path-size-bytes-v1` fingerprint over every graph input instead of comparing the snapshot commit to `HEAD`; the graph and metadata retain the matching generation-base commit as ancestor provenance.
+- Coverage contract: Gate C requires the exact Git-visible article and raw-source node sets, complete required node fields, valid layers and tour steps, and no dangling edges.
+- Graph: five complete analyzer batches produced `kind: knowledge`, 212 nodes (75 articles, 50 sources, 34 deduplicated entities, 49 claims, and 4 topics), 190 edges, 5 layers, 4 tour steps, and 0 dangling edges.
+- Automation: the review-only Hermes graph job now validates Gate A and Gate B, regenerates and stamps the two allowlisted outputs, validates Gate C, and leaves their diff for human review without committing, merging, or pushing.
+- Updated:
+  - `.agents/skills/llm-wiki/SKILL.md`
+  - `.agents/skills/llm-wiki/scripts/validate-wiki.py`
+  - `.gitignore`
+  - `AGENTS.md`
+  - `README.md`
+  - `README.ko.md`
+  - `SCHEMA.md`
+  - `docs/architecture/second-brain-pkm-architecture.md`
+  - `index.md`
+  - `log.md`
+  - `manual.md`
+  - `queries/ua-knowledge-graph-workflow.md`
+  - `.understand-anything/knowledge-graph.json`
+  - `.understand-anything/meta.json`

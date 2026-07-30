@@ -37,7 +37,8 @@ source metadata.
 - Curate reusable knowledge only in `entities/`, `concepts/`, `comparisons/`, and `queries/`.
 - Maintain `SCHEMA.md`, `index.md`, and `log.md` as the operational contract, catalog, and history.
 - Treat `inbox/` as temporary intake, `docs/` as documentation, and graph/runtime directories as
-  derived state rather than evidence.
+  derived state rather than evidence. The repository may version the two schema-allowlisted graph
+  snapshot files for sharing without making them canonical.
 
 Do not cite attachments, generated graphs, documentation diagrams, or an inbox item as canonical
 evidence.
@@ -114,8 +115,17 @@ python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate a --gate b
 ```
 
 Use `--require-clean-main` for scheduled graph generation. Run `--gate c` after graph generation
-to verify freshness, canonical coverage, required node fields, layers, tour steps, and dangling
-edges.
+to verify deterministic input-hash freshness, complete article/source coverage, required node
+fields, layers, tour steps, and dangling edges. Before Gate C, stamp the generated metadata:
+
+```bash
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --write-graph-input-metadata
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py \
+  --gate c --require-clean-main --allow-graph-output-changes
+```
+
+The second command permits dirty state only for the versioned
+`.understand-anything/knowledge-graph.json` and `.understand-anything/meta.json` outputs.
 
 The validator checks:
 
@@ -128,7 +138,8 @@ The validator checks:
    targets.
 5. Compare active canonical files with `index.md`; require a one-to-one, count-accurate catalog.
 6. Recompute every recorded raw body hash without rewriting the file.
-7. Confirm prior `log.md` entries remain unchanged and the new entry uses an allowed action.
+7. Validate every `log.md` heading and allowed action; use the Git diff to confirm prior entries
+   remain unchanged and the new entry is append-only.
 8. Report documented legacy coverage gaps separately from errors.
 9. Keep graph data and other generated state out of canonical counts and evidence checks.
 
@@ -152,6 +163,9 @@ For Hermes or another scheduler:
 - Regenerate a graph only after deterministic Gate A and Gate B pass.
 - Require every analysis batch to finish before replacing the last valid graph, then require
   deterministic Gate C to pass.
+- Limit a successful graph run to the two allowlisted versioned snapshot files. Stamp their input
+  fingerprint, return their diff for review, and do not commit, merge, or push unless the user
+  explicitly authorizes it.
 
 ## Use Obsidian and graph tools
 
@@ -159,13 +173,16 @@ Open the repository root as the Obsidian vault. Use Graph View for explicit cano
 `[[wikilinks]]`; keep `.obsidian/` workspace and personal plugin state local unless the repository
 contract explicitly allowlists a shared setting.
 
-Treat Understand Anything or other graph output as reproducible derived state. Lint canonical
-Markdown before generation, verify graph completeness and dangling edges afterward, and validate
-any proposed relationship against raw evidence before curating it.
+Treat Understand Anything or other graph output as reproducible derived state. The two versioned
+snapshot files make the same enriched graph available to authorized clones but remain non-evidence.
+Lint canonical Markdown before generation, verify the content fingerprint, complete coverage, and
+dangling edges afterward, and validate any proposed relationship against raw evidence before
+curating it.
 
 ## Protect sensitive and local state
 
 Never commit credentials, cookies, authentication state, personal notes, private Zotero notes,
-automation tokens, local databases, runtime logs, Obsidian workspace state, or generated graph
-caches. Inspect staged files and ignore behavior before every commit that changes integration or
-agent directories.
+automation tokens, local databases, runtime logs, Obsidian workspace state, graph intermediates,
+or generated caches. Commit graph output only when `SCHEMA.md` explicitly allowlists the snapshot
+path and Gate C passes. Inspect staged files and ignore behavior before every commit that changes
+integration, graph, or agent directories.

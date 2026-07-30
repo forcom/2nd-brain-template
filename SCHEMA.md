@@ -38,6 +38,8 @@ contains no raw source record and no canonical page.
 | `comparisons/` | Canonical pages whose exact `type` is `comparison`. |
 | `queries/` | Canonical filed syntheses whose exact `type` is `query`. |
 | `_archive/` | Fully superseded canonical pages removed from active navigation. |
+| `.understand-anything/knowledge-graph.json` | Versioned, reproducible graph snapshot for shared exploration; derived state, never evidence. |
+| `.understand-anything/meta.json` | Versioned graph provenance and deterministic input fingerprint. |
 
 ## File and frontmatter rules
 
@@ -181,3 +183,36 @@ For every canonical create, update, filed query, archive, or delete operation:
 When an index section exceeds 50 entries, divide it into stable subsections. When
 the full index exceeds 200 entries, add a thematic navigation map without changing
 the canonical count. Rotate the log only under its policy in `log.md`.
+
+## Versioned knowledge-graph snapshot
+
+The repository versions only `.understand-anything/knowledge-graph.json` and
+`.understand-anything/meta.json` so authorized clones can open the same enriched
+graph without first regenerating it. These files remain derived output: they are
+not raw evidence, canonical pages, active index entries, or valid `sources`.
+Legacy `.ua/`, `.understand-anything/intermediate/`, analyzer batches, dashboard
+tokens, caches, and other runtime files remain unversioned.
+
+Gate C identifies freshness by a deterministic graph-input fingerprint rather
+than requiring `meta.gitCommitHash` to equal the snapshot commit. The input set is:
+
+1. Every Git-visible Markdown article that the Understand Anything parser scans,
+   excluding root-level `index.md`, `log.md`, `CLAUDE.md`, `AGENTS.md`, and
+   `SOUL.md`.
+2. Root `index.md` and `log.md`, which affect categories and operation context.
+3. Every non-hidden Git-visible file below `raw/`, including a future explicitly
+   versioned attachment.
+
+For `sha256-path-size-bytes-v1`, sort repository-relative paths by their UTF-8
+bytes, initialize SHA-256 with the UTF-8 algorithm name followed by NUL, and then
+append for each input: UTF-8 path, NUL, decimal byte length, NUL, exact file bytes,
+and NUL. Store the result as `inputHash: sha256:<hex>`, plus the exact algorithm
+name and input count in `meta.json`.
+
+The graph project and metadata `gitCommitHash` values must match. They record the
+generation base commit for provenance and must resolve to the current commit or one
+of its ancestors. The value is not the freshness authority, because committing the
+graph necessarily creates a newer commit. Before replacing a shared snapshot, Gate
+A and Gate B must pass, every analyzer batch must finish, the input fingerprint
+must be written, temporary files must be removed, and Gate C must pass. A failed
+generation restores the previous versioned graph files.

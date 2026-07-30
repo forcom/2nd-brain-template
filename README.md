@@ -110,12 +110,19 @@ The repository root is both the wiki root and the Obsidian vault. All paths are 
 ├── templates/                # Validated note templates, created only when needed
 ├── _archive/                 # Fully superseded canonical knowledge, created only when needed
 ├── .obsidian/                # Local Obsidian configuration (Git-ignored)
+├── .understand-anything/     # Shared, versioned enriched-graph snapshot
+│   ├── knowledge-graph.json
+│   └── meta.json
 ├── SCHEMA.md                 # Authoritative directory, metadata, and integrity contract
 ├── index.md                  # Complete catalog of active canonical knowledge
 └── log.md                    # Append-only wiki operation history
 ```
 
-`raw/papers/files/`, `templates/`, and `_archive/` are created only when their workflows require them. Knowledge graph caches such as `.ua/` and other generated outputs are reproducible derived data, so they are not treated as canonical knowledge or source evidence.
+`raw/papers/files/`, `templates/`, and `_archive/` are created only when their workflows require
+them. The repository versions the validated `.understand-anything/knowledge-graph.json` and
+`meta.json` snapshot for authorized clones. The legacy `.ua/` path, analyzer intermediates, and
+other generated caches remain excluded. Every graph output is derived data, never canonical
+knowledge or source evidence.
 
 ### What the Structure Means
 
@@ -125,14 +132,14 @@ The repository root is both the wiki root and the Obsidian vault. All paths are 
 | Layer 1: source evidence | `raw/` | Preserves captured bodies and provenance metadata. After initial capture, the body is generally immutable; corrections and interpretation belong in canonical knowledge. |
 | Layer 2: canonical knowledge | `entities/`, `concepts/`, `comparisons/`, `queries/` | Synthesizes reusable knowledge from source evidence. The directory name must match the frontmatter `type`. |
 | Layer 3: operational metadata | `SCHEMA.md`, `index.md`, `log.md` | Defines the schema contract, active knowledge navigation, and change history. Apply their rules as one transaction whenever canonical knowledge changes. |
-| Supporting and derived artifacts | `docs/`, local `.obsidian/`, `.ua/` | Supports documentation, editing, and graph exploration but does not serve as evidence. `.obsidian/` and `.ua/` are excluded from Git; graph-proposed relationships remain hypotheses until verified against source material. |
+| Supporting and derived artifacts | `docs/`, local `.obsidian/`, `.ua/`, `.understand-anything/` | Supports documentation, editing, and graph exploration but does not serve as evidence. `.obsidian/`, legacy `.ua/`, and graph intermediates are excluded; only the validated graph/meta snapshot is versioned. Graph-proposed relationships remain hypotheses until verified against source material. |
 
 ## Quick Start
 
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:ains-lab/2nd-brain-template.git
+git clone git@github.com:forcom/2nd-brain-template.git
 cd 2nd-brain-template
 ```
 
@@ -169,7 +176,10 @@ Before adding knowledge, read [SCHEMA.md](SCHEMA.md), check [index.md](index.md)
 - **Canonical knowledge is selective.** Promote a subject only when it is central to one source or repeated across at least two sources. Add new evidence to an existing subject instead of creating a duplicate page.
 - **Canonical knowledge is connected.** When active canonical pages exist, every page must link to at least two distinct active pages other than itself using `[[wikilinks]]`.
 - **Changes are recorded together.** Creating, updating, filing a query, archiving, or deleting canonical knowledge is complete only after updating `index.md` and appending to `log.md`. Never rewrite or remove earlier log entries.
-- **Derived data stays separate.** Material under `docs/` and graph data under `.ua/` support analysis but are not source evidence. Never cite them as `raw/` evidence or promote them automatically into canonical knowledge.
+- **Derived data stays separate.** Material under `docs/` and graph data under `.ua/` or
+  `.understand-anything/` support analysis but are not source evidence. The validated graph/meta
+  pair is versioned only to share the same exploration snapshot. Never cite graph output as
+  `raw/` evidence or promote it automatically into canonical knowledge.
 
 ## Synchronization and Backup
 

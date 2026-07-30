@@ -42,14 +42,18 @@
 │   ├── architecture/      # Narrative architecture plus rendered exports
 │   ├── tech-stack/        # Editable and rendered technology-stack diagram
 │   └── workflow/          # Editable and rendered workflow diagram
+├── .understand-anything/
+│   ├── knowledge-graph.json # Versioned shared graph snapshot
+│   └── meta.json            # Input fingerprint and generation provenance
 ├── SCHEMA.md              # Authoritative content and integrity contract
 ├── index.md               # Complete active canonical catalog
 └── log.md                 # Append-only wiki operation history
 ```
 
 `raw/papers/files/`, `templates/`, and `_archive/` are schema-defined, on-demand
-paths. Ignored `.obsidian/` is local editor configuration; ignored `.ua/` and
-`.understand-anything/` are derived knowledge-graph state, never canonical evidence.
+paths. Ignored `.obsidian/` is local editor configuration and ignored `.ua/` is a
+legacy graph path. Only the two allowlisted `.understand-anything/` snapshot files
+are versioned; they remain derived state and never canonical evidence.
 
 ## WHERE TO LOOK
 
@@ -64,6 +68,7 @@ paths. Ignored `.obsidian/` is local editor configuration; ignored `.ua/` and
 | Preserve source evidence | Registered source directories under `raw/` | Body integrity boundary; preserve importer paths |
 | Curate reusable knowledge | `entities/`, `concepts/`, `comparisons/`, `queries/` | Folder and frontmatter `type` must agree |
 | Inspect architecture and diagrams | `docs/` | Deliverables only; not raw or canonical evidence |
+| Inspect the shared enriched graph | `.understand-anything/knowledge-graph.json` | Versioned derived snapshot; validate with Gate C |
 | Inspect local editor behavior | `.obsidian/` | Git-ignored; wikilinks enabled and attachments use `raw/assets` |
 
 ## CONTENT CONTRACT
@@ -72,7 +77,7 @@ paths. Ignored `.obsidian/` is local editor configuration; ignored `.ua/` and
 - Canonical frontmatter starts at byte zero and contains `title`, `created`,
   `updated`, `type`, `tags`, `sources`, `confidence`, `contested`, and `contradictions`.
 - Preserve `created`; bump `updated` whenever content or metadata changes.
-- Register tags in the `SCHEMA.md` taxonomy before use; 9 tags currently exist.
+- Register tags in the `SCHEMA.md` taxonomy before use; 21 tags currently exist.
 - Use `confidence: high` only when multiple sources support the content.
 - When `contested` is true, record dated, sourced unresolved positions in the body;
   `contradictions` lists conflicting canonical slugs or is empty.
@@ -126,7 +131,9 @@ the graph is built:
 
 ```bash
 python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate a --gate b
-python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate c
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --write-graph-input-metadata
+python3 .agents/skills/llm-wiki/scripts/validate-wiki.py \
+  --gate c --require-clean-main --allow-graph-output-changes
 ```
 
 No build, CI, or release pipeline is configured. The checker covers the deterministic
@@ -142,7 +149,8 @@ directly:
 - Raw hashes still match exact post-frontmatter bytes.
 - Obsidian JSON remains parseable after shared setting changes.
 - Before graph generation, lint canonical state; afterward verify `kind: knowledge`,
-  complete batches, freshness, required node fields, and no dangling edges.
+  complete batches, full article/source coverage, content-hash freshness, required
+  node fields, and no dangling edges.
 
 ## ANTI-PATTERNS
 
@@ -151,12 +159,14 @@ directly:
 - Do not edit raw bodies, invent provenance paths, or treat attachments as evidence.
 - Do not create passing-mention, isolated, free-form-tag, or duplicate canonical pages.
 - Do not rewrite prior `log.md` entries or silently omit index/log synchronization.
-- Do not treat `docs/`, `.ua/`, or `.understand-anything/` as evidence, auto-promote graph output, or
-  overwrite canonical Markdown from graph hypotheses; verify against raw sources.
+- Do not treat `docs/`, `.ua/`, or the versioned `.understand-anything/` snapshot
+  as evidence, auto-promote graph output, or overwrite canonical Markdown from
+  graph hypotheses; verify against raw sources.
 - Do not commit credentials, personal data, Obsidian workspace state, local plugin
-  symlinks, automation tokens/log URLs, copied assets, graph caches, `output/`, or
-  QA artifacts. The audited `.agents/skills/llm-wiki/` directory is the sole
-  allowlisted project skill; keep other `.agents/` contents ignored.
+  symlinks, automation tokens/log URLs, copied assets, graph intermediate/cache
+  files, `output/`, or QA artifacts. Only `knowledge-graph.json` and `meta.json`
+  are allowlisted graph outputs. The audited `.agents/skills/llm-wiki/` directory
+  is the sole allowlisted project skill; keep other `.agents/` contents ignored.
 
 ## NOTES
 

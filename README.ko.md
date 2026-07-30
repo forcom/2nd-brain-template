@@ -110,12 +110,19 @@
 ├── templates/                # 검증된 노트 양식(필요할 때 생성)
 ├── _archive/                 # 완전히 대체된 정식 지식(필요할 때 생성)
 ├── .obsidian/                # 로컬 Obsidian 설정(Git 제외)
+├── .understand-anything/     # 공유·버전 관리하는 확장 그래프 snapshot
+│   ├── knowledge-graph.json
+│   └── meta.json
 ├── SCHEMA.md                 # 폴더·메타데이터·무결성의 기준 계약
 ├── index.md                  # 활성 정식 지식의 전체 목록
 └── log.md                    # wiki 작업을 덧붙여 기록하는 변경 이력
 ```
 
-`raw/papers/files/`, `templates/`, `_archive/`는 해당 워크플로가 실제로 필요할 때만 만듭니다. `.ua/` 같은 지식그래프 캐시와 기타 생성 결과는 다시 만들 수 있는 파생 데이터이므로 정식 지식이나 원본 증거로 취급하지 않습니다.
+`raw/papers/files/`, `templates/`, `_archive/`는 해당 워크플로가 실제로 필요할 때만
+만듭니다. 권한 있는 사용자가 clone 직후 같은 그래프를 볼 수 있도록 검증된
+`.understand-anything/knowledge-graph.json`과 `meta.json` snapshot은 버전 관리합니다.
+이전 `.ua/` 경로, 분석 중간 파일과 기타 캐시는 계속 제외합니다. 모든 그래프 산출물은
+파생 데이터이며 정식 지식이나 원본 증거가 아닙니다.
 
 ### 구조가 의미하는 것
 
@@ -125,14 +132,14 @@
 | Layer 1: 원본 증거 | `raw/` | 수집 당시의 본문과 출처 메타데이터를 보존합니다. 최초 캡처 뒤 본문은 원칙적으로 수정하지 않으며, 해석과 정정은 정식 지식에 기록합니다. |
 | Layer 2: 정식 지식 | `entities/`, `concepts/`, `comparisons/`, `queries/` | 원본 증거를 인용해 반복 사용 가능한 지식으로 종합합니다. 폴더명과 frontmatter의 `type`이 반드시 일치해야 합니다. |
 | Layer 3: 운영 메타데이터 | `SCHEMA.md`, `index.md`, `log.md` | 스키마 계약, 활성 지식 탐색, 변경 이력을 담당합니다. 정식 지식을 변경할 때 세 파일의 규칙을 하나의 트랜잭션처럼 적용합니다. |
-| 보조·파생 산출물 | `docs/`, 로컬 `.obsidian/`, `.ua/` | 문서화, 편집 환경, 그래프 탐색을 지원하지만 출처 증거는 아닙니다. `.obsidian/`과 `.ua/`는 Git에서 제외하며, 특히 그래프가 제안한 관계는 원문 검증 전까지 가설로 다룹니다. |
+| 보조·파생 산출물 | `docs/`, 로컬 `.obsidian/`, `.ua/`, `.understand-anything/` | 문서화, 편집 환경, 그래프 탐색을 지원하지만 출처 증거는 아닙니다. `.obsidian/`, 이전 `.ua/`, 그래프 중간 파일은 제외하고 검증된 graph/meta snapshot만 버전 관리합니다. 그래프가 제안한 관계는 원문 검증 전까지 가설로 다룹니다. |
 
 ## 빠르게 시작하기
 
 ### 1. 저장소 복제
 
 ```bash
-git clone git@github.com:ains-lab/2nd-brain-template.git
+git clone git@github.com:forcom/2nd-brain-template.git
 cd 2nd-brain-template
 ```
 
@@ -169,7 +176,10 @@ cd 2nd-brain-template
 - **정식 지식은 선별해서 만듭니다.** 하나의 원본에서 중심적으로 다루거나 둘 이상의 원본에서 반복되는 주제만 페이지로 승격합니다. 이미 존재하는 주제에는 새 증거를 합칩니다.
 - **정식 지식은 서로 연결합니다.** 활성 정식 페이지가 있다면 각 페이지는 자신을 제외한 서로 다른 활성 페이지 두 개 이상에 `[[wikilinks]]`로 연결되어야 합니다.
 - **변경은 함께 기록합니다.** 정식 지식의 생성·수정·질의 편입·보관·삭제는 `index.md`와 `log.md` 갱신까지 완료되어야 하나의 작업으로 끝납니다. 이전 로그는 고치거나 지우지 않습니다.
-- **파생 데이터는 원본과 분리합니다.** `docs/`의 설명 자료와 `.ua/`의 그래프 데이터는 분석을 돕는 산출물입니다. 이를 `raw/` 증거처럼 인용하거나 자동으로 정식 지식에 승격하지 않습니다.
+- **파생 데이터는 원본과 분리합니다.** `docs/`와 `.ua/` 또는
+  `.understand-anything/`의 그래프 데이터는 분석을 돕는 산출물입니다. 검증된
+  graph/meta 두 파일은 같은 탐색 snapshot을 공유하기 위해서만 버전 관리합니다. 이를
+  `raw/` 증거처럼 인용하거나 자동으로 정식 지식에 승격하지 않습니다.
 
 ## 동기화와 백업
 
