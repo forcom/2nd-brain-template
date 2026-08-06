@@ -250,3 +250,15 @@
 - Deleted:
   - `.claude/settings.local.json` (was untracked)
   - `.venv/` (was untracked)
+
+## [2026-08-06] update | scoped factlog sync to the HLS comparison set
+
+- Scope: `policy/sync-ignore.md` now excludes 46 of 50 sources, leaving the four Annex SL management-system standards that share the HLS structure — ISO 9001, ISO/IEC 27001, ISO/IEC 42001, and ISO 14001, all Korean editions so clause titles stay comparable across them.
+- Rationale: the fact model has never run against a real standard. Phase 1 exercises the parts most likely to be wrong — clause namespacing, `clause_title` as a single-valued relation, and `maps_to_hls` across standards — before the cost of extracting all 50 is incurred.
+- Reversal: excluded sources are staged out, not judged irrelevant; `factlog ignore --remove <pattern>` widens the scope, and ignoring stops only re-extraction while already-merged facts are kept.
+- Blocked: `/factlog sync` could not run this session. A stale `FACTLOG_PYTHON` remains in the session process environment from the settings file deleted earlier, holding the literal unexpanded `${CLAUDE_PROJECT_DIR}/.venv/bin/python`; the CLI exits 127 and the PreToolUse gate hook fails closed on every write. A new session clears it. No extraction was attempted and no `runs/*.json` was written.
+- Verification: `factlog sources` reports 4 in scope and 46 sync-ignored. Still 0 facts.
+- Canonical state: unchanged at 18 pages and 18 index entries; `index.md` was not modified.
+- Updated:
+  - `.factlog/policy/sync-ignore.md`
+  - `log.md`
