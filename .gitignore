@@ -7,6 +7,9 @@ config/integrations.local.toml
 .agents/skills/*
 !.agents/skills/llm-wiki/
 !.agents/skills/llm-wiki/**
+!.agents/plugins/
+.agents/plugins/*
+!.agents/plugins/factlog
 .env
 .env.*
 !.env.example
@@ -46,6 +49,11 @@ raw/papers/files/*
 !raw/papers/files/.gitkeep
 raw/assets/*
 !raw/assets/.gitkeep
+
+# factlog KB: version the reviewable trust boundary, ignore regenerable engine state
+.factlog/runs/
+.factlog/pages/
+.factlog/facts/logic_report.txt
 
 # NotebookLM, legacy graph paths, graph intermediates, and other generated output
 output/

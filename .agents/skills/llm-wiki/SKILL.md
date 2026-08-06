@@ -64,6 +64,57 @@ the old captured body.
 For importer-preserved legacy records, keep paths and bytes stable. Report missing hashes or final
 newlines as documented coverage gaps instead of normalizing the files.
 
+## Extract and verify facts with factlog
+
+The `.factlog/` knowledge base reads `raw/` in place through the `.factlog/sources` symlink. It
+never writes to `raw/`, so running it does not touch Layer 1 immutability.
+
+factlog requires Python 3.11+, which the system `python3` may not provide. Run the CLI through the
+project virtualenv (`.venv/bin/python -m factlog ...`), created with
+`uv venv --python 3.11 .venv && uv pip install --python .venv/bin/python -r
+.agents/plugins/factlog/requirements.txt -e .agents/plugins/factlog`.
+
+The factlog plugin's gate hook resolves its interpreter from `FACTLOG_PYTHON` and blocks edits
+when that is unset or unusable. Set it to an absolute path in the gitignored
+`.claude/settings.local.json`; a settings `env` value is not shell-expanded, so
+`${CLAUDE_PROJECT_DIR}` is passed through literally and fails. A new session must start before a
+settings change takes effect.
+
+After a raw record is captured and the contract checks pass, extract its claims and reconcile them
+against the facts already accepted:
+
+```bash
+/factlog sync                 # extract candidate claims from raw/ into .factlog/facts/candidates.csv
+/factlog query                # compile policy/questions.md into facts/query.dl
+/factlog check                # compile accepted facts, run the logic check, print the report
+```
+
+Run `query` before `check`; the logic check evaluates the draft `query` produces. `sync`, `query`,
+`check`, `repair`, and `ask` exist only as slash commands because each needs an in-session LLM step.
+Everything else is Python CLI.
+
+Review each candidate before it can influence a canonical page. Approval is a human step:
+
+```bash
+.venv/bin/python -m factlog accept "<subject>" <relation> "<object>"
+.venv/bin/python -m factlog reject "<subject>" <relation> "<object>"
+.venv/bin/python -m factlog amend ...          # correct a value; never hand-edit candidates.csv
+.venv/bin/python -m factlog provenance "<subject>" <relation> "<object>"   # trace back to the raw/ record
+```
+
+Use the result as a research aid, not as evidence:
+
+- Cite the `raw/` record that `factlog provenance` reports. Never cite `candidates.csv`,
+  `accepted.dl`, `logic_report.txt`, or a `runs/` record as a canonical `sources` entry.
+- Never promote a `needs_review` candidate into a canonical page. It has not cleared the trust
+  boundary.
+- Treat a reported conflict as a signal to read both cited raw records. When they genuinely
+  disagree, record it on the canonical page with `contested: true` and populate `contradictions`.
+- Extraction is not deterministic; verification is. Re-running `sync` may yield different
+  candidates, so never treat its absence of a claim as evidence of absence.
+
+Run `.venv/bin/python -m factlog eject <path>` when a raw record is superseded, so its facts retire with it.
+
 ## Ingest or repair Zotero material
 
 Read [references/zotero-ingest.md](references/zotero-ingest.md) before any Zotero ingest, batch,

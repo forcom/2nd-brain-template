@@ -40,6 +40,14 @@ contains no raw source record and no canonical page.
 | `_archive/` | Fully superseded canonical pages removed from active navigation. |
 | `.understand-anything/knowledge-graph.json` | Versioned, reproducible graph snapshot for shared exploration; derived state, never evidence. |
 | `.understand-anything/meta.json` | Versioned graph provenance and deterministic input fingerprint. |
+| `.factlog/sources` | Symlink to `raw/`; the factlog knowledge base reads evidence in place and never writes here. |
+| `.factlog/facts/` | Extracted claim review queue (`candidates.csv`) and accepted engine input (`accepted.dl`); derived state, never evidence. |
+| `.factlog/policy/` | Hand-edited factlog review questions, logic policy, and relation declarations. |
+| `.factlog/decisions/` | Recorded factlog review decisions and open questions. |
+
+A factlog claim is never a citable source. Cite the `raw/` record the claim was
+extracted from, which `factlog provenance` reports. A `needs_review` candidate has
+not cleared the human trust boundary and must not enter a canonical page at all.
 
 ## File and frontmatter rules
 

@@ -1,0 +1,3 @@
+[submodule ".agents/plugins/factlog"]
+	path = .agents/plugins/factlog
+	url = https://github.com/semantic-reasoning/factlog.git

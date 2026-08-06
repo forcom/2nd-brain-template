@@ -309,10 +309,8 @@ def write_graph_input_metadata(root: Path) -> dict[str, Any]:
     meta["inputHash"] = input_hash
     meta["inputHashAlgorithm"] = GRAPH_INPUT_HASH_ALGORITHM
     meta["inputFiles"] = len(input_paths)
-    meta_path.write_text(
-        json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-        newline="\n",
+    meta_path.write_bytes(
+        (json.dumps(meta, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     )
     return {
         "ok": True,

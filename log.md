@@ -198,3 +198,39 @@
   - `queries/ua-knowledge-graph-workflow.md`
   - `.understand-anything/knowledge-graph.json`
   - `.understand-anything/meta.json`
+
+## [2026-08-06] update | factlog fact-extraction and verification integration
+
+- Tooling: added `semantic-reasoning/factlog` @ `6c1d5b6` as the Git submodule `.agents/plugins/factlog`, versioned through a new `.gitignore` exception under the otherwise ignored `.agents/` tree.
+- Runtime: factlog requires Python 3.11+ while the system interpreter is 3.10, so the CLI runs through the unversioned `.venv` (pyrewire 1.0.4, factlog 0.8.0). `FACTLOG_PYTHON` pins the plugin hook to that interpreter from the gitignored `.claude/settings.local.json`, because a settings `env` value is passed through literally and `${CLAUDE_PROJECT_DIR}` does not expand, so only an absolute machine-specific path works.
+- Ingest wiring: `.factlog/sources` is a symlink to `raw/`, so factlog reads all 50 raw records in place; it writes only under `.factlog/` and never mutates Layer 1 evidence.
+- Evidence policy: factlog output is derived state. `candidates.csv`, `accepted.dl`, `logic_report.txt`, and `runs/` records are never valid canonical `sources`; a `needs_review` candidate must not enter a canonical page, and provenance resolves back to the cited `raw/` record.
+- Fact model: registered `clause_title`, `obligation`, `annex_status`, and `edition_year` as attribute relations; declared `clause_title`, `maps_to_hls`, `annex_status`, and `edition_year` single-valued for conflict detection. `obligation` is deliberately multi-valued because one clause legitimately carries several modal levels.
+- Domain policy: research questions require clauses namespaced by standard and edition, and logic rules cover certification-mandatory scope, HLS integration points, strictest-obligation resolution across standards, deliverable scope, and edition currency.
+- Versioning split: `.factlog/facts/`, `policy/`, `decisions/`, and `templates/` are versioned as the reviewable trust boundary; `.factlog/runs/`, `pages/`, and `logic_report.txt` are ignored as regenerable engine state.
+- Validator fix: `--write-graph-input-metadata` now writes `meta.json` bytes directly, since `write_text` with `newline="\n"` is not a valid combination for byte-exact output.
+- Verification: Gate A and Gate B pass with 0 errors; `factlog status` resolves 50 sources, 4 attribute relations, and 4 single-valued relations. No `sync` has run yet, so the fact model is unvalidated against the corpus and 0 facts exist.
+- Canonical state: unchanged at 18 pages and 18 index entries; no canonical page was created or edited, so `index.md` was not modified.
+- Updated:
+  - `.agents/plugins/factlog` (new submodule)
+  - `.agents/skills/llm-wiki/SKILL.md`
+  - `.agents/skills/llm-wiki/scripts/validate-wiki.py`
+  - `.factlog/decisions/open-questions.md`
+  - `.factlog/facts/candidates.csv`
+  - `.factlog/policy/attribute-relations.md`
+  - `.factlog/policy/logic-policy.md`
+  - `.factlog/policy/questions.md`
+  - `.factlog/policy/single-valued.md`
+  - `.factlog/policy/prompts/natural_language_to_policy.md`
+  - `.factlog/policy/prompts/self_correct.md`
+  - `.factlog/policy/prompts/text_to_datalog.md`
+  - `.factlog/policy/prompts/text_to_fact.md`
+  - `.factlog/policy/sync-ignore.md`
+  - `.factlog/policy/typed-relations.md`
+  - `.factlog/sources` (symlink to `raw/`)
+  - `.factlog/templates/pages.md`
+  - `.gitignore`
+  - `.gitmodules`
+  - `CLAUDE.md`
+  - `SCHEMA.md`
+  - `log.md`
