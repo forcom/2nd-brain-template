@@ -69,16 +69,13 @@ newlines as documented coverage gaps instead of normalizing the files.
 The `.factlog/` knowledge base reads `raw/` in place through the `.factlog/sources` symlink. It
 never writes to `raw/`, so running it does not touch Layer 1 immutability.
 
-factlog requires Python 3.11+, which the system `python3` may not provide. Run the CLI through the
-project virtualenv (`.venv/bin/python -m factlog ...`), created with
-`uv venv --python 3.11 .venv && uv pip install --python .venv/bin/python -r
-.agents/plugins/factlog/requirements.txt -e .agents/plugins/factlog`.
+factlog requires Python 3.11+ and runs on the ambient `python3`. This repository expects a pyenv
+interpreter on the 3.14 line; install the CLI into it with
+`python3 -m pip install -r .agents/plugins/factlog/requirements.txt -e .agents/plugins/factlog`.
 
-The factlog plugin's gate hook resolves its interpreter from `FACTLOG_PYTHON` and blocks edits
-when that is unset or unusable. Set it to an absolute path in the gitignored
-`.claude/settings.local.json`; a settings `env` value is not shell-expanded, so
-`${CLAUDE_PROJECT_DIR}` is passed through literally and fails. A new session must start before a
-settings change takes effect.
+The factlog plugin's gate hook resolves its interpreter from `FACTLOG_PYTHON` when that is set, and
+blocks edits when the value does not point at a usable Python 3.11+. Leave it unset so the hook
+falls through to `python3`.
 
 After a raw record is captured and the contract checks pass, extract its claims and reconcile them
 against the facts already accepted:
@@ -96,10 +93,10 @@ Everything else is Python CLI.
 Review each candidate before it can influence a canonical page. Approval is a human step:
 
 ```bash
-.venv/bin/python -m factlog accept "<subject>" <relation> "<object>"
-.venv/bin/python -m factlog reject "<subject>" <relation> "<object>"
-.venv/bin/python -m factlog amend ...          # correct a value; never hand-edit candidates.csv
-.venv/bin/python -m factlog provenance "<subject>" <relation> "<object>"   # trace back to the raw/ record
+python3 -m factlog accept "<subject>" <relation> "<object>"
+python3 -m factlog reject "<subject>" <relation> "<object>"
+python3 -m factlog amend ...          # correct a value; never hand-edit candidates.csv
+python3 -m factlog provenance "<subject>" <relation> "<object>"   # trace back to the raw/ record
 ```
 
 Use the result as a research aid, not as evidence:
@@ -113,7 +110,7 @@ Use the result as a research aid, not as evidence:
 - Extraction is not deterministic; verification is. Re-running `sync` may yield different
   candidates, so never treat its absence of a claim as evidence of absence.
 
-Run `.venv/bin/python -m factlog eject <path>` when a raw record is superseded, so its facts retire with it.
+Run `python3 -m factlog eject <path>` when a raw record is superseded, so its facts retire with it.
 
 ## Ingest or repair Zotero material
 

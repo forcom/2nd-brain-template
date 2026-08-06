@@ -234,3 +234,19 @@
   - `CLAUDE.md`
   - `SCHEMA.md`
   - `log.md`
+
+## [2026-08-06] update | factlog runtime moved from project venv to pyenv python3
+
+- Interpreter: installed Python 3.14.6 with pyenv and set it as the pyenv global version, so the ambient `python3` now satisfies factlog's 3.11+ requirement directly. Python 3.10.19 and 3.14.2 remain installed; `pyenv local <version>` still overrides per directory.
+- Reverted: removed the unversioned `.venv`, uninstalled the virtualenv indirection, and installed `pyrewire 1.0.4` and `factlog 0.8.0` into the pyenv interpreter instead. `python3 -m factlog doctor` reports no problems.
+- Reverted: deleted the machine-local `.claude/settings.local.json` that pinned `FACTLOG_PYTHON`. The plugin gate hook now falls through to `python3`, so the variable must stay unset; a stale value blocks edits.
+- Skill: `.agents/skills/llm-wiki/SKILL.md` now documents the pyenv 3.14 expectation and calls the CLI as `python3 -m factlog ...` rather than through a virtualenv path.
+- Supersedes: the runtime bullets of the preceding `[2026-08-06] update | factlog fact-extraction and verification integration` entry. The ingest wiring, evidence policy, fact model, and domain policy recorded there are unchanged.
+- Verification: Gate A and Gate B pass with 0 errors. Still 0 facts; no `sync` has run, so the fact model remains unvalidated against the corpus.
+- Canonical state: unchanged at 18 pages and 18 index entries; `index.md` was not modified.
+- Updated:
+  - `.agents/skills/llm-wiki/SKILL.md`
+  - `log.md`
+- Deleted:
+  - `.claude/settings.local.json` (was untracked)
+  - `.venv/` (was untracked)
