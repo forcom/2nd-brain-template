@@ -22,6 +22,7 @@ A Markdown/Obsidian second-brain wiki, not a software project — there is no bu
 ## Non-negotiable rules
 
 - Never edit a `raw/*` body after capture (the only exceptions are the two narrow metadata-repair operations defined in `SCHEMA.md`).
+- Capture a PDF by reading its rendered page images, never with an OCR tool and never from the embedded text layer — Korean OCR is unreliable and the KS text layers drop table columns. See "PDF page images are the evidence" in `SCHEMA.md`.
 - Every canonical page edit is only complete once `index.md` and `log.md` are updated in the same change — never rewrite or remove existing `log.md` entries.
 - Canonical `sources` must point to real files under registered `raw/` subdirectories; a PDF/image attachment alone is not a valid source.
 - Every tag used on a canonical page must already be registered in the SCHEMA.md tag taxonomy.

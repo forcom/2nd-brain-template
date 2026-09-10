@@ -11,10 +11,17 @@
 # across standards.
 #
 # Kept in scope (all Korean, so HLS clause titles stay comparable):
-#   papers/ks-q-iso-9001-20241213-ko.md        ISO 9001 QMS
-#   papers/ks-x-iso-iec-27001-20241030-ko.md   ISO/IEC 27001 ISMS
-#   papers/ks-x-iso-iec-42001-20251030-ko.md   ISO/IEC 42001 AIMS
-#   papers/ks-i-iso-14001-20210928-ko.md       ISO 14001 EMS
+#   papers/ks-q-iso-9001-20241213-ko-llmvision.md        ISO 9001 QMS
+#   papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md   ISO/IEC 27001 ISMS
+#   papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md   ISO/IEC 42001 AIMS
+#   papers/ks-i-iso-14001-20210928-ko-llmvision.md       ISO 14001 EMS
+#
+# Added 2026-09-10 — the structure the four above are compared against:
+#   papers/iso-iec-directives-part1-annex-sl-2020-en.md  Annex SL (HLS), 11th ed.
+#   papers/iso-iec-harmonized-structure-mss-20260701-en.md  HS (former Appendix 2), 2026-07-01
+# Without it the HLS slot entities had no source and `maps_to_hls` was fabricated;
+# see the 2026-09-10 entry in decisions/open-questions.md. English, unlike the four
+# Korean captures, so slot titles are quoted from Annex SL rather than translated.
 #
 # Everything below is excluded from THIS PHASE ONLY, not judged irrelevant.
 # Widen the scope by removing entries:  factlog ignore --remove <pattern>
@@ -32,6 +39,11 @@
 - notebooklm/understand-anything-github.md
 - notebooklm/zotero-mcp-github.md
 - papers/iso-iec-27001-2022-en.md
+# superseded by the -llmvision page-image re-captures of the same PDFs:
+- papers/ks-x-iso-iec-27001-20241030-ko.md
+- papers/ks-q-iso-9001-20241213-ko.md
+- papers/ks-x-iso-iec-42001-20251030-ko.md
+- papers/ks-i-iso-14001-20210928-ko.md
 - papers/iso-iec-27701-2019-en.md
 - papers/iso-iec-27701-2025-en.md
 - papers/iso-iec-42001-2023-en.md

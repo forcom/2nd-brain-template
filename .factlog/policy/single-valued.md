@@ -23,6 +23,18 @@
 # One edition is issued in one year.
 - edition_year
 
+# A standard applies exactly one harmonized clause structure. ISO moved from the
+# Annex SL HLS (2012-2020) to the Harmonized Structure (2021-), and the two number
+# clause 10 in opposite order, so a standard claiming both means the structure was
+# inferred from the year instead of read from the body.
+- structure_family
+
+# One KS standard is based on exactly one ISO standard edition.
+- based_on
+
+# One ISO edition has one ordinal (제N판).
+- iso_edition_ordinal
+
 # NOT single-valued, deliberately:
 #   obligation        — one clause normally carries several requirements at
 #                       different modal levels (a shall sentence and a should

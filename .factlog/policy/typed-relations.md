@@ -29,3 +29,6 @@
 # 2025, for example), so edition year must be comparable — "which edition is
 # current" and "what changed after 2022" are range queries, not string matches.
 - `edition_year` : date as edition_year_value
+
+# 같은 표준의 판 순서(제2판 → 제5판)는 문자열이 아니라 순위 비교 대상이다.
+- `iso_edition_ordinal` : ordinal as iso_edition_ordinal_value

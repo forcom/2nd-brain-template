@@ -10,3 +10,6 @@
 - obligation
 - annex_status
 - edition_year
+- structure_family
+- iso_edition_ordinal
+- control_objective

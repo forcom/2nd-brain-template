@@ -1,0 +1,40 @@
+// generated from policy/logic-policy.md
+// run tools/generate_logic_policy.py to regenerate
+
+.decl policy_match(entity: symbol, reason: symbol)
+.decl requires_review(entity: symbol, reason: symbol)
+
+// certification_mandatory
+policy_match(X, "certification_mandatory") :-
+  relation(X, "obligation", _),
+  relation(X, "annex_status", _).
+
+// cross_structure_integration_point
+policy_match(X, "cross_structure_integration_point") :-
+  relation(X, "slot_equivalent_to", _).
+
+// deliverable_scope
+policy_match(X, "deliverable_scope") :-
+  relation(X, "requires_document", _).
+
+// hls_integration_point
+policy_match(X, "hls_integration_point") :-
+  relation(X, "maps_to_hls", _).
+
+// hls_strictest_wins
+policy_match(X, "hls_strictest_wins") :-
+  relation(X, "obligation", _).
+
+// normative_annex_item
+policy_match(X, "normative_annex_item") :-
+  relation(X, "belongs_to_annex", _),
+  relation(X, "annex_status", _),
+  relation(X, "made_binding_by", _).
+
+// edition_currency
+requires_review(X, "edition_currency") :-
+  relation(X, "supersedes", _).
+
+// structure_family_read_not_inferred
+requires_review(X, "structure_family_read_not_inferred") :-
+  relation(X, "structure_family", _).

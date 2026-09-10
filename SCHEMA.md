@@ -119,11 +119,57 @@ a documented format gap, not permission to alter the immutable raw bytes.
 A local PDF capture under `raw/papers/` records `source_type`, the source basename
 without a user-specific absolute path, document identifier, language, page and byte
 counts, source-PDF SHA-256, extraction method and quality, extracted-text SHA-256,
-`ingested`, and the post-frontmatter body `sha256`. Text-layer extraction and OCR
-are both permitted when their method is explicit. Normalize only during initial
+`ingested`, and the post-frontmatter body `sha256`. Normalize only during initial
 capture: use LF, replace PDF form feeds with numbered page markers, remove NUL and
 backspace controls, and end with one LF. Do not copy the PDF into
 `raw/papers/files/` unless attachment preservation is explicitly required.
+
+### PDF page images are the evidence
+
+**The rendered page image is the source of truth for a PDF capture. Transcribe it
+by reading the image. Do not capture a PDF body with an OCR tool, and do not
+capture it from the PDF's embedded text layer.** New PDF captures record
+`extraction_method: llm-vision-transcription` and an `extraction_quality` of
+`llm-vision-verbatim-unreviewed` until a human proofreads the transcription against
+the page images, at which point it becomes `llm-vision-verbatim-reviewed`.
+
+Both rejected methods lose evidence that the page image preserves, and both failed
+on this corpus:
+
+- **Embedded text layer.** A text layer is a claim about the page, not the page. The
+  KS standards were published through a renderer that reflows the page before
+  writing the text layer, so `pdftotext -layout` merges the three columns of the
+  ISO/IEC 27001 Annex A control table (번호 │ 제목 │ 통제) onto one line and truncates
+  the control sentence at the right margin. Word bounding boxes do not recover the
+  column split either, because the reflow already destroyed it. Rendering the same
+  pages and reading them recovered all 114 control titles and corrected 9 of them.
+- **OCR tools.** Korean OCR accuracy is poor enough that a Korean capture cannot be
+  trusted, which is the governing reason for this rule. Accuracy is not reliable on
+  Latin scripts either: on an image-only PDF, `tesseract -l eng` rendered the ISO
+  cover block "ISO / International Standard" as `1so International`.
+
+Diagnosing a PDF is not capturing it. Checking whether a text layer exists
+(`pdftotext … | wc -c`) or rendering pages (`pdftoppm -r 150 -png`) is expected
+preparation; only the transcription that reaches the raw body is constrained.
+
+This also bounds the factlog plugin, which reads `raw/` in place through
+`.factlog/sources`. Its `factlog ingest` converts binary sources with `pdftotext`
+into `.factlog/runs/sources/`, which would reintroduce a text-layer body as the
+thing facts cite. Keep binary files out of registered `raw/` source directories so
+that converter never fires; a PDF belongs in a capture, not in `raw/` itself.
+
+Transcribe verbatim, page by page, one `<!-- PDF page N -->` marker per source page,
+preserving the reading order, headings, list markers, and table row structure that
+the image shows. Do not summarize, reorder, translate, correct, or complete text
+that the page does not contain. Where the page itself is illegible, mark the gap
+rather than guessing.
+
+Raw bodies are immutable, and re-extracting a PDF with a better method is not one of
+the two permitted mutations below. Records captured before this rule keep their
+bytes, their `sha256`, and their original `extraction_method` value
+(`poppler-pdftotext-layout`, `tesseract-ocr-…`). To supersede one, capture a **new
+versioned record** beside it, and record in `log.md` which record canonical pages
+should cite.
 
 Only these raw-record mutations are allowed:
 

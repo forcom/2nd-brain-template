@@ -61,6 +61,32 @@ For web content, preserve the original URL and capture date. When the upstream p
 a new versioned raw capture unless `SCHEMA.md` explicitly defines another operation; do not rewrite
 the old captured body.
 
+### Ingest a PDF from its page images
+
+The rendered page image is the evidence. Render the pages, read them, and transcribe verbatim:
+
+```bash
+pdftoppm -r 150 -png "<source.pdf>" <workdir>/pg    # then read each pg-NN.png and transcribe
+```
+
+**Do not use an OCR tool (`tesseract`, `ocrmypdf`), and do not build the body from the PDF's
+embedded text layer (`pdftotext`).** Korean OCR is unreliable, and a text layer is a claim about
+the page rather than the page — the KS standards' text layers are reflowed, which merges the
+ISO/IEC 27001 Annex A table columns and truncates control sentences at the right margin. Probing
+for a text layer or rendering images is diagnosis and is fine; the constraint is on the body that
+reaches `raw/`.
+
+Record `extraction_method: llm-vision-transcription` and
+`extraction_quality: llm-vision-verbatim-unreviewed` (`…-reviewed` once a human has proofread it
+against the images). Keep one `<!-- PDF page N -->` marker per source page and transcribe reading
+order, headings, list markers, and table row structure as shown. Never summarize, reorder,
+translate, or complete text the page does not contain; mark illegible spans instead of guessing.
+
+Budget for it: a 46-page standard is a multi-turn job. Write each page to its own file as you go so
+an interrupted ingest resumes instead of restarting, and assemble the raw record only once every
+page exists. See `SCHEMA.md` for the full contract, including how to supersede a record captured
+under the older text-layer/OCR rule.
+
 For importer-preserved legacy records, keep paths and bytes stable. Report missing hashes or final
 newlines as documented coverage gaps instead of normalizing the files.
 

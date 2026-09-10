@@ -26,7 +26,7 @@
 
 ## Comparisons
 
-- [[iso-standards-portfolio-map]] — 수집한 37개 ISO·IEC·KS PDF의 판본, 역할과 표준군 인벤토리.
+- [[iso-standards-portfolio-map]] — 수집한 37개 ISO·IEC·KS PDF의 판본, 역할과 표준군 인벤토리. (2026-08-27 KS X ISO/IEC 27001 판번호 `:2014`→`:2013` 정정)
 - [[knowledge-tool-roles]] — Zotero, NotebookLM, LLM Wiki, Obsidian과 그래프 도구의 책임 비교.
 
 ## Queries

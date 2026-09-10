@@ -101,6 +101,13 @@ are versioned; they remain derived state and never canonical evidence.
 - Only the Zotero metadata-repair and NotebookLM frontmatter-mapping operations
   defined in `SCHEMA.md` may mutate a raw record; follow their byte-preservation
   requirements exactly.
+- Capture a PDF from its **rendered page images**, transcribed by reading them
+  (`extraction_method: llm-vision-transcription`). Never capture a PDF body with an
+  OCR tool or from its embedded text layer: Korean OCR is unreliable, and the KS
+  text layers are reflowed and drop table columns. Rendering and text-layer probing
+  are allowed as diagnosis; only the body that lands in `raw/` is constrained.
+- Re-extracting a PDF with a better method is not a permitted mutation. Add a new
+  versioned record beside the old one and say in `log.md` which one to cite.
 - Put corrections and interpretation in canonical pages, never in captured text.
 - Canonical `sources` entries must be exact, existing repository-relative raw
   Markdown paths under a source directory registered in `SCHEMA.md`. Assets and

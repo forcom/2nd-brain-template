@@ -1,7 +1,7 @@
 ---
 title: ISO 표준 포트폴리오 맵
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-08-27
 type: comparison
 tags:
   - comparison
@@ -34,6 +34,7 @@ sources:
   - raw/papers/ks-x-iso-iec-25000-20230421-ko.md
   - raw/papers/ks-x-iso-iec-25010-20210819-ko.md
   - raw/papers/ks-x-iso-iec-27001-20241030-ko.md
+  - raw/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md
   - raw/papers/ks-x-iso-iec-27002-20251223-ko.md
   - raw/papers/ks-x-iso-iec-27017-20241030-ko.md
   - raw/papers/ks-x-iso-iec-27018-20241030-ko.md
@@ -113,7 +114,7 @@ contradictions: []
 | 수집 문서 | 언어 | 역할 |
 | --- | --- | --- |
 | ISO/IEC 27001:2022 | 영어 | 정보보호경영시스템 요구사항, 제3판. ^[raw/papers/iso-iec-27001-2022-en.md] |
-| KS X ISO/IEC 27001:2014 | 한국어 | 정보보호경영시스템 요구사항의 KS 판본. ^[raw/papers/ks-x-iso-iec-27001-20241030-ko.md] |
+| KS X ISO/IEC 27001:2013 | 한국어 | 정보보호경영시스템 요구사항의 KS 판본. 표지·본문 표제지·해설이 모두 `:2013`으로 표기하며, 러닝헤더의 `:2014`는 개정일(2014-12-12)이다. ^[raw/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md] |
 | KS X ISO/IEC 27002:2022 | 한국어 | 정보보호 통제 지침. ^[raw/papers/ks-x-iso-iec-27002-20251223-ko.md] |
 | KS X ISO/IEC 27017:2015 | 한국어 | 클라우드 서비스 정보보호 통제 지침. ^[raw/papers/ks-x-iso-iec-27017-20241030-ko.md] |
 | KS X ISO/IEC 27018:2014 | 한국어 | 공공 클라우드 PII 처리자의 보호 실무지침. ^[raw/papers/ks-x-iso-iec-27018-20241030-ko.md] |
