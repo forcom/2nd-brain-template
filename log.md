@@ -621,3 +621,21 @@
 - 지표: engine facts 1,926 → 2,116. `cross_structure_pair` 33 → 66,
   `certification_mandatory` 309 → 344. errors 0 / warnings 0.
 - `inbox/obligation-audit/extract.py` 에 영문 조동사 판정을 `lang` 인자로 추가. 한국어 감사 0/0 유지.
+
+## [2026-09-11] lint | 대기 사실 137행 전량 처리 — 잔여 1행
+
+- ① `control_objective` 45행 수락(27001 35 + 42001 10, 부속서 그룹과 1:1). 검증에서 14행이
+  원문과 달라 `factlog amend --set-object` 로 교정했다 — 13행은 약 50자에서 잘렸고 1행은
+  띄어쓰기 훼손(27001 A.9.2). 교정 후 45/45 원문 일치 재확인. 42001 은 `목표:` 표기를 쓴다.
+- ② 고아 교정 `HS 6.3 변경의 기획` → `HS 6.3`, 같은 근거의 HS 전용 슬롯 9.3.1~9.3.3 추가(총 4행).
+  9.2.1·9.2.2 는 HLS 에도 번호가 있어 제외. `introduced_in_structure` 를 attribute-relations 에 등록.
+  14001:2026 누락분 추출 — edition_year date(2026), iso_edition_ordinal ordinal(4),
+  supersedes ISO 14001:2015 및 /Amd 1:2024. KS 재발행은 `supersedes` 유지.
+  `structure_family` 는 본문 선언이 있는 3건만 수락, 9001 은 needs_review 유지.
+- ③ `requires_document` 71행 폐기 → 불리언 `requires_documented_information` 142행.
+  구 행을 옮기지 않고 본문에서 재도출했고, 판정 기준을 두 번 고쳤다(명사구만 보다 27001 6.1.3 의
+  동사형 "문서화하여 유지하여야 한다" 를 놓쳐 어간으로 확장, 비고 전용 언급 배제).
+  폐기분 중 14001 10.3·9001 10.3 은 문서화 언급이 없어 거짓이었다.
+- 지표: engine facts 2,116 → 2,330, review facts 137 → 1, errors 0 / warnings 0.
+- 새로 드러난 규칙 결함: `structure_family_read_not_inferred` 와 `edition_currency` 생성본도
+  퇴화했다(지목 대상이 반대이거나 엉뚱함). extra.dl 손작성이 해법이며 미착수 — open-questions 기록.

@@ -5314,6 +5314,294 @@
 - needs_review: ISO 14001:2026 Annex A / annex_status / informative (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차에 "(informative)" 로 표기
 
 - needs_review: ISO 14001:2026 Annex A / clause_title / Guidance on the use of this document (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차 표제 그대로
+
+- needs_review: ISO 14001:2026 / edition_year / date(2026) (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 표지: "Fourth edition / 2026-04"
+
+- needs_review: ISO 14001:2026 / iso_edition_ordinal / ordinal(4) (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 표지 "Fourth edition"; 머리말 "This fourth edition cancels and replaces the third edition"
+
+- needs_review: ISO 14001:2026 / supersedes / ISO 14001:2015 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 머리말: "This fourth edition cancels and replaces the third edition (ISO 14001:2015), which has been technically revised."
+
+- needs_review: ISO 14001:2026 / supersedes / ISO 14001:2015/Amd 1:2024 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 머리말: "It also replaces the Amendment ISO 14001:2015/Amd 1:2024."
+
+- needs_review: HS 6.3 / introduced_in_structure / HS (sources/papers/iso-iec-harmonized-structure-mss-20260701-en.md, confidence=0.90) - HS 규범 좌열에 "6.3 Planning of changes" 이 있으나 Annex SL(2020) HLS 에는 대응 슬롯이 없다 (양쪽 캡처 대조). 구 주어 "HS 6.3 변경의 기획" 은 제목이 id 에 박힌 형식이라 폐기하고 "HS 6.3" 로 다시 세웠다.
+
+- needs_review: HS 9.3.1 / introduced_in_structure / HS (sources/papers/iso-iec-harmonized-structure-mss-20260701-en.md, confidence=0.90) - HS 규범 좌열에 "9.3.1 General" 이 있으나 Annex SL(2020) HLS 에는 대응 슬롯이 없다 (양쪽 캡처 대조). 구 주어 "HS 6.3 변경의 기획" 은 제목이 id 에 박힌 형식이라 폐기하고 "HS 9.3.1" 로 다시 세웠다.
+
+- needs_review: HS 9.3.2 / introduced_in_structure / HS (sources/papers/iso-iec-harmonized-structure-mss-20260701-en.md, confidence=0.90) - HS 규범 좌열에 "9.3.2 Management review inputs" 이 있으나 Annex SL(2020) HLS 에는 대응 슬롯이 없다 (양쪽 캡처 대조). 구 주어 "HS 6.3 변경의 기획" 은 제목이 id 에 박힌 형식이라 폐기하고 "HS 9.3.2" 로 다시 세웠다.
+
+- needs_review: HS 9.3.3 / introduced_in_structure / HS (sources/papers/iso-iec-harmonized-structure-mss-20260701-en.md, confidence=0.90) - HS 규범 좌열에 "9.3.3 Management review results" 이 있으나 Annex SL(2020) HLS 에는 대응 슬롯이 없다 (양쪽 캡처 대조). 구 주어 "HS 6.3 변경의 기획" 은 제목이 id 에 박힌 형식이라 폐기하고 "HS 9.3.3" 로 다시 세웠다.
+
+- needs_review: ISO 14001:2026 4.3 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The scope shall be available as documented information and shall be available to interested parties."
+
+- needs_review: ISO 14001:2026 5.2 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "—   be available as documented information;"
+
+- needs_review: ISO 14001:2026 6.1.1 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The process(es) for 6.1.2 to 6.1.5 shall be available as documented information to the extent necessary to have confidence that they are carried out as planned."
+
+- needs_review: ISO 14001:2026 6.1.2 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The following shall be available as documented information:"
+
+- needs_review: ISO 14001:2026 6.1.3 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The compliance obligations shall be available as documented information."
+
+- needs_review: ISO 14001:2026 6.1.4 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The risks and opportunities that need to be addressed shall be available as documented information."
+
+- needs_review: ISO 14001:2026 6.2.1 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "f)   available as documented information."
+
+- needs_review: ISO 14001:2026 7.5.1 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)   documented information required by this document;"
+
+- needs_review: ISO 14001:2026 7.5.2 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "Creating and updating documented information"
+
+- needs_review: ISO 14001:2026 7.5.3 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "Control of documented information"
+
+- needs_review: ISO 14001:2026 8.1 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The process(es) for 8.1 shall be available as documented information to the extent necessary to have confidence that they are carried out as planned."
+
+- needs_review: ISO 14001:2026 8.2 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The process(es) for 8.2 shall be available as documented information to the extent necessary to have confidence that they are carried out as planned."
+
+- needs_review: ISO 14001:2026 9.2.2 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "The following documented information shall be available:"
+
+- needs_review: KS I ISO 14001:2015 10.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 다음의 증거로 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 4.3 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "이 적용범위는 문서화된 정보로 유지되어야 하며, 이해관계자가 이용할 수 있어야 한다."
+
+- needs_review: KS I ISO 14001:2015 5.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "— 문서화된 정보로 유지되어야 함."
+
+- needs_review: KS I ISO 14001:2015 6.1.1 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 다음 사항에 대해 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 6.1.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 다음을 문서화된 정보로 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 6.1.3 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 조직의 준수의무사항과 관련된 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 6.2.1 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 환경목표에 대한 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 7.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 역량(competence)의 증거로, 적절히 문서화된 정보를 보유해야 한다."
+
+- needs_review: KS I ISO 14001:2015 7.4.1 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 의사소통의 증거로 문서화된 정보를 적절한 수준에서(as appropriate) 보유해야 한다."
+
+- needs_review: KS I ISO 14001:2015 7.5.1 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a) 이 표준에서 요구하는 문서화된 정보"
+
+- needs_review: KS I ISO 14001:2015 7.5.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서화된 정보를 작성(creating)하고 갱신할 때, 조직은 다음이 적절함을 보장하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 7.5.3 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서화된 정보의 관리"
+
+- needs_review: KS I ISO 14001:2015 8.1 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 프로세스가 계획된 대로 실행되었음을 확신할 수 있는 범위까지 필요한 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 8.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 프로세스가 계획된 대로 실행됨을 확신할 수 있는 범위까지 필요한 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 9.1.1 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 모니터링, 측정, 분석 및 평가 결과의 증거로 적절한 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 9.1.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 준수평가 결과의 증거로 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 9.2.2 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 심사프로그램의 실행과 심사결과의 증거로 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 9.3 / requires_documented_information / true (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 경영검토의 결과의 증거로 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 10.2.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 다음 사항의 증거로, 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 4.3 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직의 품질경영시스템의 적용범위는 문서화된 정보로 이용 가능하고 유지되어야 한다. 적용범위에는 포함되는 제품 및 서비스의 형태를 기술하여야 하고, 조직이 그 조직의 품질경영시스템 적용범위에 포함되지 않는다고 정한 이 표준의 어떤 요구사항이 있는 경우, 그에 대한 정당성을 제시하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 4.4.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  프로세스의 운용을 지원하기 위하여 문서화된 정보의 유지"
+
+- needs_review: KS Q ISO 9001:2015 5.2.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  문서화된 정보로 이용 가능하고 유지됨."
+
+- needs_review: KS Q ISO 9001:2015 6.2.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 품질목표에 관하여 문서화된 정보를 유지하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 7.1.5.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 모니터링 자원과 측정 자원의 목적에 적합하다는 증거로, 적절한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 7.1.5.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  규정된 주기 또는 사용 전에, 국제 또는 국가 측정표준에 소급 가능한 측정표준에 대하여 교정 또는 검증 혹은 두 가지 모두 시행될 것. 그러한 표준이 없는 경우, 교정 또는 검증에 사용된 근거는 문서화된 정보로 보유될 것."
+
+- needs_review: KS Q ISO 9001:2015 7.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "d)  역량의 증거로 적절한 문서화된 정보를 보유"
+
+- needs_review: KS Q ISO 9001:2015 7.5.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  이 표준에서 요구하는 문서화된 정보"
+
+- needs_review: KS Q ISO 9001:2015 7.5.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서화된 정보를 작성하거나 갱신할 경우, 조직은 다음 사항의 적절함을 보장하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 7.5.3.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "품질경영시스템 및 이 표준에서 요구되는 문서화된 정보는, 다음 사항을 보장하기 위하여 관리되어야 한다."
+
+- needs_review: KS Q ISO 9001:2015 7.5.3.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서화된 정보의 관리를 위하여, 다음 활동 중 적용되는 사항을 다루어야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "e)  다음을 위해 필요한 정도로 문서화된 정보의 결정, 유지 및 보유"
+
+- needs_review: KS Q ISO 9001:2015 8.2.3.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "고객이 요구사항을 문서화된 상태로 제시하지 않는 경우, 고객 요구사항은 수락 전에 조직에 의해"
+
+- needs_review: KS Q ISO 9001:2015 8.2.3.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 적용될 경우, 다음 사항에 대한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.2.4 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "제품 및 서비스에 대한 요구사항이 변경된 경우, 조직은 관련 문서화된 정보가 수정됨을, 그리고 관련 인원이 변경된 요구사항을 인식하고 있음을 보장하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.3.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "j)  설계와 개발 요구사항이 충족되었음을 실증하는데 필요한 문서화된 정보"
+
+- needs_review: KS Q ISO 9001:2015 8.3.3 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 설계와 개발 입력에 대한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.3.4 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "f)  이들 활동에 대한 문서화된 정보의 보유"
+
+- needs_review: KS Q ISO 9001:2015 8.3.5 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 설계와 개발 출력에 대한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.3.6 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 다음 사항에 대한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.4.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 요구사항에 따라 프로세스 또는 제품 및 서비스를 공급할 수 있는 능력을 근거로, 외부공급자의 평가, 선정, 성과 모니터링 및 재평가에 대한 기준을 결정하고 적용하여야 한다. 또한 조직은 이들 활동에 대한, 그리고 평가를 통해 발생한 모든 필요한 조치에 대한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.5.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  다음을 규정하는 문서화된 정보의 가용성"
+
+- needs_review: KS Q ISO 9001:2015 8.5.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "추적성이 요구사항인 경우, 조직은 출력의 고유한 식별을 관리하여야 하며, 추적이 가능하기 위하여 필요한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.5.3 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "고객 또는 외부공급자의 재산이 분실, 손상 또는 사용하기에 부적절한 것으로 판명된 경우, 조직은 고객 또는 외부공급자에게 이를 통보하여야 하며, 발생한 사항에 대해 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.5.6 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 변경에 대한 검토의 결과, 변경 승인자 및 검토 결과 도출된 필요한 모든 조치사항을 기술한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.6 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 제품 및 서비스의 불출에 관련된 문서화된 정보를 보유하여야 한다. 문서화된 정보에는 다음 사항이 포함되어야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.7.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 다음의 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 9.1.1 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 결과의 증거로, 적절한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 9.2.2 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "f)  심사 프로그램의 실행 및 심사결과의 증거로 문서화된 정보의 보유"
+
+- needs_review: KS Q ISO 9001:2015 9.3.3 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 경영검토 결과의 증거로, 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 10.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 다음에 대한 증적 문서 정보를 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 4.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "범위는 문서 정보로 존재하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 5.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "e)  문서 정보로 이용할 수 있어야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 6.1.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 정보보호 위험평가 프로세스에 관한 문서 정보를 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 6.1.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 정보보호 위험처리 프로세스를 문서화하여 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 6.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 정보보호 목표를 문서화하여 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 7.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "d)  적격성의 증거로써 적합한 문서 정보를 유지한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 7.5.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  이 표준에서 요구하는 문서 정보"
+
+- needs_review: KS X ISO/IEC 27001:2013 7.5.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서 정보를 생성하고 갱신할 때 조직은 다음과 같은 사항이 적합하도록 보장하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 7.5.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서 정보의 통제"
+
+- needs_review: KS X ISO/IEC 27001:2013 8.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 프로세스가 계획대로 수행되었음을 확신하기 위해 필요한 문서 정보를 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 8.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 정보보호 위험평가의 결과를 문서 정보로 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 8.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 정보보호 위험처리의 결과를 문서 정보로 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 9.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 모니터링 및 측정 결과에 대한 증적으로 적절한 문서 정보를 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 9.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "g)  감사 프로그램 및 감사 결과에 대한 증적으로 문서 정보의 유지"
+
+- needs_review: KS X ISO/IEC 27001:2013 9.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 경영진 검토의 결과에 대한 증적으로 문서 정보를 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.12.1.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 운영 절차를 문서화하고 필요한 모든 사용자가 이용할 수 있도록 하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.13.2.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 정보보호에 대한 조직의 요구를 반영한 기밀유지협약 및 비밀유지서약 요구사항을 식별하고 주기적으로 검토 및 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.14.2.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 시스템 보안 공학을 위한 원칙을 수립하여 문서화하고 유지하며 모든 정보시스템의 구현에 적용하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.15.1.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 조직 자산에 대한 공급자 접근과 연관된 위험을 감소시키기 위한 정보보호 요구사항은 공급자와 합의를 거쳐 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.16.1.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 정보보호 사고는 문서화된 절차에 따라 대응하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.17.1.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 조직은 어려운 상황에서 정보보호에 필요한 수준의 연속성을 보장하기 위하여 프로세스, 절차, 통제를 수립하고 문서화하여 구현 및 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.18.1.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 정보시스템과 조직에 관련한 모든 법령, 규제, 계약 요구사항과 조직의 요구사항 만족을 위한 접근방법을 명시적으로 식별하고 문서화하며 최신으로 유지하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.8.1.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 정보 및 정보처리 시설에 연관된 자산의 적절한 사용을 위한 규칙을 식별하고 문서화 및 구현하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.9.1.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "통제: 업무 및 정보보호 요구사항을 기반으로 접근통제 정책을 수립하고 문서화 및 검토하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 10.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "다음 사항의 증거로서 문서화된 정보는 이용 가능하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 4.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "적용범위는 문서화된 정보로, 이용 가능하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 4.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 이 표준의 요구사항에 따라, 필요한 프로세스와 그 프로세스의 상호 작용을 포함하는 AI경영시스템을 수립, 구현, 유지, 지속적 개선 및 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 5.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "—  문서화된 정보로 이용 가능"
+
+- needs_review: KS X ISO/IEC 42001:2023 6.1.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 리스크 및 AI 기회를 식별하고 다루기 위한 조치에 대해 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 6.1.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 리스크 평가 프로세스에 대한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 6.1.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "비고 3  조직은 일반적으로 또는 특정 AI 시스템에 대한 관리 목표를 제외하기 위한 문서화된 정당성을 부속서 A에 나열된 것이든 조직이 자체적으로 수립한 것이든 제공할 수 있다."
+
+- needs_review: KS X ISO/IEC 42001:2023 6.1.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "AI 시스템 영향 평가의 결과는 문서화되어야 한다. 적절한 경우, 시스템 영향 평가의 결과는 조직이 규정한 대로 관련 이해관계자에게 이용될 수 있다."
+
+- needs_review: KS X ISO/IEC 42001:2023 6.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "g)  문서화된 정보로 이용되어야 함."
+
+- needs_review: KS X ISO/IEC 42001:2023 7.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "역량의 증거는 적절한 문서화된 정보로 이용 가능하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 7.5.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  이 표준에서 요구하는 문서화된 정보"
+
+- needs_review: KS X ISO/IEC 42001:2023 7.5.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서화된 정보의 작성 및 갱신"
+
+- needs_review: KS X ISO/IEC 42001:2023 7.5.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "문서화된 정보의 관리"
+
+- needs_review: KS X ISO/IEC 42001:2023 8.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "프로세스가 계획대로 수행되었음을 확신하기 위하여 필요한 정도까지 문서화된 정보는 이용 가능하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 8.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 모든(all) AI 리스크 평가의 결과를 문서화된 정보로 보유하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 8.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 모든(all) AI 리스크 처리 결과에 대해 문서화된 정보로 보유하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 8.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 모든(all) AI 시스템 영향 평가 결과에 대해 문서화된 정보로 보유하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 9.1 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "그 결과의 증거는 문서화된 정보로 이용 가능하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 9.2.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "심사 프로그램 구현 및 심사결과 증거는 문서화된 정보로 이용 가능하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 9.3.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "경영검토 결과의 증거는 문서화된 정보로 이용 가능하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.2.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템의 개발 또는 사용을 위한 방침을 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.4.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 주어진 AI 시스템 수명 주기 단계의 활동과 조직과 관련된 기타 AI 관련 활동에 필요한 관련 자원을 식별하고 문서화해야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.4.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 자원 식별의 일부로 AI 시스템에 활용되는 데이터 자원에 대한 정보를 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.4.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 자원 식별의 일부로 AI 시스템에 사용되는 도구 자원에 대해 정보를 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.4.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 자원 식별의 일부로 AI 시스템에 활용되는 시스템 및 컴퓨터 사용 자원에 대한 정보를 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.4.6 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 자원 식별의 일부로 AI 시스템의 개발, 배포, 운용, 변경관리, 유지보수, 이관 및 폐기뿐만 아니라 검증 및 AI 시스템 통합에 활용되는 인적 자원 및 그들의 역량에 대한 정보를 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.5.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템 영향 평가 결과를 문서화하고 규정된 기간 동안 결과를 보유(retain)하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.5.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 시스템 수명 주기 동안 개인 또는 개인그룹에 대한 AI 시스템의 잠재적 영향을 평가하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.5.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템의 수명 주기 전반에 걸쳐 잠재적인 사회적 영향을 평가하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.1.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 책임 있는 AI 시스템의 개발을 가이드하기 위한 목표를 식별하고 문서화하고, 이러한 목표를 반영하고, 개발 수명 주기에서 이를 달성하기 위한 방법을 통합하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.1.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 책임 있는 AI 시스템의 설계 및 개발을 위한 특정인 프로세스를 규정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.2.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 새로운 AI 시스템 또는 기존 시스템에 대한 중대한 강화(enhancements)에 대한 요구사항을 명시하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.2.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 조직 목표, 문서화된 요구사항 및 규격 기준에 따라 AI 시스템 설계 및 개발을 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.2.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템에 대한 검증 및 검토 방법을 규정하고 문서화하며, 그 사용 기준을 명시하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.2.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 배포 계획을 문서화하고 배포 전에 적절한 요구사항이 충족되는지 확인하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.2.6 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템의 지속적인 운용에 필요한 요소를 규정하고 문서화하여야 한다. 여기에는 최소한 시스템 및 성능 모니터링, 수리, 업데이트 및 지원이 포함되는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.6.2.7 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 사용자, 파트너, 감독 당국 등 이해관계자의 각 범주별로 어떤 AI 시스템 기술 문서화가 필요한지 정하여야 하고, 적절한 형태로 기술 문서를 제공하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.7.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템 개발과 관련된 데이터 관리 프로세스를 규정, 문서화 및 구현하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.7.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템에 사용되는 데이터의 수집 및 선택에 대한 세부사항을 정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.7.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 데이터 품질에 대한 요구사항을 규정하고 문서화하며 AI 시스템을 개발하고 운용하는 데 사용되는 데이터가 이러한 요구사항을 충족하는지 보장하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.7.6 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 데이터 선택기준과 사용될 데이터 준비 방법을 규정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.8.4 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템 사용자에게 사건을 의사소통하기 위한 계획을 정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.8.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템에 대한 정보를 이해관계자에게 보고할 의무를 정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.9.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템의 책임 있는 사용을 위한 프로세스를 규정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.9.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 AI 시스템의 책임 있는 사용을 가이드하기 위한 목표를 식별하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 새로운 AI 시스템 또는 기존 시스템에 대한 중요한 강화에 대한 요구사항을 명시하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.3 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "AI 시스템 설계 및 개발의 문서화"
+
+- needs_review: KS X ISO/IEC 42001:2023 B.7.6 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 데이터 준비 선택 기준과 사용할 데이터 준비 방법을 규정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.8.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "사용자를 위한 시스템 문서화 및 정보"
 ## 출처 부족
 
 근거 문서가 없거나, 사라진 문서를 가리키는 항목.
@@ -5337,6 +5625,18 @@
 - needs_review: ISO 14001:2026 7.1 / maps_to_hls / HS 7.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Resources"
 
 - needs_review: ISO 14001:2026 7.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall determine and provide the resources needed for the establishment, implementation, maintenance and continual improvement of the environmental management system."
+
+- needs_review: ISO 14001:2026 7.2 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "Appropriate documented information shall be available as evidence of competence."
+
+- needs_review: ISO 14001:2026 7.4.1 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "Appropriate documented information shall be available as evidence of the organization's communications."
+
+- needs_review: ISO 14001:2026 9.1.1 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "Appropriate documented information shall be available as evidence of the monitoring, measurement, analysis and evaluation results."
+
+- needs_review: ISO 14001:2026 9.1.2 / requires_documented_information / true (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "Appropriate documented information shall be available as evidence of the compliance evaluation result(s)."
+
+- needs_review: KS Q ISO 9001:2015 7.1.6 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  내부 출처(예: 지적 재산, 경험에서 얻은 지식, 실패 및 성공한 프로젝트로부터 얻은 교훈, 문서화되지 않은 지식 및 경험의 포착과 공유, 프로세스, 제품 및 서비스에서 개선된 결과)"
+
+- needs_review: KS X ISO/IEC 42001:2023 A.7.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 데이터 및 AI 시스템의 수명 주기에 걸쳐 AI 시스템에 사용된 데이터의 출처를 기록하기 위한 프로세스를 규정하고 문서화하여야 한다."
 ## 기존 내용과 충돌할 수 있는 항목
 
 이미 확정된 사실과 어긋날 수 있어 둘 중 하나를 골라야 하는 항목.
@@ -5358,6 +5658,50 @@
   둔다 — 승인하려면 Annex SL Appendix 2를 먼저 ingest해 출처로 인용할 것.
   (2021년 개정으로 HLS → HS 개명, 6.3 신설, 10절 순서 변경. 기존 표준에 소급 적용되지
   않으므로 2015년판 9001·14001이 HLS인 것과 모순되지 않는다.)
+
+- 2026-09-11: **대기 사실 137행을 전부 처리했다 — 남은 대기는 1행뿐이다.**
+
+  ① `control_objective` 45행 수락. 27001 부속서 그룹 35개와 42001 10개에 1:1로 대응한다.
+  검증 중 **14행이 원문과 달랐다** — 13행은 약 50자에서 잘렸고(원본 추출의 길이 제한으로 보인다)
+  1행은 띄어쓰기가 뭉개졌다(27001 A.9.2). `factlog amend --set-object` 로 원문 전문으로 교정한 뒤
+  45/45 일치를 재확인하고 수락했다. 42001 은 `목적:` 이 아니라 `목표:` 를 쓴다.
+
+  ② 판본·계보. 고아 1행을 교정했다: `HS 6.3 변경의 기획` → `HS 6.3`(제목이 id 에 박힌 구형).
+  같은 근거가 성립하는 HS 전용 슬롯 `HS 9.3.1`~`9.3.3` 도 함께 채워 4행으로 만들었다.
+  **`HS 9.2.1`·`9.2.2` 는 제외했다** — HLS(2020)에도 번호는 있고 제목만 없으므로 "HS 신설" 이 아니다.
+  `introduced_in_structure` 를 attribute-relations.md 에 등록했다(객체가 HS/HLS 계열 값).
+  14001:2026 누락분을 추출했다: `edition_year date(2026)`, `iso_edition_ordinal ordinal(4)`,
+  `supersedes ISO 14001:2015`, `supersedes ISO 14001:2015/Amd 1:2024`.
+  근거는 표지 "Fourth edition / 2026-04" 와 머리말 "This fourth edition cancels and replaces the
+  third edition (ISO 14001:2015) … It also replaces the Amendment ISO 14001:2015/Amd 1:2024."
+  KS 재발행은 사용자 결정에 따라 `supersedes` 로 유지했다(9001 → "KS Q ISO 9001:2015(2018년 발행)").
+  `structure_family` 는 본문이 선언한 3건만 수락하고 9001(0.55)은 `needs_review` 로 남겼다 —
+  `structure_family_read_not_inferred` 정책이 요구하는 상태다.
+
+  ③ `requires_document` 71행을 폐기하고 불리언 `requires_documented_information` 142행으로 재설계했다.
+  구 관계는 객체 11종 중 63행이 "유지되는 문서화된 정보" 라는 일반 버킷이라 사실상 불리언이었고,
+  실무에서 조항별 문서 이름을 쓰지 않으므로 이름 재추출은 과하다는 판단이다(사용자 결정).
+  구 행을 그대로 옮기지 않고 **본문에서 다시 도출**했으며, 그 과정에서 판정 기준을 두 번 고쳤다:
+    - 처음엔 명사구(`문서화된 정보`/`문서 정보`)만 찾아 27001 6.1.3 을 놓쳤다. 그 조항은
+      "프로세스를 문서화하여 유지하여야 한다" 처럼 동사형이라 기존 행이 옳았다. 어간 `문서화` 로 넓혔다.
+    - 비고/참고 줄에만 언급된 경우를 배제하도록 했다(실제 해당 0건이었다).
+  결과 142행(42001 50, 9001 32, 27001 25, 14001:2015 18, 14001:2026 17). 기존 60개 주어보다 큰 것은
+  부속서 통제와 14001:2026 이 들어왔기 때문이다. 표본 16건을 눈으로 확인했고, 각 행 노트에
+  근거 문장을 인용해 개별 감사가 가능하다.
+  폐기된 71행 중 `14001 10.3`·`9001 10.3` 두 행은 본문에 문서화 언급이 아예 없어 거짓이었다.
+
+  지표: engine facts 2,116 → 2,330. review facts 137 → 1. errors 0 / warnings 0.
+
+- 2026-09-11 (미해결): **생성 규칙 `structure_family_read_not_inferred` 와 `edition_currency` 도
+  퇴화했다 — 앞서 손으로 고친 두 건과 같은 부류다.** `requires_review` 가 10행으로 늘어 확인했다.
+    - `structure_family_read_not_inferred` 는 산문상 "본문이 둘 다 선언하지 않은 표준"을 지목해야 하는데,
+      생성본은 `structure_family` 를 가진 모든 주어를 지목한다. **지목 대상이 정확히 반대다** —
+      선언이 있어 수락된 27001·42001·14001 과 구조 문서 2건이 걸리고, 정작 선언이 없는 9001 은
+      걸리지 않는다(needs_review 는 엔진 상태가 아니라 accepted.dl 에 없기 때문).
+    - `edition_currency` 는 "폐지판에서만 인용된 조항"을 지목해야 하는데 `supersedes` 를 가진 주어,
+      즉 폐지한 쪽(신판)을 지목한다.
+  둘 다 부정이나 다변수 몸통이 필요해 Lane A 산문 DSL 로 표현할 수 없다. `certification_mandatory`·
+  `hls_strictest_wins` 와 동일하게 `logic-policy.extra.dl` 에 손으로 쓰는 것이 해법이다. 미착수.
 
 - 2026-09-11: **ISO 14001:2026(en) 사실 추출 190행 수락 — HLS→HS 마이그레이션이 그래프에서 도출된다.**
   내역: `structure_family` 1(HS), `has_clause` 56, `clause_title` 57(부속서 A 포함),
