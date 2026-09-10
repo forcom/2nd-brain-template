@@ -491,6 +491,118 @@
 - needs_review: KS X ISO/IEC 42001:2023 9.3.2 / maps_to_hls / HS 9.3.2 (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 개요: 이 표준은 경영시스템표준(MSS) 간의 정렬성을 높이기 위해 개발된 조화된 구조(harmonized structure) (동일한 조항 번호, 조항 제목, 텍스트 및 공통 용어와 핵심 정의)를 적용한다. 번호 9.3.2 이 양쪽에 존재. 10절 역전(10.1 지속적 개선 / 10.2 부적합 및 시정조치)도 HS와 일치
 
 - needs_review: KS X ISO/IEC 42001:2023 9.3.3 / maps_to_hls / HS 9.3.3 (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 개요: 이 표준은 경영시스템표준(MSS) 간의 정렬성을 높이기 위해 개발된 조화된 구조(harmonized structure) (동일한 조항 번호, 조항 제목, 텍스트 및 공통 용어와 핵심 정의)를 적용한다. 번호 9.3.3 이 양쪽에 존재. 10절 역전(10.1 지속적 개선 / 10.2 부적합 및 시정조치)도 HS와 일치
+
+- needs_review: ISO 14001:2026 1 / clause_title / Scope (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 10 / clause_title / Improvement (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 10.1 / clause_title / Continual improvement (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 10.2 / clause_title / Nonconformity and corrective action (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 2 / clause_title / Normative references (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 3 / clause_title / Terms and definitions (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 3.1 / clause_title / Terms related to organization and leadership (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 3.2 / clause_title / Terms related to planning (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 3.3 / clause_title / Terms related to support and operation (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 3.4 / clause_title / Terms related to performance evaluation and improvement (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 4 / clause_title / Context of the organization (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 4.1 / clause_title / Understanding the organization and its context (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 4.2 / clause_title / Understanding the needs and expectations of interested parties (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 4.3 / clause_title / Determining the scope of the environmental management system (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 4.4 / clause_title / Environmental management system (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 5 / clause_title / Leadership (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 5.1 / clause_title / Leadership and commitment (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 5.2 / clause_title / Environmental policy (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 5.3 / clause_title / Roles, responsibilities and authorities (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6 / clause_title / Planning (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.1 / clause_title / Actions to address risks and opportunities (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.1.1 / clause_title / General (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.1.2 / clause_title / Environmental aspects (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.1.3 / clause_title / Compliance obligations (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.1.4 / clause_title / Risks and opportunities (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.1.5 / clause_title / Planning action (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.2 / clause_title / Environmental objectives and planning to achieve them (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.2.1 / clause_title / Environmental objectives (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.2.2 / clause_title / Planning actions to achieve environmental objectives (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 6.3 / clause_title / Planning of changes (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7 / clause_title / Support (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.1 / clause_title / Resources (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.2 / clause_title / Competence (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.3 / clause_title / Awareness (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.4 / clause_title / Communication (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.4.1 / clause_title / General (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.4.2 / clause_title / Internal communication (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.4.3 / clause_title / External communication (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.5 / clause_title / Documented information (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.5.1 / clause_title / General (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.5.2 / clause_title / Creating and updating documented information (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 7.5.3 / clause_title / Control of documented information (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 8 / clause_title / Operation (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 8.1 / clause_title / Operational planning and control (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 8.2 / clause_title / Emergency preparedness and response (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9 / clause_title / Performance evaluation (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.1 / clause_title / Monitoring, measurement, analysis, and evaluation (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.1.1 / clause_title / General (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.1.2 / clause_title / Evaluation of compliance (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.2 / clause_title / Internal audit (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.2.1 / clause_title / General (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.2.2 / clause_title / Internal audit programme (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.3 / clause_title / Management review (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.3.1 / clause_title / General (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.3.2 / clause_title / Management review inputs (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
+
+- needs_review: ISO 14001:2026 9.3.3 / clause_title / Management review results (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 본문 표제 그대로(목차와 동일)
 ## 모호한 관계명
 
 관계명이나 대상이 여러 가지로 읽혀 확정하기 어려운 항목.
@@ -4940,6 +5052,268 @@
 - needs_review: KS X ISO/IEC 42001:2023 B.9.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 책임 있는 사용을 가이드하는 목표를 식별하고 문서화하는 것이 좋다."
 
 - needs_review: KS X ISO/IEC 42001:2023 B.9.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 의도된 용도와 함께 제공되는 문서에 따라 AI 시스템이 사용되도록 보장하는 것이 좋다."
+
+- needs_review: ISO 14001:2026 / has_annex / ISO 14001:2026 Annex A (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차: "Annex A (informative) Guidance on the use of this document"
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "1 Scope" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 10 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "10 Improvement" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 10.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "10.1 Continual improvement" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 10.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "10.2 Nonconformity and corrective action" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "2 Normative references" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "3 Terms and definitions" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 3.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "3.1 Terms related to organization and leadership" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 3.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "3.2 Terms related to planning" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 3.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "3.3 Terms related to support and operation" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 3.4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "3.4 Terms related to performance evaluation and improvement" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "4 Context of the organization" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 4.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "4.1 Understanding the organization and its context" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 4.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "4.2 Understanding the needs and expectations of interested parties" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 4.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "4.3 Determining the scope of the environmental management system" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 4.4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "4.4 Environmental management system" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 5 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "5 Leadership" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 5.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "5.1 Leadership and commitment" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 5.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "5.2 Environmental policy" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 5.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "5.3 Roles, responsibilities and authorities" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6 Planning" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.1 Actions to address risks and opportunities" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.1.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.1.1 General" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.1.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.1.2 Environmental aspects" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.1.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.1.3 Compliance obligations" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.1.4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.1.4 Risks and opportunities" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.1.5 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.1.5 Planning action" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.2 Environmental objectives and planning to achieve them" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.2.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.2.1 Environmental objectives" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.2.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.2.2 Planning actions to achieve environmental objectives" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 6.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "6.3 Planning of changes" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7 Support" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.2 Competence" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.3 Awareness" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.4 Communication" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.4.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.4.1 General" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.4.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.4.2 Internal communication" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.4.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.4.3 External communication" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.5 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.5 Documented information" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.5.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.5.1 General" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.5.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.5.2 Creating and updating documented information" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.5.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.5.3 Control of documented information" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 8 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "8 Operation" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 8.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "8.1 Operational planning and control" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 8.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "8.2 Emergency preparedness and response" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9 Performance evaluation" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.1 Monitoring, measurement, analysis, and evaluation" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.1.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.1.1 General" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.1.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.1.2 Evaluation of compliance" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.2 Internal audit" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.2.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.2.1 General" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.2.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.2.2 Internal audit programme" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.3 Management review" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.3.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.3.1 General" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.3.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.3.2 Management review inputs" 로 일치
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 9.3.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "9.3.3 Management review results" 로 일치
+
+- needs_review: ISO 14001:2026 / structure_family / HS (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards."
+
+- needs_review: ISO 14001:2026 1 / maps_to_hls / HS 1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Scope"
+
+- needs_review: ISO 14001:2026 10 / maps_to_hls / HS 10 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 10 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Improvement"
+
+- needs_review: ISO 14001:2026 10.1 / maps_to_hls / HS 10.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 10.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Continual improvement"
+
+- needs_review: ISO 14001:2026 10.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall continually improve the suitability, adequacy and effectiveness of the environmental management system to enhance environmental performance by determining opportunities for i…"
+
+- needs_review: ISO 14001:2026 10.2 / maps_to_hls / HS 10.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 10.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Nonconformity and corrective action"
+
+- needs_review: ISO 14001:2026 10.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "When a nonconformity occurs, the organization shall:"
+
+- needs_review: ISO 14001:2026 2 / maps_to_hls / HS 2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Normative references"
+
+- needs_review: ISO 14001:2026 3 / maps_to_hls / HS 3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Terms and definitions"
+
+- needs_review: ISO 14001:2026 4 / maps_to_hls / HS 4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 4 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Context of the organization"
+
+- needs_review: ISO 14001:2026 4.1 / maps_to_hls / HS 4.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 4.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Understanding the organization and its context"
+
+- needs_review: ISO 14001:2026 4.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall determine external and internal issues that are relevant to its purpose and that affect its ability to achieve the intended outcomes of its environmental management system."
+
+- needs_review: ISO 14001:2026 4.2 / maps_to_hls / HS 4.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 4.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Understanding the needs and expectations of interested parties"
+
+- needs_review: ISO 14001:2026 4.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall determine:"
+
+- needs_review: ISO 14001:2026 4.3 / maps_to_hls / HS 4.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 4.3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Determining the scope of the environmental management system"
+
+- needs_review: ISO 14001:2026 4.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall determine the boundaries and applicability of the environmental management system to establish its scope."
+
+- needs_review: ISO 14001:2026 4.4 / maps_to_hls / HS 4.4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 4.4 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Environmental management system"
+
+- needs_review: ISO 14001:2026 4.4 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "To achieve the intended outcomes, including enhancing its environmental performance, the organization shall establish, implement, maintain and continually improve an environmental management system…"
+
+- needs_review: ISO 14001:2026 5 / maps_to_hls / HS 5 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 5 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Leadership"
+
+- needs_review: ISO 14001:2026 5.1 / maps_to_hls / HS 5.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 5.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Leadership and commitment"
+
+- needs_review: ISO 14001:2026 5.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "Top management shall demonstrate leadership and commitment with respect to the environmental management system by:"
+
+- needs_review: ISO 14001:2026 5.2 / maps_to_hls / HS 5.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 5.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Environmental policy"
+
+- needs_review: ISO 14001:2026 5.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "Top management shall establish, implement and maintain an environmental policy within the defined scope of its environmental management system that:"
+
+- needs_review: ISO 14001:2026 5.3 / maps_to_hls / HS 5.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 5.3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Roles, responsibilities and authorities"
+
+- needs_review: ISO 14001:2026 5.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "Top management shall ensure that the responsibilities and authorities for relevant roles are assigned and communicated within the organization."
+
+- needs_review: ISO 14001:2026 6 / maps_to_hls / HS 6 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 6 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Planning"
+
+- needs_review: ISO 14001:2026 6.1 / maps_to_hls / HS 6.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 6.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Actions to address risks and opportunities"
+
+- needs_review: ISO 14001:2026 6.1.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall establish, implement and maintain (a) process(es) needed to meet the requirements in 6.1.2 to 6.1.5."
+
+- needs_review: ISO 14001:2026 6.1.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "Within the defined scope of the environmental management system, the organization shall determine the environmental aspects of its activities, products and services that it can control and those th…"
+
+- needs_review: ISO 14001:2026 6.1.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall:"
+
+- needs_review: ISO 14001:2026 6.1.4 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "When planning for the environmental management system, the organization shall consider:"
+
+- needs_review: ISO 14001:2026 6.1.5 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall plan:"
+
+- needs_review: ISO 14001:2026 6.2 / maps_to_hls / HS 6.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 6.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Environmental objectives and planning to achieve them"
+
+- needs_review: ISO 14001:2026 6.2.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall establish environmental objectives at relevant functions and levels, taking into account the organization's significant environmental aspects and related compliance obligatio…"
+
+- needs_review: ISO 14001:2026 6.2.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "When planning how to achieve its environmental objectives, the organization shall determine:"
+
+- needs_review: ISO 14001:2026 6.3 / maps_to_hls / HS 6.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 6.3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Planning of changes"
+
+- needs_review: ISO 14001:2026 6.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "When the organization determines the need for changes that affect or can affect the environmental management system, the changes shall be carried out in a planned manner. The changes shall be manag…"
+
+- needs_review: ISO 14001:2026 7 / maps_to_hls / HS 7 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Support"
+
+- needs_review: ISO 14001:2026 7.2 / maps_to_hls / HS 7.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Competence"
+
+- needs_review: ISO 14001:2026 7.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall:"
+
+- needs_review: ISO 14001:2026 7.3 / maps_to_hls / HS 7.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Awareness"
+
+- needs_review: ISO 14001:2026 7.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall ensure that persons doing work under the organization's control are aware of:"
+
+- needs_review: ISO 14001:2026 7.4 / maps_to_hls / HS 7.4 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.4 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Communication"
+
+- needs_review: ISO 14001:2026 7.4.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall establish, implement and maintain the process(es) needed for internal and external communications relevant to the environmental management system including:"
+
+- needs_review: ISO 14001:2026 7.4.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall:"
+
+- needs_review: ISO 14001:2026 7.4.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall externally communicate information relevant to the environmental management system, as established by the organization's communication process(es) and as required by its comp…"
+
+- needs_review: ISO 14001:2026 7.5 / maps_to_hls / HS 7.5 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.5 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Documented information"
+
+- needs_review: ISO 14001:2026 7.5.1 / maps_to_hls / HS 7.5.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.5.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "General"
+
+- needs_review: ISO 14001:2026 7.5.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization's environmental management system shall include:"
+
+- needs_review: ISO 14001:2026 7.5.2 / maps_to_hls / HS 7.5.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.5.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Creating and updating documented information"
+
+- needs_review: ISO 14001:2026 7.5.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "When creating and updating documented information, the organization shall ensure appropriate:"
+
+- needs_review: ISO 14001:2026 7.5.3 / maps_to_hls / HS 7.5.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.5.3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Control of documented information"
+
+- needs_review: ISO 14001:2026 7.5.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "Documented information required by the environmental management system and by this document shall be controlled to ensure:"
+
+- needs_review: ISO 14001:2026 8 / maps_to_hls / HS 8 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 8 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Operation"
+
+- needs_review: ISO 14001:2026 8.1 / maps_to_hls / HS 8.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 8.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Operational planning and control"
+
+- needs_review: ISO 14001:2026 8.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall establish, implement, control and maintain the process(es) needed to meet environmental management system requirements, and to implement the actions determined in Clause 6, by:"
+
+- needs_review: ISO 14001:2026 8.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall establish, implement and maintain the process(es) needed to prepare for and respond to the potential emergency situations determined in 6.1.2."
+
+- needs_review: ISO 14001:2026 9 / maps_to_hls / HS 9 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Performance evaluation"
+
+- needs_review: ISO 14001:2026 9.1 / maps_to_hls / HS 9.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Monitoring, measurement, analysis, and evaluation"
+
+- needs_review: ISO 14001:2026 9.1.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall evaluate its environmental performance and the effectiveness of the environmental management system."
+
+- needs_review: ISO 14001:2026 9.1.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall establish, implement and maintain the process(es) needed to evaluate if it is meeting its compliance obligations."
+
+- needs_review: ISO 14001:2026 9.2 / maps_to_hls / HS 9.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Internal audit"
+
+- needs_review: ISO 14001:2026 9.2.1 / maps_to_hls / HS 9.2.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.2.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "General"
+
+- needs_review: ISO 14001:2026 9.2.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall conduct internal audits at planned intervals to provide information on whether the environmental management system:"
+
+- needs_review: ISO 14001:2026 9.2.2 / maps_to_hls / HS 9.2.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.2.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Internal audit programme"
+
+- needs_review: ISO 14001:2026 9.2.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall establish, implement and maintain (an) internal audit programme(s), including the frequency, methods, responsibilities, planning requirements and reporting of its internal au…"
+
+- needs_review: ISO 14001:2026 9.3 / maps_to_hls / HS 9.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Management review"
+
+- needs_review: ISO 14001:2026 9.3.1 / maps_to_hls / HS 9.3.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.3.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "General"
+
+- needs_review: ISO 14001:2026 9.3.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "Top management shall review the organization's environmental management system, at planned intervals, to ensure its continuing suitability, adequacy and effectiveness."
+
+- needs_review: ISO 14001:2026 9.3.2 / maps_to_hls / HS 9.3.2 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.3.2 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Management review inputs"
+
+- needs_review: ISO 14001:2026 9.3.2 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The management review inputs shall include:"
+
+- needs_review: ISO 14001:2026 9.3.3 / maps_to_hls / HS 9.3.3 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 9.3.3 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Management review results"
+
+- needs_review: ISO 14001:2026 9.3.3 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The results of the management review shall include:"
+
+- needs_review: ISO 14001:2026 Annex A / annex_status / informative (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차에 "(informative)" 로 표기
+
+- needs_review: ISO 14001:2026 Annex A / clause_title / Guidance on the use of this document (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차 표제 그대로
 ## 출처 부족
 
 근거 문서가 없거나, 사라진 문서를 가리키는 항목.
@@ -4957,6 +5331,12 @@
 - needs_review: KS Q ISO 9001:2015 7.1 / maps_to_hls / HLS 7.1 (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.80) - 9001 본문은 HLS·부속서 SL 을 명명하지 않는다 — 0.4 "경영시스템을 위한 표준 간의 정렬을 개선하기 위하여 ISO에서 개발된 틀을 적용한다", A.1 "항 구조와 몇몇 용어는 다른 경영시스템 표준과의 정렬을 향상시키기 위하여 변경되었다" 뿐이다. 따라서 이 행의 근거는 표준의 선언이 아니라, raw/ 에 있는 Annex SL 원문과 9001 캡처의 절 제목 대조다. 번호 7.1 이 양쪽에 존재하고 제목이 대응한다: "자원" ↔ "Resources"
 
 - needs_review: KS X ISO/IEC 42001:2023 B.7.5 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 데이터 및 AI 시스템의 수명 주기에 걸쳐 AI 시스템에 사용되는 데이터의 출처를 기록하기 위한 프로세스를 규정하고 문서화하는 것이 좋다."
+
+- needs_review: ISO 14001:2026 / has_clause / ISO 14001:2026 7.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - 목차와 본문 표제가 모두 "7.1 Resources" 로 일치
+
+- needs_review: ISO 14001:2026 7.1 / maps_to_hls / HS 7.1 (sources/papers/iso-14001-2026-en.md, confidence=0.95) - Foreword: "This document conforms to ISO requirements for management system standards. These requirements include a harmonized structure, identical core text and common terms with core definitions, designed to benefit users implementing multiple ISO management system standards." 번호 7.1 이 양쪽에 존재하고 제목이 XXX 치환 관계로 일치한다: "Resources"
+
+- needs_review: ISO 14001:2026 7.1 / obligation / shall (sources/papers/iso-14001-2026-en.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "The organization shall determine and provide the resources needed for the establishment, implementation, maintenance and continual improvement of the environmental management system."
 ## 기존 내용과 충돌할 수 있는 항목
 
 이미 확정된 사실과 어긋날 수 있어 둘 중 하나를 골라야 하는 항목.
@@ -4978,6 +5358,30 @@
   둔다 — 승인하려면 Annex SL Appendix 2를 먼저 ingest해 출처로 인용할 것.
   (2021년 개정으로 HLS → HS 개명, 6.3 신설, 10절 순서 변경. 기존 표준에 소급 적용되지
   않으므로 2015년판 9001·14001이 HLS인 것과 모순되지 않는다.)
+
+- 2026-09-11: **ISO 14001:2026(en) 사실 추출 190행 수락 — HLS→HS 마이그레이션이 그래프에서 도출된다.**
+  내역: `structure_family` 1(HS), `has_clause` 56, `clause_title` 57(부속서 A 포함),
+  `obligation` 35(전부 shall), `maps_to_hls` 39, `has_annex` 1, `annex_status` 1(informative).
+  검증:
+    - 목차 56항목과 본문 표제가 **제목까지 100% 일치**(불일치 0). 본문 표제를 정본으로 삼았다.
+    - HS 슬롯 39개가 전부 존재하고 제목이 XXX 치환 관계로 일치한다(HS "XXX management system"
+      → "Environmental management system" 등). 번역을 거치지 않아 코퍼스에서 가장 정확한 대응이다.
+    - 조동사 판정: 상위 표제(4, 5, 6, 6.1, 6.2, 7, 7.4, 7.5, 8, 9, 9.1, 9.2, 9.3, 10)와
+      용어 항목(3.x)에는 조동사가 없고 요구사항 조항에만 shall 이 붙는다. 이는 2026-09-11 에
+      정리한 "조동사가 실제로 있는 조항에 붙인다" 관례와 독립적으로 일치한다.
+    - **본문에 should 가 하나도 없다.** 지침이 전부 부속서 A(informative)로 분리돼 있기 때문이며,
+      부속서 B 가 규정이면서 should 인 42001 과 대조된다.
+  성과 — 14001 두 판본이 한 코퍼스에 있으니 마이그레이션이 추론이 아니라 조회 결과다:
+    | 요구사항 | 14001:2015 | 슬롯 | 14001:2026 |
+    | 지속적 개선 | 10.3 | HLS 10.2 = HS 10.1 | 10.1 |
+    | 부적합 및 시정조치 | 10.2 | HLS 10.1 = HS 10.2 | 10.2 |
+    | 변경의 기획 | 없음 | HS 6.3 | 6.3 (신설) |
+  9.3.1~9.3.3 도 2026 에서 신설됐다. 주의: 9.2.1·9.2.2 는 두 판본 모두에 있으며, 슬롯 대응이
+  2026 쪽에만 있는 것은 HLS(2020)가 그 둘에 제목을 주지 않았기 때문이지 신설이 아니다.
+  `cross_structure_pair` 33 → 66행, `certification_mandatory` 309 → 344행.
+  `requires_review` 3행(신규 1건은 14001:2026 의 structure_family — 규칙이 의도한 정상 플래그).
+  추출기에 영문 조동사(`\bshall\b`/`\bshould\b`)를 `lang` 인자로 추가했다. 한국어 판정과
+  섞이지 않도록 명시 선택이며, 기존 한국어 감사 결과는 0/0 그대로다.
 
 - 2026-09-11 (해결): **`obligation` 결손을 전수 처리했다 — 65행 추가, 거짓 3행 회수.**
   바로 앞 항목에서 "89건 미해결"로 남겨 둔 건이다. 추출기를 다시 만들어 오탐 원인을 제거했다:

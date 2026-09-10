@@ -606,3 +606,18 @@
   마이그레이션 전후 판본이 한 코퍼스에 놓인다 — 6.3 신설과 10절 역전을 판본 차이로 직접
   관측할 수 있는 유일한 쌍이다. 사실 추출은 아직 하지 않았다(다음 sync 대상).
 - `extraction_quality` 는 `llm-vision-verbatim-unreviewed` 유지 — 사람 교정 전이다.
+
+## [2026-09-11] lint | ISO 14001:2026 사실 추출 190행 수락
+
+- `structure_family` 1(HS), `has_clause` 56, `clause_title` 57, `obligation` 35(전부 shall),
+  `maps_to_hls` 39, `has_annex` 1, `annex_status` 1(informative).
+- 검증: 목차 56항목과 본문 표제가 제목까지 100% 일치(불일치 0). HS 슬롯 39개가 전부 존재하고
+  제목이 XXX 치환 관계로 일치 — 번역을 거치지 않아 코퍼스에서 가장 정확한 대응이다.
+- 조동사: 상위 표제와 용어 항목에는 없고 요구사항 조항에만 shall. 본문에 should 는 0건이며
+  지침이 전부 부속서 A(informative)로 분리돼 있다. 부속서 B 가 규정이면서 should 인 42001 과 대조.
+- 마이그레이션이 이제 조회 결과다 — 지속적 개선 10.3→10.1, 부적합 및 시정조치 10.2→10.2,
+  변경의 기획 신설 6.3. 9.3.1~9.3.3 도 2026 신설. (9.2.1·9.2.2 는 두 판본 모두 존재하며,
+  슬롯 대응이 2026 에만 있는 것은 HLS 가 그 둘에 제목을 주지 않은 탓이지 신설이 아니다.)
+- 지표: engine facts 1,926 → 2,116. `cross_structure_pair` 33 → 66,
+  `certification_mandatory` 309 → 344. errors 0 / warnings 0.
+- `inbox/obligation-audit/extract.py` 에 영문 조동사 판정을 `lang` 인자로 추가. 한국어 감사 0/0 유지.

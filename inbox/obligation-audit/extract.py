@@ -5,6 +5,10 @@ import re, io
 NUM = r'(?:[A-Z]\.)?\d+(?:\.\d+)*'
 SHALL = [r'[아어여]야\s*한다', r'[아어여]야\s*하며', r'[아어여]야\s*함', r'해야\s*한다']
 SHOULD = [r'것이\s*좋다', r'좋을\s*것이다', r'하여야\s*할\s*것이다', r'것이\s*좋을']
+# 영문 캡처용. 한국어 판정과 섞이지 않도록 lang 으로 명시 선택한다.
+SHALL_EN = [r'\bshall\b']
+SHOULD_EN = [r'\bshould\b']
+PATTERNS = {'ko': (SHALL, SHOULD), 'en': (SHALL_EN, SHOULD_EN)}
 
 def clean(text):
     out=[]
@@ -18,9 +22,10 @@ def clean(text):
     m=re.search(r'^해\s*설\s*$', t, re.M)      # 문서 말미 '해 설'은 표준 본문이 아니다
     return t[:m.start()] if m else t
 
-def modals(body):
-    return (any(re.search(p, body) for p in SHALL),
-            any(re.search(p, body) for p in SHOULD))
+def modals(body, lang='ko'):
+    sh, so = PATTERNS[lang]
+    return (any(re.search(p, body, re.I) for p in sh),
+            any(re.search(p, body, re.I) for p in so))
 
 def clause_bodies(path):
     """{번호: 자체본문}"""

@@ -1,6 +1,196 @@
 // generated from facts/candidates.csv
 // only confirmed/accepted facts become engine input
 
+relation("ISO 14001:2026", "has_annex", "ISO 14001:2026 Annex A").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 10").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 10.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 10.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 3.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 3.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 3.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 3.4").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 4").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 4.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 4.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 4.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 4.4").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 5").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 5.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 5.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 5.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.1.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.1.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.1.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.1.4").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.1.5").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.2.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.2.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 6.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.4").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.4.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.4.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.4.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.5").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.5.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.5.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 7.5.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 8").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 8.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 8.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.1.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.1.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.2.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.2.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.3").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.3.1").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.3.2").
+relation("ISO 14001:2026", "has_clause", "ISO 14001:2026 9.3.3").
+relation("ISO 14001:2026", "structure_family", "HS").
+relation("ISO 14001:2026 1", "clause_title", "Scope").
+relation("ISO 14001:2026 1", "maps_to_hls", "HS 1").
+relation("ISO 14001:2026 10", "clause_title", "Improvement").
+relation("ISO 14001:2026 10", "maps_to_hls", "HS 10").
+relation("ISO 14001:2026 10.1", "clause_title", "Continual improvement").
+relation("ISO 14001:2026 10.1", "maps_to_hls", "HS 10.1").
+relation("ISO 14001:2026 10.1", "obligation", "shall").
+relation("ISO 14001:2026 10.2", "clause_title", "Nonconformity and corrective action").
+relation("ISO 14001:2026 10.2", "maps_to_hls", "HS 10.2").
+relation("ISO 14001:2026 10.2", "obligation", "shall").
+relation("ISO 14001:2026 2", "clause_title", "Normative references").
+relation("ISO 14001:2026 2", "maps_to_hls", "HS 2").
+relation("ISO 14001:2026 3", "clause_title", "Terms and definitions").
+relation("ISO 14001:2026 3", "maps_to_hls", "HS 3").
+relation("ISO 14001:2026 3.1", "clause_title", "Terms related to organization and leadership").
+relation("ISO 14001:2026 3.2", "clause_title", "Terms related to planning").
+relation("ISO 14001:2026 3.3", "clause_title", "Terms related to support and operation").
+relation("ISO 14001:2026 3.4", "clause_title", "Terms related to performance evaluation and improvement").
+relation("ISO 14001:2026 4", "clause_title", "Context of the organization").
+relation("ISO 14001:2026 4", "maps_to_hls", "HS 4").
+relation("ISO 14001:2026 4.1", "clause_title", "Understanding the organization and its context").
+relation("ISO 14001:2026 4.1", "maps_to_hls", "HS 4.1").
+relation("ISO 14001:2026 4.1", "obligation", "shall").
+relation("ISO 14001:2026 4.2", "clause_title", "Understanding the needs and expectations of interested parties").
+relation("ISO 14001:2026 4.2", "maps_to_hls", "HS 4.2").
+relation("ISO 14001:2026 4.2", "obligation", "shall").
+relation("ISO 14001:2026 4.3", "clause_title", "Determining the scope of the environmental management system").
+relation("ISO 14001:2026 4.3", "maps_to_hls", "HS 4.3").
+relation("ISO 14001:2026 4.3", "obligation", "shall").
+relation("ISO 14001:2026 4.4", "clause_title", "Environmental management system").
+relation("ISO 14001:2026 4.4", "maps_to_hls", "HS 4.4").
+relation("ISO 14001:2026 4.4", "obligation", "shall").
+relation("ISO 14001:2026 5", "clause_title", "Leadership").
+relation("ISO 14001:2026 5", "maps_to_hls", "HS 5").
+relation("ISO 14001:2026 5.1", "clause_title", "Leadership and commitment").
+relation("ISO 14001:2026 5.1", "maps_to_hls", "HS 5.1").
+relation("ISO 14001:2026 5.1", "obligation", "shall").
+relation("ISO 14001:2026 5.2", "clause_title", "Environmental policy").
+relation("ISO 14001:2026 5.2", "maps_to_hls", "HS 5.2").
+relation("ISO 14001:2026 5.2", "obligation", "shall").
+relation("ISO 14001:2026 5.3", "clause_title", "Roles, responsibilities and authorities").
+relation("ISO 14001:2026 5.3", "maps_to_hls", "HS 5.3").
+relation("ISO 14001:2026 5.3", "obligation", "shall").
+relation("ISO 14001:2026 6", "clause_title", "Planning").
+relation("ISO 14001:2026 6", "maps_to_hls", "HS 6").
+relation("ISO 14001:2026 6.1", "clause_title", "Actions to address risks and opportunities").
+relation("ISO 14001:2026 6.1", "maps_to_hls", "HS 6.1").
+relation("ISO 14001:2026 6.1.1", "clause_title", "General").
+relation("ISO 14001:2026 6.1.1", "obligation", "shall").
+relation("ISO 14001:2026 6.1.2", "clause_title", "Environmental aspects").
+relation("ISO 14001:2026 6.1.2", "obligation", "shall").
+relation("ISO 14001:2026 6.1.3", "clause_title", "Compliance obligations").
+relation("ISO 14001:2026 6.1.3", "obligation", "shall").
+relation("ISO 14001:2026 6.1.4", "clause_title", "Risks and opportunities").
+relation("ISO 14001:2026 6.1.4", "obligation", "shall").
+relation("ISO 14001:2026 6.1.5", "clause_title", "Planning action").
+relation("ISO 14001:2026 6.1.5", "obligation", "shall").
+relation("ISO 14001:2026 6.2", "clause_title", "Environmental objectives and planning to achieve them").
+relation("ISO 14001:2026 6.2", "maps_to_hls", "HS 6.2").
+relation("ISO 14001:2026 6.2.1", "clause_title", "Environmental objectives").
+relation("ISO 14001:2026 6.2.1", "obligation", "shall").
+relation("ISO 14001:2026 6.2.2", "clause_title", "Planning actions to achieve environmental objectives").
+relation("ISO 14001:2026 6.2.2", "obligation", "shall").
+relation("ISO 14001:2026 6.3", "clause_title", "Planning of changes").
+relation("ISO 14001:2026 6.3", "maps_to_hls", "HS 6.3").
+relation("ISO 14001:2026 6.3", "obligation", "shall").
+relation("ISO 14001:2026 7", "clause_title", "Support").
+relation("ISO 14001:2026 7", "maps_to_hls", "HS 7").
+relation("ISO 14001:2026 7.1", "clause_title", "Resources").
+relation("ISO 14001:2026 7.1", "maps_to_hls", "HS 7.1").
+relation("ISO 14001:2026 7.1", "obligation", "shall").
+relation("ISO 14001:2026 7.2", "clause_title", "Competence").
+relation("ISO 14001:2026 7.2", "maps_to_hls", "HS 7.2").
+relation("ISO 14001:2026 7.2", "obligation", "shall").
+relation("ISO 14001:2026 7.3", "clause_title", "Awareness").
+relation("ISO 14001:2026 7.3", "maps_to_hls", "HS 7.3").
+relation("ISO 14001:2026 7.3", "obligation", "shall").
+relation("ISO 14001:2026 7.4", "clause_title", "Communication").
+relation("ISO 14001:2026 7.4", "maps_to_hls", "HS 7.4").
+relation("ISO 14001:2026 7.4.1", "clause_title", "General").
+relation("ISO 14001:2026 7.4.1", "obligation", "shall").
+relation("ISO 14001:2026 7.4.2", "clause_title", "Internal communication").
+relation("ISO 14001:2026 7.4.2", "obligation", "shall").
+relation("ISO 14001:2026 7.4.3", "clause_title", "External communication").
+relation("ISO 14001:2026 7.4.3", "obligation", "shall").
+relation("ISO 14001:2026 7.5", "clause_title", "Documented information").
+relation("ISO 14001:2026 7.5", "maps_to_hls", "HS 7.5").
+relation("ISO 14001:2026 7.5.1", "clause_title", "General").
+relation("ISO 14001:2026 7.5.1", "maps_to_hls", "HS 7.5.1").
+relation("ISO 14001:2026 7.5.1", "obligation", "shall").
+relation("ISO 14001:2026 7.5.2", "clause_title", "Creating and updating documented information").
+relation("ISO 14001:2026 7.5.2", "maps_to_hls", "HS 7.5.2").
+relation("ISO 14001:2026 7.5.2", "obligation", "shall").
+relation("ISO 14001:2026 7.5.3", "clause_title", "Control of documented information").
+relation("ISO 14001:2026 7.5.3", "maps_to_hls", "HS 7.5.3").
+relation("ISO 14001:2026 7.5.3", "obligation", "shall").
+relation("ISO 14001:2026 8", "clause_title", "Operation").
+relation("ISO 14001:2026 8", "maps_to_hls", "HS 8").
+relation("ISO 14001:2026 8.1", "clause_title", "Operational planning and control").
+relation("ISO 14001:2026 8.1", "maps_to_hls", "HS 8.1").
+relation("ISO 14001:2026 8.1", "obligation", "shall").
+relation("ISO 14001:2026 8.2", "clause_title", "Emergency preparedness and response").
+relation("ISO 14001:2026 8.2", "obligation", "shall").
+relation("ISO 14001:2026 9", "clause_title", "Performance evaluation").
+relation("ISO 14001:2026 9", "maps_to_hls", "HS 9").
+relation("ISO 14001:2026 9.1", "clause_title", "Monitoring, measurement, analysis, and evaluation").
+relation("ISO 14001:2026 9.1", "maps_to_hls", "HS 9.1").
+relation("ISO 14001:2026 9.1.1", "clause_title", "General").
+relation("ISO 14001:2026 9.1.1", "obligation", "shall").
+relation("ISO 14001:2026 9.1.2", "clause_title", "Evaluation of compliance").
+relation("ISO 14001:2026 9.1.2", "obligation", "shall").
+relation("ISO 14001:2026 9.2", "clause_title", "Internal audit").
+relation("ISO 14001:2026 9.2", "maps_to_hls", "HS 9.2").
+relation("ISO 14001:2026 9.2.1", "clause_title", "General").
+relation("ISO 14001:2026 9.2.1", "maps_to_hls", "HS 9.2.1").
+relation("ISO 14001:2026 9.2.1", "obligation", "shall").
+relation("ISO 14001:2026 9.2.2", "clause_title", "Internal audit programme").
+relation("ISO 14001:2026 9.2.2", "maps_to_hls", "HS 9.2.2").
+relation("ISO 14001:2026 9.2.2", "obligation", "shall").
+relation("ISO 14001:2026 9.3", "clause_title", "Management review").
+relation("ISO 14001:2026 9.3", "maps_to_hls", "HS 9.3").
+relation("ISO 14001:2026 9.3.1", "clause_title", "General").
+relation("ISO 14001:2026 9.3.1", "maps_to_hls", "HS 9.3.1").
+relation("ISO 14001:2026 9.3.1", "obligation", "shall").
+relation("ISO 14001:2026 9.3.2", "clause_title", "Management review inputs").
+relation("ISO 14001:2026 9.3.2", "maps_to_hls", "HS 9.3.2").
+relation("ISO 14001:2026 9.3.2", "obligation", "shall").
+relation("ISO 14001:2026 9.3.3", "clause_title", "Management review results").
+relation("ISO 14001:2026 9.3.3", "maps_to_hls", "HS 9.3.3").
+relation("ISO 14001:2026 9.3.3", "obligation", "shall").
+relation("ISO 14001:2026 Annex A", "annex_status", "informative").
+relation("ISO 14001:2026 Annex A", "clause_title", "Guidance on the use of this document").
 relation("HLS (Annex SL Appendix 2, 2020)", "has_clause", "HLS 1").
 relation("HLS (Annex SL Appendix 2, 2020)", "has_clause", "HLS 10").
 relation("HLS (Annex SL Appendix 2, 2020)", "has_clause", "HLS 10.1").
