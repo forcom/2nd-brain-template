@@ -587,3 +587,22 @@
 - 감사 도구를 `inbox/obligation-audit/` 에 남겼다(자체검증 assert 포함). 현재 0 / 0.
 - 발견 사항: 42001 부속서 B 는 "(규정)" normative 인데 항목이 대부분 should 다. normative +
   should 조합 38건의 인증 필수 여부 판정은 별도 판단 필요 — open-questions 에 기록.
+
+## [2026-09-11] ingest | ISO 14001:2026(en) — 계약 완결 및 인스코프 편입
+
+- `raw/papers/iso-14001-2026-en.md` (46쪽, 2026-08-11 캡처)을 정식 편입했다. 이전 세션이
+  페이지 이미지 판독으로 만들어 두었으나 로그 항목과 스코프 결정이 없어 미커밋 상태였다.
+- 기록 무결성 검증: 본문 `sha256` 일치, `extracted_text_sha256` 일치, 페이지 마커 46개가
+  1~46 연속, 빈 페이지 0, 최종 개행 존재.
+- **원본 PDF 재해싱은 불가**했다. OneDrive 사본이 `compressed,dataless` 자리표시자(blocks=0)이며
+  내려받기가 실패한다. 주의: 이 상태에서 `shasum` 은 오류 없이 빈 문자열의 해시
+  `e3b0c442…b855` 를 돌려준다 — 해시 불일치로 오판하기 쉬운 함정이다. 따라서
+  `source_pdf_sha256: c94f58e8…` 는 캡처 당시 값을 그대로 신뢰하며, 이는 원본 드리프트가 아니라
+  해시 커버리지 공백으로 기록한다(SCHEMA.md 의 legacy 해시 공백 처리와 같은 취급).
+- 교차 확인: 이 기록의 HS 구조(`6.3 Planning of changes`, `10.1 Continual improvement`,
+  `10.2 Nonconformity and corrective action`)가 이번 세션에 ISO 원문에서 독립적으로 확정한
+  HS 절 목록과 일치한다. 서문도 "harmonized structure, identical core text" 를 선언한다.
+- 스코프: **인스코프**로 편입했다. 14001:2015(HLS)가 이미 인스코프이므로, 같은 표준의
+  마이그레이션 전후 판본이 한 코퍼스에 놓인다 — 6.3 신설과 10절 역전을 판본 차이로 직접
+  관측할 수 있는 유일한 쌍이다. 사실 추출은 아직 하지 않았다(다음 sync 대상).
+- `extraction_quality` 는 `llm-vision-verbatim-unreviewed` 유지 — 사람 교정 전이다.

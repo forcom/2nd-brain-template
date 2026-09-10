@@ -19,6 +19,11 @@
 # Added 2026-09-10 — the structure the four above are compared against:
 #   papers/iso-iec-directives-part1-annex-sl-2020-en.md  Annex SL (HLS), 11th ed.
 #   papers/iso-iec-harmonized-structure-mss-20260701-en.md  HS (former Appendix 2), 2026-07-01
+#
+# Added 2026-09-11 — the HLS→HS migration seen inside one standard:
+#   papers/iso-14001-2026-en.md                         ISO 14001:2026 (HS), English
+# 14001:2015 (HLS) is already in scope, so the pair is the same standard before and
+# after the migration: 6.3 신설과 10절 역전이 판본 차이로 직접 관측된다.
 # Without it the HLS slot entities had no source and `maps_to_hls` was fabricated;
 # see the 2026-09-10 entry in decisions/open-questions.md. English, unlike the four
 # Korean captures, so slot titles are quoted from Annex SL rather than translated.
