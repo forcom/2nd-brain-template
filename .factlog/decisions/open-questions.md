@@ -4812,6 +4812,134 @@
 - needs_review: KS Q ISO 9001:2015 9.3 / maps_to_hls / HLS 9.3 (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.80) - 9001 본문은 HLS·부속서 SL 을 명명하지 않는다 — 0.4 "경영시스템을 위한 표준 간의 정렬을 개선하기 위하여 ISO에서 개발된 틀을 적용한다", A.1 "항 구조와 몇몇 용어는 다른 경영시스템 표준과의 정렬을 향상시키기 위하여 변경되었다" 뿐이다. 따라서 이 행의 근거는 표준의 선언이 아니라, raw/ 에 있는 Annex SL 원문과 9001 캡처의 절 제목 대조다. 번호 9.3 이 양쪽에 존재하고 제목이 대응한다: "경영검토/경영평가(management review)" ↔ "Management review"
 
 - needs_review: KS Q ISO 9001:2015 10.2.2 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.95) - 10.2.2 본문 전문: "조직은 다음 사항의 증거로, 문서화된 정보를 보유하여야 한다." — shall 조동사가 조항 자체 본문에 있다. 2026-09-11 obligation 7행 폐기 과정에서 9001 10.2 가 비어 있는 것을 확인하다 발견한 추출 결손이다(10.2 는 표제라 정상, 10.2.1 은 shall 수락됨, 10.2.2 만 누락).
+
+- needs_review: KS I ISO 14001:2015 5.1 / obligation / shall (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "최고경영자는 환경경영시스템에 대한 리더십과 의지를 다음을 통해 표명(demonstrate)하여야 한다."
+
+- needs_review: KS I ISO 14001:2015 7.1 / obligation / shall (sources/papers/ks-i-iso-14001-20210928-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 환경경영시스템의 수립, 실행, 유지와 지속적인 개선을 위해 필요한 자원을 결정하고 제공해야 한다."
+
+- needs_review: KS Q ISO 9001:2015 4.4.2 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 필요한 정도까지 다음 사항을 실행하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 5.2.2 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "품질방침은 다음과 같아야 한다."
+
+- needs_review: KS Q ISO 9001:2015 6.2.2 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "품질목표를 달성하는 방법을 기획할 때, 조직은 다음 사항을 정하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 7.4 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 다음 사항을 포함하여 품질경영시스템에 관련되는 내부 및 외부 의사소통을 결정하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.2.2 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "고객에게 제공될 제품 및 서비스에 대한 요구사항을 결정할 경우, 조직은 다음 사항을 보장하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.2.3.2 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 적용될 경우, 다음 사항에 대한 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS Q ISO 9001:2015 8.7.2 / obligation / shall (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 다음의 문서화된 정보를 보유하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 7.1 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 정보보호 경영시스템의 수립, 구현, 유지, 지속적 개선에 필요한 자원을 파악하고 제공하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.11.1.6 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 배송 및 하역 구역과 같이 비인가자가 구내로 들어올 수 있는 접근 장소는 통제하여야 하며, 비인가 접근을 피하기 위하여 정보처리 시설에서 가능한 고립시켜야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.11.2.8 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 사용자는 방치된 장비에 대한 적절한 보호를 보장하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.14.2.8 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 개발 기간 동안에 보안 기능의 시험을 수행하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.14.3.1 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 시험 데이터를 신중하게 선택하여 보호하고 통제하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.16.1.5 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 정보보호 사고는 문서화된 절차에 따라 대응하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.6.1.5 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 프로젝트의 유형에 상관없이 프로젝트 관리 내에서 정보보호를 다루어야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.9.2.3 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 특수 접근권한에 대한 할당과 사용을 제한하고 통제하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.9.2.5 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 자산 소유자는 정기적으로 사용자 접근권한을 검토하여야 한다."
+
+- needs_review: KS X ISO/IEC 27001:2013 A.9.4.5 / obligation / shall (sources/papers/ks-x-iso-iec-27001-20241030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "통제: 프로그램 소스 코드에 대한 접근은 제한하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 6.3 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직이 AI경영시스템의 변경이 필요하다고 정한 경우, 변경은 계획된 방식으로 수립하여 수행되어야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 7.4 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 다음 사항을 포함하여 AI경영시스템에 관련되는 내부 및 외부 의사소통을 결정하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.2.3 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템과 관련하여 조직의 목표에 의해 다른 방침이 영향을 받거나 적용될 수 있다는 것을 결정하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.3.2 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "AI의 역할과 책임은 조직의 필요에 따라 규정되고 부여되어야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 A.8.2 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 사용자에게 필요한 정보를 정하고 제공하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.10.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템 수명 주기 내의 책임이 조직, 파트너, 공급업체, 고객 및 제3자 사이에 부여되도록 보장하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.10.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 공급업체가 제공하는 서비스, 제품 또는 자료의 사용이 AI 시스템의 책임 있는 개발 및 사용에 대한 조직의 접근 방식과 일치하도록 보장하는 프로세스를 수립하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.10.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템 개발 및 사용에 대한 책임 있는 접근 방식이 고객의 기대와 요구를 고려하도록 보장하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.2.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 개발 또는 사용을 위한 방침을 문서화하여야 할 것이다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.2.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템과 관련하여 조직의 목표에 따라 다른 방침이 영향을 받거나 적용할 수 있는 부분을 정하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.2.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "AI 방침은 지속적인 적절성, 충족성 및 효과성을 보장하기 위해 계획된 주기 또는 필요에 따라 추가로 검토되는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.3.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "AI의 역할과 책임은 조직의 필요에 따라 규정 및 부여되는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.3.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템과 관련된 조직의 역할에 대한 우려사항을 수명 주기 전반에 걸쳐 보고할 수 있는 프로세스를 규정하고 마련하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.4.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 주어진 AI 시스템 수명 주기 단계에서 활동과 조직과 관련된 기타 AI 관련 활동에 요구되는 자원을 식별하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.4.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "자원 식별의 일부로, 조직은 AI 시스템에 활용되는 데이터 자원에 대한 정보를 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.4.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "자원 식별의 일부로 조직은 AI 시스템에 사용되는 도구 자원에 대한 정보를 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.4.5 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "자원 식별의 일부로, 조직은 AI 시스템에 사용되는 시스템 및 컴퓨팅 자원에 대한 정보를 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.4.6 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "니라 검증 및 통합에 활용되는 인적 자원 및 그들의 역량에 대한 정보를 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.5.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 수명 주기 전반에 걸쳐 AI 시스템으로 인해 발생할 수 있는 개인 또는 개인그룹 또는 둘 다 그리고 사회의 잠재적 결과를 평가하기 위한 프로세스를 수립하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.5.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템 영향 평가 결과를 문서화하고 규정된 기간 동안 결과를 유지하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.5.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 시스템 수명 주기 동안 개인 또는 개인그룹에 대한 AI 시스템의 잠재적 영향을 평가하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.5.5 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 수명 주기 전반에 걸쳐 잠재적인 사회적 영향을 평가하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.1.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 책임 있는 개발을 가이드하기 위한 목표를 식별하고 문서화하며 개발 수명 주기에서 이러한 목표를 고려하고 이를 달성하기 위한 조치를 통합하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.1.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 설계 및 개발을 위한 특정 프로세스를 규정하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 새로운 AI 시스템 또는 기존 시스템에 대한 중요한 강화에 대한 요구사항을 명시하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.3 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 조직 목표, 문서화된 요구사항 및 규격 기준에 따라 AI 시스템 설계 및 개발을 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "설계와 개발 사이에는 여러 번의 반복이 있을 수 있지만, 단계의 문서화는 유지되는 것이 좋으며, 최종 시스템의 아키텍처 문서화를 이용할 수 있는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템에 대한 검증 및 검토 방법 그리고, 그 사용을 위한 구체적인 기준을 규정하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.5 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 배포 계획을 문서화하고 배포하기 전에 적절한 요구사항이 충족되는지 확인하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.6 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 지속적인 운용에 필요한 요소를 규정(define)하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.7 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 사용자, 파트너, 감독 기관 등 이해관계자의 관련 범주별로 어떤 AI 시스템 기술 문서가 필요한지 결정하고 적절한 형식으로 기술 문서를 제공하여야 할 것이다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.6.2.8 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템 수명 주기의 어느 단계에서 이벤트 로그의 기록 보관을 활성화해야 하는지 결정해야 하지만 AI 시스템이 사용 중인 경우에는 최소한으로 결정하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.7.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템 개발과 관련된 데이터 관리 프로세스를 규정, 문서화 및 구현하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.7.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템에 사용되는 데이터의 획득 및 선택에 대한 세부 정보를 결정하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.7.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 데이터 품질에 대한 요구사항을 규정하고 문서화하고 AI 시스템을 개발하고 운용하는 데 사용되는 데이터가 이러한 요구사항을 충족하는지 확인하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.7.6 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 데이터 준비 선택 기준과 사용할 데이터 준비 방법을 규정하고 문서화하여야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.7.6 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "방법과 변환을 선택하기 위한 기준을 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.8.2 / obligation / shall (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "인공지능 시스템은 복잡할 수 있지만, 사용자가 인공지능 시스템과 상호작용할 때 시스템이 어떻게 작동하는지 이해할 수 있어야 한다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.8.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 시스템 사용자에게 필요한 정보를 결정하고 제공하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.8.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 시스템의 부정적인 영향을 보고하기 위한 기능을 제공하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.8.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 사건을 시스템 사용자와 의사소통하기 위한 계획을 결정하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.8.5 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템에 대한 정보를 이해관계자에게 보고할 의무를 결정하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.9.2 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 책임 있는 사용을 위한 프로세스를 규정하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.9.3 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 책임 있는 사용을 가이드하는 목표를 식별하고 문서화하는 것이 좋다."
+
+- needs_review: KS X ISO/IEC 42001:2023 B.9.4 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 AI 시스템의 의도된 용도와 함께 제공되는 문서에 따라 AI 시스템이 사용되도록 보장하는 것이 좋다."
 ## 출처 부족
 
 근거 문서가 없거나, 사라진 문서를 가리키는 항목.
@@ -4827,6 +4955,8 @@
 - needs_review: HS 7.1 / clause_title / Resources (sources/papers/iso-iec-harmonized-structure-mss-20260701-en.md, confidence=0.95) - HS 규범 좌열 p20 표제 그대로
 
 - needs_review: KS Q ISO 9001:2015 7.1 / maps_to_hls / HLS 7.1 (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.80) - 9001 본문은 HLS·부속서 SL 을 명명하지 않는다 — 0.4 "경영시스템을 위한 표준 간의 정렬을 개선하기 위하여 ISO에서 개발된 틀을 적용한다", A.1 "항 구조와 몇몇 용어는 다른 경영시스템 표준과의 정렬을 향상시키기 위하여 변경되었다" 뿐이다. 따라서 이 행의 근거는 표준의 선언이 아니라, raw/ 에 있는 Annex SL 원문과 9001 캡처의 절 제목 대조다. 번호 7.1 이 양쪽에 존재하고 제목이 대응한다: "자원" ↔ "Resources"
+
+- needs_review: KS X ISO/IEC 42001:2023 B.7.5 / obligation / should (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문의 조동사 문장: "조직은 데이터 및 AI 시스템의 수명 주기에 걸쳐 AI 시스템에 사용되는 데이터의 출처를 기록하기 위한 프로세스를 규정하고 문서화하는 것이 좋다."
 ## 기존 내용과 충돌할 수 있는 항목
 
 이미 확정된 사실과 어긋날 수 있어 둘 중 하나를 골라야 하는 항목.
@@ -4848,6 +4978,32 @@
   둔다 — 승인하려면 Annex SL Appendix 2를 먼저 ingest해 출처로 인용할 것.
   (2021년 개정으로 HLS → HS 개명, 6.3 신설, 10절 순서 변경. 기존 표준에 소급 적용되지
   않으므로 2015년판 9001·14001이 HLS인 것과 모순되지 않는다.)
+
+- 2026-09-11 (해결): **`obligation` 결손을 전수 처리했다 — 65행 추가, 거짓 3행 회수.**
+  바로 앞 항목에서 "89건 미해결"로 남겨 둔 건이다. 추출기를 다시 만들어 오탐 원인을 제거했다:
+    - 부속서 그룹 행은 표가 시작되는 지점에서 자체 본문을 끊는다(표 행 = 자식 항목).
+      부속서 개별 항목은 표 셀에서 따로 뽑는다.
+    - 문서 말미 `해 설` 절 이후를 잘라낸다. 이 절이 "2 용어 해설"처럼 본문과 겹치는 번호로
+      표제를 달아, 앞선 훑기에서 조항 2·3 의 본문으로 오인됐다.
+    - 번호와 본문이 한 줄인 조항(`10.2.2  조직은 … 보유하여야 한다.`)은 표제 줄 나머지를 본문에 포함.
+  **검증 기준: 이미 수락된 obligation 행을 추출기가 전부 재현해야 한다.** 최종 재현 실패 0.
+  이 기준이 실제로 데이터 오류를 잡아냈다 — 재현되지 않던 3행이 추출기 결함이 아니라
+  수락된 행 쪽의 거짓이었다:
+    - 9001 조항 2 "인용표준"(shall·should 둘 다). 본문은 "…필수적이다 … 적용한다" 로 조동사가 없다.
+    - 42001 조항 3 "용어와 정의"(shall). 본문은 "…적용한다" 뿐이다.
+  둘 다 요구사항이 아니라 적용 범위 서술이며, 원래 추출이 `해 설` 절 텍스트를 집어온 것으로 보인다.
+  → `factlog eject --fact` 로 회수.
+  추가한 65행의 내역: 27001 shall 10(7.1 자원 + 부속서 A 통제 9), 9001 shall 7, 42001 shall 8,
+  42001 should 38(부속서 B), 14001 shall 2(5.1, 7.1). 각 행의 노트에 조동사가 든 문장을 그대로 인용했고
+  confidence 0.90 이다(기존 행의 "본문에 … 계열 조동사 존재" 보다 근거가 구체적이다).
+  제외 1건: 42001 B.6.2.2 의 shall. "AI 시스템 요구사항은 구체화되어야 하며 … 있는 것이 좋다." 는
+  종결 술어가 `좋다` 라 shall 로 볼 수 없다. 같은 항목의 should 는 수락했다.
+  주목할 점: **42001 부속서 B 는 "(규정)" 즉 normative 인데 항목 본문은 대부분 should 다.**
+  normative 이면서 should 인 조합이 38건 생겼다 — `certification_mandatory` 가 이 둘을 어떻게
+  다뤄야 하는지는 별도 판단이 필요하다(현재 규칙은 annex_status normative 만으로 필수 판정).
+  도구는 `inbox/obligation-audit/` 에 자체검증과 함께 남겼다. 재현 실패가 0 이 아니면
+  결손 후보를 신뢰하지 말 것(assert 로 강제).
+  검증 후 상태: 재현 실패 0 / 결손 후보 0.
 
 - 2026-09-11: **`obligation` 추출 결손이 단발이 아니다 — 1건만 채우고 나머지는 미해결로 둔다.**
   9001 10.2.2 는 본문이 "조직은 다음 사항의 증거로, 문서화된 정보를 보유하여야 한다." 인데

@@ -568,3 +568,22 @@
   계통적 문제다. 다만 훑기의 오탐률이 높아(부속서 그룹 행이 자식 조동사를 흡수, 페이지 경계에서
   본문 혼입) 일괄 투입하지 않았다. 상세는 open-questions 2026-09-11 항목.
 - 지표: engine facts 1,863 → 1,864, errors 0 / warnings 0.
+
+## [2026-09-11] lint | obligation 결손 전수 처리 — 65행 추가, 거짓 3행 회수
+
+- 추출기를 다시 만들어 앞선 훑기의 오탐을 제거했다: 부속서 그룹은 표 시작에서 자체 본문을 끊고
+  개별 항목은 표 셀에서 뽑으며, 말미 `해 설` 절을 잘라내고, 번호와 본문이 한 줄인 조항은
+  표제 줄 나머지를 본문에 포함한다.
+- 검증 기준은 "수락된 obligation 행을 전부 재현할 것". 최종 재현 실패 0.
+- 이 기준이 데이터 오류를 잡았다 — 재현되지 않던 3행이 실제로는 거짓이었다.
+  9001 조항 2 인용표준(shall·should), 42001 조항 3 용어와 정의(shall). 두 조항 다 본문이
+  "필수적이다 / 적용한다" 로 조동사가 없다. `factlog eject --fact` 로 회수했다.
+- 추가 65행: 27001 shall 10, 9001 shall 7, 42001 shall 8, 42001 should 38(부속서 B), 14001 shall 2.
+  각 행 노트에 조동사 문장을 그대로 인용, confidence 0.90.
+- 제외 1건: 42001 B.6.2.2 shall — 종결 술어가 `좋다` 라 shall 로 볼 수 없다(should 는 수락).
+- 지표: engine facts 1,864 → 1,926. `certification_mandatory` 284 → 309. errors 0 / warnings 0.
+  `hls_strictest_wins` 는 obligation 이 늘어난 뒤에도 0행 — 공유 슬롯 33개 중 의무수준이
+  갈리는 것은 여전히 0건이다.
+- 감사 도구를 `inbox/obligation-audit/` 에 남겼다(자체검증 assert 포함). 현재 0 / 0.
+- 발견 사항: 42001 부속서 B 는 "(규정)" normative 인데 항목이 대부분 should 다. normative +
+  should 조합 38건의 인증 필수 여부 판정은 별도 판단 필요 — open-questions 에 기록.
