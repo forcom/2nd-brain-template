@@ -735,3 +735,17 @@
 - 첫 활용: `mandatory_annex_item` 151행 — "인증 필수인 부속서 항목"을 정규식이 아니라 타입으로
   건다. annex_item ∩ certification_mandatory 교집합과 일치.
 - `facts/query.dl` 에 타입 질의 2건 추가(910행·151행 응답). errors 0 / warnings 0.
+
+## [2026-09-11] update | factlog KB → Understand-Anything 결정적 변환기
+
+- `inbox/factlog-graph/build.py` 추가. LLM 추론 없이 `accepted.dl` + `instance_of` 도출 결과만
+  읽어 UA 스키마로 옮긴다. 사실 2,330건 → 노드 654 / 엣지 1,975 / layers 6 / tour 6, dangling 0.
+- 관계 이름이 엣지 타입으로 보존된다(has_clause 621, belongs_to_annex 263, maps_to_hls 177 …).
+  UA 파서를 pages/ 에 겨누는 대안은 위키링크가 전부 `related` 로 뭉개져 쓰지 않았다.
+- 대시보드 지식 뷰가 5종 타입에만 색·범례를 붙이므로 온톨로지 타입을 그 안으로 매핑하고
+  원래 타입은 tags 에 보존했다. 리터럴 관계 9종은 노드가 아니라 노드 속성으로 접었다.
+- source 노드 id 를 위키 그래프와 같은 `source:papers/<stem>` 형식으로 맞췄다. 두 그래프가
+  실제로 조인된다 — factlog 쪽 7개가 전부 위키 쪽 57개 안에 있다.
+- 출력은 `.factlog/.ua/`(gitignore 대상). 루트 `.understand-anything/` 은 위키 그래프이고
+  Gate C 가 article 95 / source 57 로 검증하므로 덮지 않는다.
+- 뷰어로 실제 서빙 확인(HTML 200, 그래프 654노드 응답).

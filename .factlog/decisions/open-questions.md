@@ -5744,6 +5744,31 @@
   생성본 `requires_review` 10행은 그대로 남는다(`policy_match` 와 같은 상황). 신뢰할 값은
   동명의 전용 술어 쪽이다.
 
+- 2026-09-11: **factlog KB → Understand-Anything 결정적 변환기(2순위 완료).**
+  `inbox/factlog-graph/build.py`. LLM 추론 0 — `accepted.dl` 의 사실과 `logic_report.txt` 의
+  `instance_of` 도출 결과만 읽는다. 사실 2,330건 → 노드 654 / 엣지 1,975, dangling 0.
+  **관계 이름이 엣지 타입으로 보존된다** — has_clause 621 / belongs_to_annex 263 /
+  maps_to_hls 177 / slot_equivalent_to 33 / has_annex 10 / supersedes 5 / based_on 4 /
+  made_binding_by 3 / amended_by 1, 그리고 provenance 용 cites 858.
+  설계 결정 셋:
+    - **UA 타입 매핑.** 대시보드 지식 뷰는 `article/entity/topic/claim/source` 5종에만 색·범례·
+      필터를 붙인다(`KnowledgeGraphView.tsx`). 온톨로지 타입을 그대로 쓰면 렌더는 되나 회색 무채색이
+      된다. 그래서 standard·structure_document→article, structure_slot→topic,
+      clause·annex·annex_item→entity 로 매핑하고 **원래 타입은 `tags` 에 보존**했다.
+    - **리터럴은 노드가 아니라 속성.** attribute-relations 9종(clause_title·obligation 등)은
+      노드를 만들지 않고 name/summary/tags 로 접었다. clause_title 은 노드 이름이 된다.
+    - **source 노드 id 를 위키 그래프와 같은 형식으로.** `source:papers/<stem>` 으로 맞춰
+      두 그래프가 조인된다 — 실제로 factlog 쪽 7개가 전부 위키 쪽 57개 안에 있다(3순위 연결 고리).
+  **루트의 `.understand-anything/` 은 건드리지 않는다.** 그쪽은 위키 문서 그래프이고 Gate C 가
+  article 95 / source 57 로 검증하므로, 구성이 다른 그래프를 덮으면 즉시 깨진다.
+  출력은 `.factlog/.ua/` 이며 `.gitignore` 의 `.ua/` 로 버전 관리에서 빠진다 — 의도한 것이다.
+  이 그래프는 커밋된 스크립트로 초 단위에 재생성되는 파생물이고, 위키 그래프처럼 LLM 보강을
+  담고 있지 않다. 그래서 위키 그래프는 버전 관리하고 이쪽은 하지 않는 비대칭이 성립한다.
+  조회: `npx --yes "<viewer tgz>" "$PWD/.factlog"` 로 뷰어가 이 디렉터리를 서빙한다(확인함).
+  **남은 것(3순위)**: 두 그래프를 합치지 않고 source id 로 잇는 조회 경로를 어떻게 노출할지.
+  현재는 두 뷰어를 따로 띄워야 한다. 신뢰 등급이 다르므로(검증된 사실 vs LLM 추론 문서 그래프)
+  합치지 않는 것이 전제다.
+
 - 2026-09-11: **타입 레이어를 추가했다 — 온톨로지 질의의 전제.**
   목표는 "원문 → LLM Wiki → factlog 그래프 → Understand-Anything 조회 → 온톨로지 질의"이고,
   네 단계 중 병목이 마지막이었다. 엔터티 647개의 종류가 **문자열 모양으로만** 구분됐다 —
