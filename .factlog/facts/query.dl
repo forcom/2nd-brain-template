@@ -4,3 +4,5 @@ relation(S, "obligation", O)?
 relation(S, "annex_status", O)?
 relation(S, "requires_documented_information", "true")?
 relation(S, "supersedes", O)?
+instance_of(X, R)?
+mandatory_annex_item(X, R)?

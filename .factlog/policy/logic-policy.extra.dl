@@ -93,3 +93,51 @@ edition_currency(C, "based_on_superseded_edition") :-
   relation(K, "has_clause", C),
   relation(K, "based_on", I),
   relation(_, "supersedes", I).
+
+// --- 2026-09-11: 타입 레이어 (온톨로지 쿼리의 전제) ---
+//
+// 엔터티 647개의 종류가 지금까지 문자열 모양으로만 구분됐다 — "…A.10.1.1" 이 부속서 항목이라는
+// 것은 정규식이 아는 것이지 KB 가 아는 것이 아니었다. 타입을 사실에서 결정적으로 파생시켜,
+// 정책 규칙과 질의가 문자열 패턴 대신 타입으로 조건을 걸 수 있게 한다.
+// 새 사실을 추출하지 않는다 — 기존 accepted 사실만으로 엔진이 도출한다.
+//
+// 리포터가 arity-2 (entity, reason) 만 다루므로 reason 자리에 타입 이름을 둔다.
+// 재귀를 피하려고 조건은 인라인한다(instance_of 를 몸통에 쓰지 않는다).
+.decl instance_of(entity: symbol, reason: symbol)
+
+// 표준 — 부속서를 갖거나, 판본 계보에 참여하는 것. 구조 문서는 부속서가 없어 섞이지 않는다.
+instance_of(S, "standard") :- relation(S, "has_annex", _).
+instance_of(S, "standard") :- relation(S, "edition_year", _).
+instance_of(S, "standard") :- relation(S, "based_on", _).
+instance_of(S, "standard") :- relation(_, "based_on", S).
+instance_of(S, "standard") :- relation(S, "supersedes", _).
+instance_of(S, "standard") :- relation(_, "supersedes", S).
+instance_of(S, "standard") :- relation(S, "amended_by", _).
+instance_of(S, "standard") :- relation(_, "amended_by", S).
+
+// 구조 문서 — 자기 조항이 슬롯인 것(HLS/HS 원문).
+instance_of(D, "structure_document") :-
+  relation(D, "has_clause", C),
+  relation(_, "maps_to_hls", C).
+
+// 구조 슬롯 — maps_to_hls 의 목적어이거나 slot_equivalent_to 의 양 끝.
+instance_of(T, "structure_slot") :- relation(_, "maps_to_hls", T).
+instance_of(T, "structure_slot") :- relation(T, "slot_equivalent_to", _).
+instance_of(T, "structure_slot") :- relation(_, "slot_equivalent_to", T).
+
+// 조항 — 표준(부속서를 가진 것)의 has_clause 목적어. 구조 문서의 슬롯은 제외된다.
+instance_of(C, "clause") :-
+  relation(S, "has_clause", C),
+  relation(S, "has_annex", _).
+
+// 부속서와 그 항목. 부속서 항목은 조항이기도 하므로 두 타입을 함께 갖는다(다중 타입 의도됨).
+instance_of(A, "annex") :- relation(_, "has_annex", A).
+instance_of(A, "annex") :- relation(_, "belongs_to_annex", A).
+instance_of(I, "annex_item") :- relation(I, "belongs_to_annex", _).
+
+// 타입을 쓰는 온톨로지 규칙의 첫 사례 — 문자열 패턴 대신 타입으로 조건을 건다.
+// "인증 필수인 부속서 항목": 종래에는 주어가 "…A.x.y" 모양인지 정규식으로 봐야 했다.
+.decl mandatory_annex_item(entity: symbol, reason: symbol)
+mandatory_annex_item(X, "annex_item_and_certification_mandatory") :-
+  instance_of(X, "annex_item"),
+  certification_mandatory(X, _).

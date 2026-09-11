@@ -723,3 +723,15 @@
 - 참고: `requires_review` 10행은 퇴화한 생성 규칙의 오탐이며 신뢰할 값은 동명의 전용 술어
   (`structure_family_read_not_inferred` 1행, `edition_currency` 52행)다. `review facts outside
   engine input: 1` 은 9001 structure_family 로, 정책이 요구하는 needs_review 상태다.
+
+## [2026-09-11] lint | instance_of 타입 레이어 추가 — 온톨로지 질의 전제
+
+- 엔터티 647개의 종류가 문자열 모양으로만 구분되던 것을 사실에서 도출하도록 바꿨다.
+  `logic-policy.extra.dl` 에 `instance_of` 규칙을 넣었고 새 사실 추출은 없다 — 기존 accepted
+  사실만으로 엔진이 파생한다.
+- 결과 910행: clause 549 / annex_item 263 / structure_slot 72 / standard 14 / annex 10 /
+  structure_document 2. 6개 타입 전부 독립 계산과 일치, 미분류 엔터티 0.
+- 부속서 항목이 clause 와 annex_item 을 함께 갖는 다중 타입은 의도된 것이다.
+- 첫 활용: `mandatory_annex_item` 151행 — "인증 필수인 부속서 항목"을 정규식이 아니라 타입으로
+  건다. annex_item ∩ certification_mandatory 교집합과 일치.
+- `facts/query.dl` 에 타입 질의 2건 추가(910행·151행 응답). errors 0 / warnings 0.

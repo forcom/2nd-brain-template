@@ -5744,6 +5744,31 @@
   생성본 `requires_review` 10행은 그대로 남는다(`policy_match` 와 같은 상황). 신뢰할 값은
   동명의 전용 술어 쪽이다.
 
+- 2026-09-11: **타입 레이어를 추가했다 — 온톨로지 질의의 전제.**
+  목표는 "원문 → LLM Wiki → factlog 그래프 → Understand-Anything 조회 → 온톨로지 질의"이고,
+  네 단계 중 병목이 마지막이었다. 엔터티 647개의 종류가 **문자열 모양으로만** 구분됐다 —
+  `"KS X ISO/IEC 27001:2013 A.10.1.1"` 이 부속서 항목이라는 것은 정규식이 아는 것이지
+  KB 가 아는 것이 아니었다. 18개 관계 중 타입/분류 관계는 0종이었다.
+  `logic-policy.extra.dl` 에 `instance_of` 를 도출 규칙으로 넣었다. **새 사실을 추출하지 않는다** —
+  기존 accepted 사실만으로 엔진이 파생한다. 리포터가 arity-2 (entity, reason) 만 다루므로
+  reason 자리에 타입 이름을 둔다. 재귀를 피하려고 조건은 인라인했다.
+  도출 근거: 표준=부속서 보유 또는 판본 계보 참여 / 구조 문서=자기 조항이 슬롯 /
+  슬롯=maps_to_hls 목적어 또는 slot_equivalent_to 양 끝 / 조항=표준의 has_clause 목적어 /
+  부속서=has_annex·belongs_to_annex 목적어 / 부속서 항목=belongs_to_annex 주어.
+  결과 910행, 타입별로 clause 549 / annex_item 263 / structure_slot 72 / standard 14 /
+  annex 10 / structure_document 2. **6개 타입 전부 독립 계산과 정확히 일치**했고,
+  엔터티 647개 중 미분류는 0이다. 부속서 항목이 clause 와 annex_item 을 함께 갖는 다중 타입은
+  의도된 것이다(부속서 항목은 표준의 조항이기도 하다).
+  첫 활용 사례로 `mandatory_annex_item` 을 썼다 — 종래에는 주어가 "…A.x.y" 모양인지 정규식으로
+  봐야 했던 질문("인증 필수인 부속서 항목")을 타입으로 건다. 151행이며 annex_item 263 ∩
+  certification_mandatory 344 의 교집합과 일치한다.
+  `facts/query.dl` 에 `instance_of(X, R)?` 와 `mandatory_annex_item(X, R)?` 를 추가해 엔진이
+  각각 910행·151행으로 답하는 것을 확인했다. errors 0 / warnings 0.
+  **다음 단계**: (2순위) `accepted.dl` → Understand-Anything 스키마 결정적 변환. 타입이 생겼으므로
+  노드 타입으로 쓸 수 있다. 반드시 별도 파일에 쓸 것 — 루트의 `.understand-anything/` 을 덮으면
+  Gate C 가 위키 기대값(article 95 / source 57)과 어긋나 즉시 깨진다.
+  (3순위) 문서 그래프와 사실 그래프를 합치지 말고 `source` 경로로 연결. 신뢰 등급이 다르다.
+
 - 2026-09-11: **대기 사실 137행을 전부 처리했다 — 남은 대기는 1행뿐이다.**
 
   ① `control_objective` 45행 수락. 27001 부속서 그룹 35개와 42001 10개에 1:1로 대응한다.
