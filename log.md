@@ -706,3 +706,20 @@
   있어 다음에 읽는 사람이 열린 항목으로 오인하게 되어 있었다(실제로 이번에 내가 그렇게 헛짚었다).
   해결된 항목에는 해결 날짜와 해당 항목 포인터를 붙였고, 9001 `structure_family` 는 결함이 아니라
   정책이 요구하는 `needs_review` 상태임을 명시했다.
+
+## [2026-09-11] query | factlog 질의 초안 작성 — facts/query.dl 신규
+
+- `factlog status` 가 `report STALE` 을 지시했고 `facts/query.dl` 이 아예 없어 질문→질의 계약
+  산출물(AC3)이 빠져 있었다. 게이트 규칙상 보고서가 존재하면 query 재작성에 신선한 보고서가
+  필요하므로 check(갱신) → query(작성) → check(평가) 순으로 수행했다.
+- `policy/questions.md` 의 q1~q6 을 각각 한 줄 Datalog 질의로 번역했다. 추측으로 쓰지 않고
+  `common.validate_candidate_query` 로 후보 형태를 먼저 시험해 통과한 것만 기록했다.
+  q1 has_clause / q2 maps_to_hls / q3 obligation / q4 annex_status /
+  q5 requires_documented_information / q6 supersedes — 전부 변수 바인딩 relation 질의다.
+- 엔진 평가 결과: 621 / 177 / 381 / 10 / 142 / 5 행. errors 0 / warnings 0.
+- `compile_facts.py` 재실행 결과 `accepted.dl` 이 바이트 동일 — 결정적 재컴파일이 확인됐다.
+- 커버리지: 소스 57개 중 7개 커버, text gap 0, 변환 필요 바이너리 0, orphan citation 0,
+  50개 sync-ignore 제외. 현재 phase-1 스코프와 일치한다.
+- 참고: `requires_review` 10행은 퇴화한 생성 규칙의 오탐이며 신뢰할 값은 동명의 전용 술어
+  (`structure_family_read_not_inferred` 1행, `edition_currency` 52행)다. `review facts outside
+  engine input: 1` 은 9001 structure_family 로, 정책이 요구하는 needs_review 상태다.

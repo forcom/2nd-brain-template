@@ -10,8 +10,8 @@
       "karpathy-wiki"
     ],
     "description": "Knowledge graph for Wiki Index",
-    "analyzedAt": "2026-09-11T12:02:00.914470+00:00",
-    "gitCommitHash": "d9d44dd2634fe8dd4d15720fc21edc82967a66c5"
+    "analyzedAt": "2026-09-11T12:31:09.717883+00:00",
+    "gitCommitHash": "0994a916daca641d367d2e470cd911b4882dd9f5"
   },
   "nodes": [
     {

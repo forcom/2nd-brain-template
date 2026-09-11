@@ -1,0 +1,6 @@
+relation(S, "has_clause", C)?
+relation(S, "maps_to_hls", O)?
+relation(S, "obligation", O)?
+relation(S, "annex_status", O)?
+relation(S, "requires_documented_information", "true")?
+relation(S, "supersedes", O)?
