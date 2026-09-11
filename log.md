@@ -654,3 +654,27 @@
 - 리포터가 arity-2 술어만 처리해 arity-1 보조 술어를 선언하면 run_logic_check.py 가 죽는다.
   보조 술어를 없애고 몸통에 직접 묶었다(더 단순하기도 하다). extra.dl 주석에 기록.
 - 지표: engine facts 2,330 불변, errors 0 / warnings 0. 손작성 규칙 총 4건.
+
+## [2026-09-11] update | requires_document 교체 잔존 참조 4곳 정리
+
+- 지식그래프 재생성 중 분석 에이전트가 `contradicts` 엣지로 지목해 발견했다. 오늘 관계를
+  불리언으로 갈아끼우며 등록만 바꾸고 나머지를 안 고쳤다.
+- `questions.md` q5(문서 이름 기록 지시)와 q2(폐기한 제목 박힌 슬롯 예시)는 다음 sync 가
+  폐기분을 되살리는 지뢰였다. q2 는 q5 를 고치다 추가로 발견했다.
+- `logic-policy.md` [deliverable_scope] 는 없어진 관계를 참조해 조용히 0행이었다.
+  `single-valued.md` 주석도 갱신.
+- `generate_logic_policy.py` 재생성 후 deliverable_scope 0 → 142행, policy_match 587 → 729행.
+- 교훈: 관계 교체 시 attribute-relations / questions / logic-policy / single-valued 네 곳을 함께 본다.
+
+## [2026-09-11] update | 지식그래프 재생성 — Gate A·B·C 전부 통과
+
+- Understand-Anything v2.9.6 을 `.understand-anything/repo`(gitignore 대상)에 저장소 전용 설치하고
+  understand-knowledge 파이프라인을 수행했다(파싱 → 분석 6배치 → 병합 → 검증 → 저장 → 스탬프).
+- UA 파서는 `.gitignore` 를 무시하는데 Gate C 기대 집합은 `git ls-files --cached --others
+  --exclude-standard` 다. 저장소에서 바로 돌리면 article 914 개가 나온다. git 이 보는 파일만
+  담은 깨끗한 사본에서 파싱해 95/57 로 맞췄다.
+- 정책 파일 수정 후 inputHash 정합을 위해 파서를 재실행했다(분석 배치는 재사용).
+- 깨끗한 사본에 .git 이 없어 비었던 `project.gitCommitHash` 를 HEAD 로 채웠다.
+- 결과: 258 노드(article 95 / source 57 / topic 4 / entity 48 / claim 54), 252 엣지,
+  5 레이어, 4 투어, dangling 0. 이전 212 노드 / 190 엣지.
+- **Gate A ok / Gate B ok / Gate C ok — 세션 시작 이래 처음 전체 ok: true.**

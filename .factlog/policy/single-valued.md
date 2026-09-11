@@ -40,4 +40,5 @@
 #                       different modal levels (a shall sentence and a should
 #                       sentence in the same clause is correct, not a conflict).
 #   has_clause        — a standard has many clauses.
-#   requires_document — one clause can demand a policy and a record together.
+#   requires_documented_information — boolean; listed here only to say it is not
+#                       single-valued-sensitive. One row per clause is the norm.

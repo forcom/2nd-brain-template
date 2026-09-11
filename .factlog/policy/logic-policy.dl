@@ -15,7 +15,8 @@ policy_match(X, "cross_structure_integration_point") :-
 
 // deliverable_scope
 policy_match(X, "deliverable_scope") :-
-  relation(X, "requires_document", _).
+  relation(X, "obligation", _),
+  relation(X, "requires_documented_information", _).
 
 // hls_integration_point
 policy_match(X, "hls_integration_point") :-

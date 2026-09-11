@@ -21,6 +21,6 @@ that actually bind it.
 
 - [hls_strictest_wins] When clauses sharing a structure slot carry different `obligation` levels, the integrated system must satisfy the strictest one — shall over should over may over can. Never downgrade an obligation because a sibling standard states it more weakly.
 
-- [deliverable_scope] The deliverables an organization must produce are the `requires_document` values of every clause that is mandatory for certification under the standards in its scope. A document required by one standard in scope is required by the integrated system.
+- [deliverable_scope] A clause that carries an `obligation` and whose body `requires_documented_information` is where a deliverable comes from. Collect these across every standard in scope: documentation demanded by one standard in scope is demanded of the integrated system.
 
 - [edition_currency] When one standard `supersedes` another, requirements are read from the superseding edition. Report a clause cited only from a superseded edition as needing review rather than treating it as current.

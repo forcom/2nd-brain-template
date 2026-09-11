@@ -5659,6 +5659,40 @@
   (2021년 개정으로 HLS → HS 개명, 6.3 신설, 10절 순서 변경. 기존 표준에 소급 적용되지
   않으므로 2015년판 9001·14001이 HLS인 것과 모순되지 않는다.)
 
+- 2026-09-11: **`requires_document` 교체가 미완이었다 — 추출 질문까지 따라가지 않았다.**
+  지식그래프 재생성 중 `article-analyzer` 배치가 `contradicts` 엣지로 지목해 발견했다.
+  오늘 ③에서 관계를 불리언으로 갈아끼우며 `attribute-relations.md` 등록만 하고 멈춘 결과,
+  네 곳에 구 관계명이 남아 있었다. 그중 둘은 **다음 sync 가 폐기한 것을 그대로 되살리는** 지뢰였다:
+    - `questions.md` q5 — 문서 이름(정책서/절차서/…)을 `requires_document` 로 기록하라고 지시.
+    - `questions.md` q2 — 슬롯 예시가 오늘 폐기한 제목 박힌 형식(`HLS 4.1 조직과 조직상황의 이해`).
+      이건 에이전트가 아니라 q5 를 고치다 내가 발견했다.
+    - `logic-policy.md` `[deliverable_scope]` — 없어진 관계를 참조해 규칙이 조용히 0행이었다.
+    - `single-valued.md` 주석.
+  넷 다 고치고 `generate_logic_policy.py` 로 재생성했다. `deliverable_scope` 0 → 142행,
+  `policy_match` 587 → 729행. errors 0.
+  **교훈: 관계를 교체할 때 `attribute-relations.md`(등록) / `questions.md`(추출 지침) /
+  `logic-policy.md`(정책 산문) / `single-valued.md`(주석) 네 곳을 함께 본다.**
+  등록만 바꾸면 KB 는 일관돼 보이지만 다음 추출이 구 형식을 되살린다.
+
+- 2026-09-11: **지식그래프를 재생성해 Gate C 가 통과했다 — 세션 시작 이래 처음 A·B·C 전부 ok.**
+  Understand-Anything v2.9.6 을 `.understand-anything/repo`(gitignore 대상)에 저장소 전용으로
+  설치하고 `understand-knowledge` 스킬 파이프라인을 수행했다. `/plugin` 설치는 사용자가 타이핑하는
+  CLI 명령이라 대신 스킬 스크립트를 직접 실행했다 — 산출물은 동일하다.
+  **핵심 함정: UA 파서와 Gate C 의 파일 관점이 다르다.** 파서는 파일시스템을 그대로 훑어
+  `.gitignore` 를 무시하고, Gate C 의 기대 집합은
+  `git ls-files --cached --others --exclude-standard` 다. 저장소에서 그냥 돌리면
+  article 914 개(설치본 120 + `.factlog/pages/` 661 포함)가 나와 Gate C 를 더 크게 깨뜨린다.
+  git 이 보는 파일만 담은 깨끗한 사본에서 파서를 돌려 95/57 로 맞췄다.
+  두 번째 함정: 파싱 뒤 저장소 파일을 고치면 `inputHash` 가 어긋난다. 위 정책 수정을 하고 나서
+  파서를 다시 돌렸다(분석 배치 6개는 문서 ID 가 그대로라 재사용).
+  세 번째: 깨끗한 사본에 `.git` 이 없어 `project.gitCommitHash` 가 비었고
+  "graph project gitCommitHash must equal meta gitCommitHash" 로 걸렸다. HEAD 로 채워 해소.
+  결과 258 노드(article 95, source 57, topic 4, entity 48, claim 54) / 252 엣지 / 5 레이어 /
+  4 투어, dangling 0. 이전 스냅샷은 212 노드 / 190 엣지였다.
+  **미해결**: 이 우회 절차(깨끗한 사본에서 파싱)가 어디에도 문서화돼 있지 않다. 다음에 누가
+  저장소에서 바로 `/understand-knowledge` 를 돌리면 같은 함정에 빠진다. AGENTS.md 나
+  llm-wiki 스킬에 적을지 결정 필요.
+
 - 2026-09-11: **퇴화한 생성 규칙 2건을 `logic-policy.extra.dl` 에 손으로 다시 썼다.**
   이로써 손작성 규칙은 4건(certification_mandatory, hls_strictest_wins, 그리고 이 둘)이 됐다.
 
