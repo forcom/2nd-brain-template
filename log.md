@@ -749,3 +749,17 @@
 - 출력은 `.factlog/.ua/`(gitignore 대상). 루트 `.understand-anything/` 은 위키 그래프이고
   Gate C 가 article 95 / source 57 로 검증하므로 덮지 않는다.
 - 뷰어로 실제 서빙 확인(HTML 200, 그래프 654노드 응답).
+
+## [2026-09-11] update | factlog 사실을 위키 그래프에 주입 — 단일 캔버스 조회
+
+- `inbox/factlog-graph/build.py` 에 `--inject` / `--verify` 모드를 추가하고, 사실 노드를
+  루트 위키 그래프에 주입했다. 905 노드(article 95 · topic 92 · source 57 · entity 607 ·
+  claim 54) / 2,227 엣지. 재실행 시 0 추가 — 멱등하다.
+- 표준·구조문서는 `topic`, 나머지는 `entity` 로 넣고 `tags` 에 `factlog`·`verified` 를 붙여
+  LLM 추론 노드와 구분한다. 원문 노드는 새로 만들지 않고 위키 그래프의 것을 재사용해,
+  `cites` 858개가 두 지식체를 잇는 실제 엣지가 된다.
+- Gate C 가 이를 허용하는 이유는 `type == "article"` / `"source"` 만 기대집합과 대조하기
+  때문이다. 주입은 그 둘을 늘리지 않는다. 게이트 전부 통과 확인.
+- **같은 이유로 위험도 있다**: 그래프를 재생성하면 647 노드가 조용히 사라지고 어떤 게이트도
+  잡지 못한다. `--verify` 가 유일한 방어이며, 미주입 상태에서 exit 1 로 잡는 것을 확인했다.
+  SKILL.md 의 재생성 절차에 `--inject` 와 `--verify` 를 편입했다.

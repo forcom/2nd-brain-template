@@ -5,17 +5,28 @@
 옮긴다. 문서에서 재추론하는 경로(UA 파서를 pages/ 에 겨누는 것)는 위키링크가 전부 `related` 로
 뭉개져 maps_to_hls 인지 belongs_to_annex 인지가 사라지므로 쓰지 않는다.
 
-    python3 inbox/factlog-graph/build.py          # 위키 루트에서
+    python3 inbox/factlog-graph/build.py             # .factlog/.ua/ 에 단독 그래프
+    python3 inbox/factlog-graph/build.py --inject   # 위키 그래프에 사실 노드를 주입
+    python3 inbox/factlog-graph/build.py --verify   # 주입이 살아 있는지 확인(없으면 exit 1)
 
-출력: .factlog/.ua/{knowledge-graph.json,meta.json}
-루트의 .understand-anything/ 은 **건드리지 않는다** — 그쪽은 위키 문서 그래프이고 Gate C 가
-article 95 / source 57 로 검증한다. 구성이 다른 그래프를 덮으면 즉시 깨진다.
+--inject 는 루트 `.understand-anything/knowledge-graph.json` 에 사실 노드/엣지를 더한다.
+표준·구조문서는 `topic` 으로, 나머지는 `entity` 로 넣고 원문 노드는 **새로 만들지 않고 위키
+그래프의 것을 재사용**한다 — 그래야 cites 엣지가 두 그래프를 잇는 실제 엣지가 된다.
+Gate C 는 `type == "article"` / `"source"` 만 기대집합과 대조하므로 이 주입은 게이트를 통과한다.
+
+주의: 위키 그래프를 재생성하면 주입분이 통째로 사라지고 **어떤 게이트도 잡지 못한다**
+(Gate C 는 article/source 만 본다). 그래서 재생성 절차의 마지막에 --inject 를, 그다음 --verify 를
+두는 것이 이 스크립트를 쓰는 조건이다. SKILL.md 의 "Generate the graph from a git-visible copy"
+참조.
 """
 import csv, json, re, subprocess, datetime, pathlib, sys
 from collections import defaultdict
 
 KB = pathlib.Path(".factlog")
 OUT = KB / ".ua"
+WIKI_GRAPH = pathlib.Path(".understand-anything") / "knowledge-graph.json"
+# 주입된 사실 노드를 식별하는 표식. --verify 가 이걸 센다.
+MARK = "factlog"
 
 # 리터럴을 목적어로 갖는 관계 — 노드가 아니라 노드의 속성으로 접는다.
 ATTRIBUTE = {
@@ -150,20 +161,72 @@ def build():
         },
         "nodes": nodes, "edges": edges, "layers": layers, "tour": tour,
     }
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "knowledge-graph.json").write_text(
-        json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (OUT / "meta.json").write_text(json.dumps({
-        "lastAnalyzedAt": graph["project"]["analyzedAt"], "gitCommitHash": head,
-        "version": "1.0.0", "analyzedFiles": len(rows),
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
     from collections import Counter
     print(f"facts {len(rows)} → nodes {len(nodes)} {dict(Counter(n['type'] for n in nodes))}")
     print(f"edges {len(edges)} {dict(Counter(e['type'] for e in edges))}")
     print(f"layers {len(layers)} · tour {len(tour)} · dangling 0")
+    return graph
+
+
+def write_standalone(graph):
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "knowledge-graph.json").write_text(
+        json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (OUT / "meta.json").write_text(json.dumps({
+        "lastAnalyzedAt": graph["project"]["analyzedAt"],
+        "gitCommitHash": graph["project"]["gitCommitHash"],
+        "version": "1.0.0", "analyzedFiles": len(graph["nodes"]),
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"written: {OUT}/knowledge-graph.json")
 
 
+def inject(graph):
+    """위키 그래프에 사실 노드/엣지를 더한다. 멱등 — 이미 있는 id 는 건너뛴다."""
+    if not WIKI_GRAPH.exists():
+        sys.exit(f"{WIKI_GRAPH} 가 없다 — 먼저 위키 그래프를 생성할 것")
+    wiki = json.loads(WIKI_GRAPH.read_text(encoding="utf-8"))
+    ids = {n["id"] for n in wiki["nodes"]}
+    added = 0
+    for n in graph["nodes"]:
+        if n["type"] == "source":          # 위키 그래프의 원문 노드를 재사용한다
+            continue
+        if n["id"] in ids:
+            continue
+        m = dict(n)
+        m["type"] = "topic" if n["type"] == "article" else n["type"]
+        m["tags"] = sorted(set(m["tags"]) | {MARK, "verified"})
+        wiki["nodes"].append(m); ids.add(m["id"]); added += 1
+    have = {(e["source"], e["target"], e["type"]) for e in wiki["edges"]}
+    kept = [e for e in graph["edges"]
+            if e["source"] in ids and e["target"] in ids
+            and (e["source"], e["target"], e["type"]) not in have]
+    wiki["edges"].extend(kept)
+    WIKI_GRAPH.write_text(json.dumps(wiki, ensure_ascii=False, indent=2) + "\n",
+                          encoding="utf-8")
+    from collections import Counter
+    print(f"injected: nodes +{added}, edges +{len(kept)}")
+    print(f"  wiki graph now {len(wiki['nodes'])} nodes "
+          f"{dict(Counter(n['type'] for n in wiki['nodes']))}, {len(wiki['edges'])} edges")
+
+
+def verify():
+    """재생성이 주입분을 지웠는지 본다. Gate C 는 article/source 만 보므로 이걸 잡지 못한다."""
+    if not WIKI_GRAPH.exists():
+        sys.exit(f"{WIKI_GRAPH} 가 없다")
+    wiki = json.loads(WIKI_GRAPH.read_text(encoding="utf-8"))
+    n = sum(1 for x in wiki["nodes"] if MARK in x.get("tags", []))
+    print(f"wiki graph 안의 factlog 사실 노드: {n}")
+    if n == 0:
+        sys.exit("사실 노드가 없다 — 그래프 재생성이 주입분을 지웠다. "
+                 "`build.py --inject` 를 다시 돌릴 것")
+    return 0
+
+
 if __name__ == "__main__":
-    build()
+    if "--verify" in sys.argv:
+        raise SystemExit(verify())
+    g = build()
+    if "--inject" in sys.argv:
+        inject(g)
+    else:
+        write_standalone(g)

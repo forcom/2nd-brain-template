@@ -231,6 +231,22 @@ Copy `assembled-graph.json` to `.understand-anything/knowledge-graph.json` and r
   not have. The analysis batches can be reused across a re-parse as long as no file was added or
   removed, since article ids stay stable.
 
+Then re-inject the factlog fact nodes, because regenerating overwrites them:
+
+```bash
+python3 inbox/factlog-graph/build.py --inject   # 647 nodes, 1975 edges; idempotent
+python3 inbox/factlog-graph/build.py --verify   # exits 1 if the injection is gone
+```
+
+The wiki graph carries verified factlog facts alongside its LLM-inferred article, entity and
+claim nodes, tagged `factlog`/`verified` and typed `topic`/`entity`. Gate C tolerates them
+because it compares only `type == "article"` and `type == "source"` against the wiki's own
+coverage, and the injection adds neither — it reuses the existing `source:` nodes so its `cites`
+edges become real links between the two bodies of knowledge.
+
+**That tolerance is also the hazard**: a regeneration silently drops all 647 nodes and no gate
+notices. `--verify` is the only thing that catches it, so run it after every regeneration.
+
 The validator checks:
 
 1. Validate UTF-8, LF, no BOM, final-newline policy, canonical filenames, and byte-zero
