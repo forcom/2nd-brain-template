@@ -134,7 +134,10 @@ after 50 entries and add thematic navigation after 200 total entries.
 ## COMMANDS AND VALIDATION
 
 Run the shared deterministic gate checker before graph generation and again after
-the graph is built:
+the graph is built. Generate the graph from a copy holding only the files Git sees —
+the Understand-Anything parser ignores `.gitignore` while Gate C does not, so parsing
+the repository in place inflates the article count roughly tenfold and fails the gate.
+See "Generate the graph from a git-visible copy" in the llm-wiki skill:
 
 ```bash
 python3 .agents/skills/llm-wiki/scripts/validate-wiki.py --gate a --gate b

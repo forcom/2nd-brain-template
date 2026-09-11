@@ -201,6 +201,36 @@ python3 .agents/skills/llm-wiki/scripts/validate-wiki.py \
 The second command permits dirty state only for the versioned
 `.understand-anything/knowledge-graph.json` and `.understand-anything/meta.json` outputs.
 
+### Generate the graph from a git-visible copy
+
+Understand-Anything builds the graph; this skill only validates it. Its parser walks the
+filesystem and does **not** honour `.gitignore`, while Gate C derives its expected node set from
+`git ls-files --cached --others --exclude-standard`. Pointed straight at this repository the
+parser reports roughly 914 articles instead of 95 — `.factlog/pages/` alone contributes some 660,
+and a repo-local install of the tool contributes more — and Gate C then fails with a large
+`unexpected=[...]` list. Parse a copy holding only what Git sees:
+
+```bash
+W=$(mktemp -d)
+git ls-files -z --cached --others --exclude-standard | while IFS= read -r -d '' f; do
+  mkdir -p "$W/$(dirname "$f")"; cp "$f" "$W/$f" 2>/dev/null
+done
+python3 "<UA>/skills/understand-knowledge/parse-knowledge-base.py" "$W"   # expect 95 articles, 57 sources
+# dispatch the article-analyzer batches, then
+python3 "<UA>/skills/understand-knowledge/merge-knowledge-graph.py" "$W"
+```
+
+Copy `assembled-graph.json` to `.understand-anything/knowledge-graph.json` and refresh
+`meta.json`. Two things bite after that:
+
+- **`project.gitCommitHash` is empty**, because the copy carries no `.git`. Gate C rejects this
+  with "graph project gitCommitHash must equal meta gitCommitHash". Set it to `HEAD`.
+- **The log entry describing the run is itself a graph input.** Any edit to a tracked `.md` after
+  parsing invalidates the stamped `inputHash`. Write `log.md` and the decision notes first, then
+  re-parse, re-merge and stamp last — re-stamping alone would assert a freshness the graph does
+  not have. The analysis batches can be reused across a re-parse as long as no file was added or
+  removed, since article ids stay stable.
+
 The validator checks:
 
 1. Validate UTF-8, LF, no BOM, final-newline policy, canonical filenames, and byte-zero

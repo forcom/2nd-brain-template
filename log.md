@@ -690,3 +690,19 @@
   KB 주어는 전부 2013 이라 수정할 것이 없다.
 - 텍스트 레이어가 **표준의 정체성 자체**를 틀리게 읽은 사례로, 표 열 병합·마진 잘림에 이은 세 번째
   실증이다. KATS-MOTIE 워터마크도 page-image 캡처 32회 대 텍스트 레이어 0회로 갈린다.
+
+## [2026-09-11] update | 그래프 생성 절차 문서화 + open-questions 미해결 표시 정리
+
+- `.agents/skills/llm-wiki/SKILL.md` 에 "Generate the graph from a git-visible copy" 절을 추가했다.
+  기존 문서는 "그래프 생성 후 Gate C 를 돌려라"고만 하고 생성 방법이 없었다. 적은 내용:
+  ① UA 파서가 `.gitignore` 를 무시하는 반면 Gate C 의 기대 집합은 `git ls-files --cached
+  --others --exclude-standard` 라 저장소에서 바로 돌리면 article 이 약 914 개로 부풀고
+  `unexpected=[...]` 로 실패한다 — git 이 보는 파일만 담은 사본에서 파싱한다.
+  ② 사본에 `.git` 이 없어 `project.gitCommitHash` 가 비면 Gate C 가 거부하므로 HEAD 로 채운다.
+  ③ 로그 항목 자체가 그래프 입력이라 스탬프를 마지막에 찍는다. 스탬프만 다시 찍으면 실제보다
+  신선하다고 주장하게 된다. 분석 배치는 파일 추가·삭제가 없으면 재파싱에도 재사용 가능하다.
+- `AGENTS.md` COMMANDS AND VALIDATION 절에서 위 절을 가리키도록 한 문단 보강했다.
+- `open-questions.md` 의 `미해결`/`미착수` 표시 4곳을 갱신했다. 같은 날 해결됐는데 표시가 남아
+  있어 다음에 읽는 사람이 열린 항목으로 오인하게 되어 있었다(실제로 이번에 내가 그렇게 헛짚었다).
+  해결된 항목에는 해결 날짜와 해당 항목 포인터를 붙였고, 9001 `structure_family` 는 결함이 아니라
+  정책이 요구하는 `needs_review` 상태임을 명시했다.
