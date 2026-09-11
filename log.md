@@ -639,3 +639,18 @@
 - 지표: engine facts 2,116 → 2,330, review facts 137 → 1, errors 0 / warnings 0.
 - 새로 드러난 규칙 결함: `structure_family_read_not_inferred` 와 `edition_currency` 생성본도
   퇴화했다(지목 대상이 반대이거나 엉뚱함). extra.dl 손작성이 해법이며 미착수 — open-questions 기록.
+
+## [2026-09-11] lint | 퇴화 생성 규칙 2건을 extra.dl 에 손으로 재작성
+
+- `structure_family_read_not_inferred` → 1행(KS Q ISO 9001:2015). "조항을 가진 주어 중
+  structure_family 가 하나도 없는 것"으로 옮겼다. 본문 선언이 있으면 수락돼 엔진에 들어오고
+  없으면 needs_review 라 안 들어오므로, 이 부정이 곧 "본문이 선언하지 않음"이다.
+  생성본은 선언이 있어 수락된 6건을 지목하고 9001 을 놓쳤다 — 대상이 정확히 반대였다.
+- `edition_currency` → 52행(KS I ISO 14001:2015 조항 전부). 지목 대상을 표준에서 조항으로 바로잡고,
+  직접 폐지 경로와 `based_on` 한 ISO 판이 폐지된 경로 둘을 썼다. 후자가 실제로 걸린다.
+  생성본은 폐지한 쪽(신판)을, 그것도 조항이 아니라 표준을 지목했다.
+- 검증: 두 결과를 accepted 행에서 독립 계산한 기대값과 대조해 일치 확인. 부정의 판별력은
+  실데이터로 확인된다 — 표준 7개 중 6개가 structure_family 보유로 제외된다.
+- 리포터가 arity-2 술어만 처리해 arity-1 보조 술어를 선언하면 run_logic_check.py 가 죽는다.
+  보조 술어를 없애고 몸통에 직접 묶었다(더 단순하기도 하다). extra.dl 주석에 기록.
+- 지표: engine facts 2,330 불변, errors 0 / warnings 0. 손작성 규칙 총 4건.

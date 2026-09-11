@@ -65,3 +65,31 @@ hls_strictest_wins(Y, "sibling_clause_states_it_more_strictly") :-
   relation(Y, "obligation", L),
   weaker_than(L, H),
   X != Y.
+
+// --- 2026-09-11: 생성된 규칙 두 건이 더 퇴화해 손으로 다시 씀 ---
+
+// [structure_family_read_not_inferred] 산문: structure_family 는 표준 자신의 본문에서 와야 하며,
+// 둘 중 어느 표기도 없는 표준은 발행연도로 계열을 배정하지 말고 review 로 보고한다.
+// 생성된 규칙은 relation(X,"structure_family",_) 하나라 "structure_family 를 가진 모든 주어"를
+// 지목한다 — 지목 대상이 정확히 반대다. 본문 선언이 있어 수락된 표준이 걸리고, 정작 선언이 없는
+// 표준은 needs_review 라 accepted.dl 에 없으므로 걸리지 않는다.
+// 엔진이 볼 수 있는 형태로 바꾸면: 조항을 가진 주어(=표준) 중 structure_family 가 하나도 없는 것.
+// 부정보다 앞선 긍정 술어가 X 를 묶는다(층화 안전). 보조 술어는 두지 않는다 — 리포터가
+// arity-2 (entity, reason) 술어만 다루므로 arity-1 헬퍼를 선언하면 리포터가 죽는다.
+.decl structure_family_read_not_inferred(entity: symbol, reason: symbol)
+structure_family_read_not_inferred(X, "body_declares_no_structure_family") :-
+  relation(X, "has_clause", _),
+  !relation(X, "structure_family", _).
+
+// [edition_currency] 산문: 한 표준이 다른 표준을 supersede 하면 요구사항은 신판에서 읽으며,
+// 폐지판에서만 인용된 조항은 현행으로 취급하지 말고 review 로 보고한다.
+// 생성된 규칙은 relation(X,"supersedes",_) 라서 폐지된 쪽이 아니라 폐지한 쪽(신판)을 지목한다.
+// 지목 대상은 조항이며, 코퍼스에서는 KS 번역본이 근거로 삼은 ISO 판이 폐지되는 경로가 실제로 쓰인다.
+.decl edition_currency(entity: symbol, reason: symbol)
+edition_currency(C, "clause_of_superseded_edition") :-
+  relation(S, "has_clause", C),
+  relation(_, "supersedes", S).
+edition_currency(C, "based_on_superseded_edition") :-
+  relation(K, "has_clause", C),
+  relation(K, "based_on", I),
+  relation(_, "supersedes", I).

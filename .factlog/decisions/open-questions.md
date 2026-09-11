@@ -5659,6 +5659,33 @@
   (2021년 개정으로 HLS → HS 개명, 6.3 신설, 10절 순서 변경. 기존 표준에 소급 적용되지
   않으므로 2015년판 9001·14001이 HLS인 것과 모순되지 않는다.)
 
+- 2026-09-11: **퇴화한 생성 규칙 2건을 `logic-policy.extra.dl` 에 손으로 다시 썼다.**
+  이로써 손작성 규칙은 4건(certification_mandatory, hls_strictest_wins, 그리고 이 둘)이 됐다.
+
+  `structure_family_read_not_inferred` — 산문은 "본문이 어느 표기도 하지 않은 표준"을 지목하라고 한다.
+  엔진이 볼 수 있는 형태로 옮기면 "조항을 가진 주어(=표준) 중 structure_family 가 하나도 없는 것"이다.
+  본문 선언이 있으면 수락되어 accepted.dl 에 들어오고, 없으면 needs_review 라 들어오지 않기 때문이다.
+  부정이 필요하므로 앞선 긍정 술어 `relation(X,"has_clause",_)` 로 X 를 먼저 묶었다(층화 안전).
+  → **1행: KS Q ISO 9001:2015.** 생성본은 27001·42001·14001:2015·14001:2026 과 구조 문서 2건,
+  즉 선언이 있어 수락된 쪽 6건을 지목하고 정작 9001 은 놓쳤다. 지목 대상이 정확히 반대였다.
+
+  `edition_currency` — 지목 대상은 표준이 아니라 **조항**이다. 두 경로를 썼다: 조항이 속한 표준이
+  직접 폐지된 경우와, KS 번역본이 `based_on` 으로 삼은 ISO 판이 폐지된 경우. 코퍼스에서 실제로
+  쓰이는 것은 후자다. → **52행: KS I ISO 14001:2015 의 조항 전부**
+  (`KS I ISO 14001:2015 based_on ISO 14001:2015`, `ISO 14001:2026 supersedes ISO 14001:2015`).
+  생성본은 `relation(X,"supersedes",_)` 라 폐지한 쪽(신판)을, 그것도 조항이 아니라 표준을 지목했다.
+
+  검증: 두 결과를 accepted 행에서 독립 계산한 기대값과 대조해 정확히 일치함을 확인했다.
+  부정이 헛돌지 않는다는 근거는 실데이터 자체에 있다 — 조항을 가진 주어 7개 중 6개가
+  structure_family 보유로 제외되고 1개만 남는다.
+
+  걸림돌 하나: 리포터가 arity-2 `(entity, reason)` 술어만 처리해서, 가독성용으로 둔 arity-1 보조
+  술어(`is_standard(std)`)를 선언하자 `run_logic_check.py` 가 ValueError 로 죽었다. 보조 술어를
+  없애고 몸통에 직접 묶는 편이 더 단순하기도 해서 그렇게 정리했다. extra.dl 주석에 적어 뒀다.
+
+  생성본 `requires_review` 10행은 그대로 남는다(`policy_match` 와 같은 상황). 신뢰할 값은
+  동명의 전용 술어 쪽이다.
+
 - 2026-09-11: **대기 사실 137행을 전부 처리했다 — 남은 대기는 1행뿐이다.**
 
   ① `control_objective` 45행 수락. 27001 부속서 그룹 35개와 42001 10개에 1:1로 대응한다.
@@ -5692,7 +5719,7 @@
 
   지표: engine facts 2,116 → 2,330. review facts 137 → 1. errors 0 / warnings 0.
 
-- 2026-09-11 (미해결): **생성 규칙 `structure_family_read_not_inferred` 와 `edition_currency` 도
+- 2026-09-11 (해결됨, 아래 항목 참조): **생성 규칙 `structure_family_read_not_inferred` 와 `edition_currency` 도
   퇴화했다 — 앞서 손으로 고친 두 건과 같은 부류다.** `requires_review` 가 10행으로 늘어 확인했다.
     - `structure_family_read_not_inferred` 는 산문상 "본문이 둘 다 선언하지 않은 표준"을 지목해야 하는데,
       생성본은 `structure_family` 를 가진 모든 주어를 지목한다. **지목 대상이 정확히 반대다** —
