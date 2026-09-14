@@ -212,6 +212,140 @@ relation("ISO 14001:2026 9.3.3", "maps_to_hls", "HS 9.3.3").
 relation("ISO 14001:2026 9.3.3", "obligation", "shall").
 relation("ISO 14001:2026 Annex A", "annex_status", "informative").
 relation("ISO 14001:2026 Annex A", "clause_title", "Guidance on the use of this document").
+relation("ISO/IEC 27001:2022", "edition_year", "date(2022)").
+relation("ISO/IEC 27001:2022", "has_annex", "ISO/IEC 27001:2022 Annex A").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 10").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 10.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 10.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 4").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 4.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 4.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 4.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 4.4").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 5").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 5.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 5.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 5.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 6").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 6.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 6.1.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 6.1.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 6.1.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 6.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 6.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.4").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.5").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.5.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.5.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 7.5.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 8").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 8.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 8.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 8.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.2.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.2.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.3").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.3.1").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.3.2").
+relation("ISO/IEC 27001:2022", "has_clause", "ISO/IEC 27001:2022 9.3.3").
+relation("ISO/IEC 27001:2022", "structure_family", "HS").
+relation("ISO/IEC 27001:2022", "supersedes", "ISO/IEC 27001:2013").
+relation("ISO/IEC 27001:2022 1", "clause_title", "Scope").
+relation("ISO/IEC 27001:2022 1", "maps_to_hls", "HS 1").
+relation("ISO/IEC 27001:2022 10", "clause_title", "Improvement").
+relation("ISO/IEC 27001:2022 10", "maps_to_hls", "HS 10").
+relation("ISO/IEC 27001:2022 10.1", "clause_title", "Continual improvement").
+relation("ISO/IEC 27001:2022 10.1", "maps_to_hls", "HS 10.1").
+relation("ISO/IEC 27001:2022 10.2", "clause_title", "Nonconformity and corrective action").
+relation("ISO/IEC 27001:2022 10.2", "maps_to_hls", "HS 10.2").
+relation("ISO/IEC 27001:2022 2", "clause_title", "Normative references").
+relation("ISO/IEC 27001:2022 2", "maps_to_hls", "HS 2").
+relation("ISO/IEC 27001:2022 3", "clause_title", "Terms and definitions").
+relation("ISO/IEC 27001:2022 3", "maps_to_hls", "HS 3").
+relation("ISO/IEC 27001:2022 4", "clause_title", "Context of the organization").
+relation("ISO/IEC 27001:2022 4", "maps_to_hls", "HS 4").
+relation("ISO/IEC 27001:2022 4.1", "clause_title", "Understanding the organization and its context").
+relation("ISO/IEC 27001:2022 4.1", "maps_to_hls", "HS 4.1").
+relation("ISO/IEC 27001:2022 4.2", "clause_title", "Understanding the needs and expectations of interested parties").
+relation("ISO/IEC 27001:2022 4.2", "maps_to_hls", "HS 4.2").
+relation("ISO/IEC 27001:2022 4.3", "clause_title", "Determining the scope of the information security management system").
+relation("ISO/IEC 27001:2022 4.3", "maps_to_hls", "HS 4.3").
+relation("ISO/IEC 27001:2022 4.4", "clause_title", "Information security management system").
+relation("ISO/IEC 27001:2022 4.4", "maps_to_hls", "HS 4.4").
+relation("ISO/IEC 27001:2022 5", "clause_title", "Leadership").
+relation("ISO/IEC 27001:2022 5", "maps_to_hls", "HS 5").
+relation("ISO/IEC 27001:2022 5.1", "clause_title", "Leadership and commitment").
+relation("ISO/IEC 27001:2022 5.1", "maps_to_hls", "HS 5.1").
+relation("ISO/IEC 27001:2022 5.2", "clause_title", "Policy").
+relation("ISO/IEC 27001:2022 5.2", "maps_to_hls", "HS 5.2").
+relation("ISO/IEC 27001:2022 5.3", "clause_title", "Organizational roles, responsibilities and authorities").
+relation("ISO/IEC 27001:2022 5.3", "maps_to_hls", "HS 5.3").
+relation("ISO/IEC 27001:2022 6", "clause_title", "Planning").
+relation("ISO/IEC 27001:2022 6", "maps_to_hls", "HS 6").
+relation("ISO/IEC 27001:2022 6.1", "clause_title", "Actions to address risks and opportunities").
+relation("ISO/IEC 27001:2022 6.1", "maps_to_hls", "HS 6.1").
+relation("ISO/IEC 27001:2022 6.1.1", "clause_title", "General").
+relation("ISO/IEC 27001:2022 6.1.2", "clause_title", "Information security risk assessment").
+relation("ISO/IEC 27001:2022 6.1.3", "clause_title", "Information security risk treatment").
+relation("ISO/IEC 27001:2022 6.2", "clause_title", "Information security objectives and planning to achieve them").
+relation("ISO/IEC 27001:2022 6.2", "maps_to_hls", "HS 6.2").
+relation("ISO/IEC 27001:2022 6.3", "clause_title", "Planning of changes").
+relation("ISO/IEC 27001:2022 6.3", "maps_to_hls", "HS 6.3").
+relation("ISO/IEC 27001:2022 7", "clause_title", "Support").
+relation("ISO/IEC 27001:2022 7", "maps_to_hls", "HS 7").
+relation("ISO/IEC 27001:2022 7.1", "clause_title", "Resources").
+relation("ISO/IEC 27001:2022 7.1", "maps_to_hls", "HS 7.1").
+relation("ISO/IEC 27001:2022 7.2", "clause_title", "Competence").
+relation("ISO/IEC 27001:2022 7.2", "maps_to_hls", "HS 7.2").
+relation("ISO/IEC 27001:2022 7.3", "clause_title", "Awareness").
+relation("ISO/IEC 27001:2022 7.3", "maps_to_hls", "HS 7.3").
+relation("ISO/IEC 27001:2022 7.4", "clause_title", "Communication").
+relation("ISO/IEC 27001:2022 7.4", "maps_to_hls", "HS 7.4").
+relation("ISO/IEC 27001:2022 7.5", "clause_title", "Documented information").
+relation("ISO/IEC 27001:2022 7.5", "maps_to_hls", "HS 7.5").
+relation("ISO/IEC 27001:2022 7.5.1", "clause_title", "General").
+relation("ISO/IEC 27001:2022 7.5.1", "maps_to_hls", "HS 7.5.1").
+relation("ISO/IEC 27001:2022 7.5.2", "clause_title", "Creating and updating").
+relation("ISO/IEC 27001:2022 7.5.2", "maps_to_hls", "HS 7.5.2").
+relation("ISO/IEC 27001:2022 7.5.3", "clause_title", "Control of documented information").
+relation("ISO/IEC 27001:2022 7.5.3", "maps_to_hls", "HS 7.5.3").
+relation("ISO/IEC 27001:2022 8", "clause_title", "Operation").
+relation("ISO/IEC 27001:2022 8", "maps_to_hls", "HS 8").
+relation("ISO/IEC 27001:2022 8.1", "clause_title", "Operational planning and control").
+relation("ISO/IEC 27001:2022 8.1", "maps_to_hls", "HS 8.1").
+relation("ISO/IEC 27001:2022 8.2", "clause_title", "Information security risk assessment").
+relation("ISO/IEC 27001:2022 8.3", "clause_title", "Information security risk treatment").
+relation("ISO/IEC 27001:2022 9", "clause_title", "Performance evaluation").
+relation("ISO/IEC 27001:2022 9", "maps_to_hls", "HS 9").
+relation("ISO/IEC 27001:2022 9.1", "clause_title", "Monitoring, measurement, analysis and evaluation").
+relation("ISO/IEC 27001:2022 9.1", "maps_to_hls", "HS 9.1").
+relation("ISO/IEC 27001:2022 9.2", "clause_title", "Internal audit").
+relation("ISO/IEC 27001:2022 9.2", "maps_to_hls", "HS 9.2").
+relation("ISO/IEC 27001:2022 9.2.1", "clause_title", "General").
+relation("ISO/IEC 27001:2022 9.2.1", "maps_to_hls", "HS 9.2.1").
+relation("ISO/IEC 27001:2022 9.2.2", "clause_title", "Internal audit programme").
+relation("ISO/IEC 27001:2022 9.2.2", "maps_to_hls", "HS 9.2.2").
+relation("ISO/IEC 27001:2022 9.3", "clause_title", "Management review").
+relation("ISO/IEC 27001:2022 9.3", "maps_to_hls", "HS 9.3").
+relation("ISO/IEC 27001:2022 9.3.1", "clause_title", "General").
+relation("ISO/IEC 27001:2022 9.3.1", "maps_to_hls", "HS 9.3.1").
+relation("ISO/IEC 27001:2022 9.3.2", "clause_title", "Management review inputs").
+relation("ISO/IEC 27001:2022 9.3.2", "maps_to_hls", "HS 9.3.2").
+relation("ISO/IEC 27001:2022 9.3.3", "clause_title", "Management review results").
+relation("ISO/IEC 27001:2022 9.3.3", "maps_to_hls", "HS 9.3.3").
+relation("ISO/IEC 27001:2022 Annex A", "annex_status", "normative").
+relation("ISO/IEC 27001:2022 Annex A", "clause_title", "Information security controls reference").
+relation("ISO/IEC 27001:2022 Annex A", "made_binding_by", "ISO/IEC 27001:2022 6.1.3").
 relation("HLS (Annex SL Appendix 2, 2020)", "has_clause", "HLS 1").
 relation("HLS (Annex SL Appendix 2, 2020)", "has_clause", "HLS 10").
 relation("HLS (Annex SL Appendix 2, 2020)", "has_clause", "HLS 10.1").

@@ -43,7 +43,14 @@
 - notebooklm/notebooklm-py-github.md
 - notebooklm/understand-anything-github.md
 - notebooklm/zotero-mcp-github.md
-- papers/iso-iec-27001-2022-en.md
+# Added 2026-09-14 — ISO/IEC 27001:2022 (EN), the edition that answers q7.
+# Extraction basis: this record is a `poppler-pdftotext-layout` capture, not a
+# page-image one. Structural claims used from it (clause numbers/titles, Annex A
+# normative status and its 6.1.3 binding, the 93-control split 37/8/14/34) were
+# verified against the rendered page images before extraction; see the
+# 2026-09-14 entry in decisions/open-questions.md. Clause bodies were NOT
+# transcribed, so `obligation` and `requires_documented_information` are absent
+# for this edition.
 # superseded by the -llmvision page-image re-captures of the same PDFs:
 - papers/ks-x-iso-iec-27001-20241030-ko.md
 - papers/ks-q-iso-9001-20241213-ko.md

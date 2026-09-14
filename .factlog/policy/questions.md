@@ -18,3 +18,4 @@
 - [q4] Is each annex normative (mandatory for certification) or informative/optional? Record as `annex_status`. State which clause of the main body makes a normative annex binding.
 - [q5] Does the clause's own body require documented information at all? Record as `requires_documented_information` with the literal `true`, quoting the sentence that demands it. Do not record document names (정책서, 절차서, …) — the clause-level name is not what practitioners use, so the boolean is the whole fact.
 - [q6] Which standard edition supersedes which, and in what year was each edition issued? Record as `supersedes` and `edition_year`.
+- [q7] Between two standards built on different structure families (HLS 2020 vs HS 2026), which clauses have no counterpart at all — i.e. sit on a structure slot with no `slot_equivalent_to` partner? This is the non-overlap between two certification scopes at the main-body level; Annex A controls are a separate, unmapped question.

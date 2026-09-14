@@ -5602,6 +5602,272 @@
 - needs_review: KS X ISO/IEC 42001:2023 B.7.6 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 데이터 준비 선택 기준과 사용할 데이터 준비 방법을 규정하고 문서화하여야 한다."
 
 - needs_review: KS X ISO/IEC 42001:2023 B.8.2 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "사용자를 위한 시스템 문서화 및 정보"
+
+- needs_review: ISO/IEC 27001:2022 / edition_year / date(2022) (sources/papers/iso-iec-27001-2022-en.md, confidence=0.98) - 표지: Third edition 2022-10
+
+- needs_review: ISO/IEC 27001:2022 / has_annex / ISO/IEC 27001:2022 Annex A (sources/papers/iso-iec-27001-2022-en.md, confidence=0.98) - 목차·본문 11쪽
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 10 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 10.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 10.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 4 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 4.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 4.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 4.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 4.4 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 5 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 5.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 5.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 5.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 6 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 6.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 6.1.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 6.1.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 6.1.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 6.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 6.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.4 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.5 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.5.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.5.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 7.5.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 8 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 8.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 8.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 8.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.2.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.2.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.3.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.3.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / has_clause / ISO/IEC 27001:2022 9.3.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽 + 본문 대조
+
+- needs_review: ISO/IEC 27001:2022 / structure_family / HS (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - Foreword: 'the text has been aligned with the harmonized structure for management system standards'
+
+- needs_review: ISO/IEC 27001:2022 / supersedes / ISO/IEC 27001:2013 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.98) - Foreword: 'This third edition cancels and replaces the second edition (ISO/IEC 27001:2013)'
+
+- needs_review: ISO/IEC 27001:2022 1 / clause_title / Scope (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 1 / maps_to_hls / HS 1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 10 / clause_title / Improvement (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 10 / maps_to_hls / HS 10 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 10 와 일치
+
+- needs_review: ISO/IEC 27001:2022 10.1 / clause_title / Continual improvement (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 10.1 / maps_to_hls / HS 10.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 10.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 10.2 / clause_title / Nonconformity and corrective action (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 10.2 / maps_to_hls / HS 10.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 10.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 2 / clause_title / Normative references (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 2 / maps_to_hls / HS 2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 3 / clause_title / Terms and definitions (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 3 / maps_to_hls / HS 3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 4 / clause_title / Context of the organization (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 4 / maps_to_hls / HS 4 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 4 와 일치
+
+- needs_review: ISO/IEC 27001:2022 4.1 / clause_title / Understanding the organization and its context (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 4.1 / maps_to_hls / HS 4.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 4.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 4.2 / clause_title / Understanding the needs and expectations of interested parties (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 4.2 / maps_to_hls / HS 4.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 4.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 4.3 / clause_title / Determining the scope of the information security management system (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 4.3 / maps_to_hls / HS 4.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 4.3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 4.4 / clause_title / Information security management system (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 4.4 / maps_to_hls / HS 4.4 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 4.4 와 일치
+
+- needs_review: ISO/IEC 27001:2022 5 / clause_title / Leadership (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 5 / maps_to_hls / HS 5 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 5 와 일치
+
+- needs_review: ISO/IEC 27001:2022 5.1 / clause_title / Leadership and commitment (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 5.1 / maps_to_hls / HS 5.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 5.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 5.2 / clause_title / Policy (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 5.2 / maps_to_hls / HS 5.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 5.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 5.3 / clause_title / Organizational roles, responsibilities and authorities (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 5.3 / maps_to_hls / HS 5.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 5.3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 6 / clause_title / Planning (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 6 / maps_to_hls / HS 6 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 6 와 일치
+
+- needs_review: ISO/IEC 27001:2022 6.1 / clause_title / Actions to address risks and opportunities (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 6.1 / maps_to_hls / HS 6.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 6.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 6.1.1 / clause_title / General (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 6.1.2 / clause_title / Information security risk assessment (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 6.1.3 / clause_title / Information security risk treatment (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 6.2 / clause_title / Information security objectives and planning to achieve them (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 6.2 / maps_to_hls / HS 6.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 6.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 6.3 / clause_title / Planning of changes (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 본문 5쪽에만 존재, 목차에는 누락
+
+- needs_review: ISO/IEC 27001:2022 6.3 / maps_to_hls / HS 6.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 6.3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7 / clause_title / Support (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7 / maps_to_hls / HS 7 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.1 / maps_to_hls / HS 7.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.2 / clause_title / Competence (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7.2 / maps_to_hls / HS 7.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.3 / clause_title / Awareness (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7.3 / maps_to_hls / HS 7.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.4 / clause_title / Communication (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7.4 / maps_to_hls / HS 7.4 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.4 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.5 / clause_title / Documented information (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7.5 / maps_to_hls / HS 7.5 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.5 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.5.1 / clause_title / General (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7.5.1 / maps_to_hls / HS 7.5.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.5.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.5.2 / clause_title / Creating and updating (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7.5.2 / maps_to_hls / HS 7.5.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.5.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 7.5.3 / clause_title / Control of documented information (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 7.5.3 / maps_to_hls / HS 7.5.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 7.5.3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 8 / clause_title / Operation (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 8 / maps_to_hls / HS 8 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 8 와 일치
+
+- needs_review: ISO/IEC 27001:2022 8.1 / clause_title / Operational planning and control (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 8.1 / maps_to_hls / HS 8.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 8.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 8.2 / clause_title / Information security risk assessment (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 8.3 / clause_title / Information security risk treatment (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9 / clause_title / Performance evaluation (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9 / maps_to_hls / HS 9 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.1 / clause_title / Monitoring, measurement, analysis and evaluation (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.1 / maps_to_hls / HS 9.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.2 / clause_title / Internal audit (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.2 / maps_to_hls / HS 9.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.2.1 / clause_title / General (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.2.1 / maps_to_hls / HS 9.2.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.2.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.2.2 / clause_title / Internal audit programme (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.2.2 / maps_to_hls / HS 9.2.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.2.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.3 / clause_title / Management review (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.3 / maps_to_hls / HS 9.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.3.1 / clause_title / General (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.3.1 / maps_to_hls / HS 9.3.1 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.3.1 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.3.2 / clause_title / Management review inputs (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.3.2 / maps_to_hls / HS 9.3.2 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.3.2 와 일치
+
+- needs_review: ISO/IEC 27001:2022 9.3.3 / clause_title / Management review results (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
+
+- needs_review: ISO/IEC 27001:2022 9.3.3 / maps_to_hls / HS 9.3.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.90) - 조항 번호·제목이 KB의 HS 9.3.3 와 일치
+
+- needs_review: ISO/IEC 27001:2022 Annex A / annex_status / normative (sources/papers/iso-iec-27001-2022-en.md, confidence=0.98) - 11쪽 표제: Annex A (normative)
+
+- needs_review: ISO/IEC 27001:2022 Annex A / clause_title / Information security controls reference (sources/papers/iso-iec-27001-2022-en.md, confidence=0.98) - 11쪽 표제
+
+- needs_review: ISO/IEC 27001:2022 Annex A / made_binding_by / ISO/IEC 27001:2022 6.1.3 (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 11쪽: 'shall be used in context with 6.1.3'
 ## 출처 부족
 
 근거 문서가 없거나, 사라진 문서를 가리키는 항목.
@@ -5637,6 +5903,8 @@
 - needs_review: KS Q ISO 9001:2015 7.1.6 / requires_documented_information / true (sources/papers/ks-q-iso-9001-20241213-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "a)  내부 출처(예: 지적 재산, 경험에서 얻은 지식, 실패 및 성공한 프로젝트로부터 얻은 교훈, 문서화되지 않은 지식 및 경험의 포착과 공유, 프로세스, 제품 및 서비스에서 개선된 결과)"
 
 - needs_review: KS X ISO/IEC 42001:2023 A.7.5 / requires_documented_information / true (sources/papers/ks-x-iso-iec-42001-20251030-ko-llmvision.md, confidence=0.90) - 조항 자체 본문이 문서화를 요구한다: "조직은 데이터 및 AI 시스템의 수명 주기에 걸쳐 AI 시스템에 사용된 데이터의 출처를 기록하기 위한 프로세스를 규정하고 문서화하여야 한다."
+
+- needs_review: ISO/IEC 27001:2022 7.1 / clause_title / Resources (sources/papers/iso-iec-27001-2022-en.md, confidence=0.95) - 목차 3쪽
 ## 기존 내용과 충돌할 수 있는 항목
 
 이미 확정된 사실과 어긋날 수 있어 둘 중 하나를 골라야 하는 항목.
@@ -6015,3 +6283,32 @@
   2026(HS)로 넘어간 실사례이며, KB의 `KS I ISO 14001:2015`(HLS)와 함께 두면
   `supersedes` + `structure_family` 전환을 검증할 수 있는 첫 쌍이 된다.
   아직 `sync-ignore` 대상이라 추출하지 않았다.
+
+## 2026-09-14 — ISO/IEC 27001:2022 추출 기반과 그 한계
+
+27001:2022 를 phase-1 sync-ignore 에서 해제하고 134행을 추출·승인했다.
+
+**추출 기반이 페이지 이미지 캡처가 아니다.** `raw/papers/iso-iec-27001-2022-en.md`
+는 `poppler-pdftotext-layout` 캡처이고, SCHEMA.md 의 "페이지 이미지가 근거"
+원칙이 요구하는 `-llmvision` 재판독본은 만들지 않았다. 26쪽 전문을 다시 옮겨
+적는 것은 문서 2쪽의 저작권 고지가 금지하는 복제에 해당한다고 판단했다.
+
+대신 추출에 실제로 쓴 구조적 주장만 렌더링된 페이지 이미지로 교차 검증했다:
+
+- 11쪽 이미지: `Annex A (normative)`, `Table A.1`, 통제 번호 체계가 `5.1` 형식
+  (2013판의 `A.5.1.1` 아님), "shall be used in context with 6.1.3"
+- 5쪽 이미지: `6.3 Planning of changes` 본문 존재
+- 통제 93개 / 테마별 37·8·14·34 — 텍스트 레이어 집계, 11쪽 이미지와 번호 체계 일치
+
+**발견 — 6.3 이 목차에 없다.** 3쪽 목차는 6.2 다음에 바로 7 로 넘어가는데
+본문 5쪽에는 `6.3 Planning of changes` 가 있다. 본문을 근거로 채택했다.
+
+**미추출.** 조항 본문을 옮기지 않았으므로 이 판본에는 `obligation` 과
+`requires_documented_information` 이 없다. 다른 판본에는 있어 비대칭이다.
+부속서 A 통제 93개도 개별 항목으로 넣지 않았다 — 표준 간 통제 대응 관계가
+KB 에 없어 비중첩 질의의 답을 바꾸지 않고, 텍스트 레이어의 제목이 하이픈으로
+줄바꿈되어 있어 별도 검증 패스가 필요하다.
+
+**결과.** 27001:2022 와 42001:2023 의 HS 슬롯 39개가 완전히 일치한다(양방향
+차집합 공집합). 본문 비중첩은 공유 슬롯 밖의 표준 고유 하위분할뿐이며
+`clause_outside_shared_structure` 가 이를 계산한다.

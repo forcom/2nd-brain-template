@@ -141,3 +141,24 @@ instance_of(I, "annex_item") :- relation(I, "belongs_to_annex", _).
 mandatory_annex_item(X, "annex_item_and_certification_mandatory") :-
   instance_of(X, "annex_item"),
   certification_mandatory(X, _).
+
+// 구조 계열이 다른 두 표준(HLS 2020 ↔ HS 2026) 사이에서 짝이 없는 조항.
+// slot_equivalent_to 는 HS → HLS 한 방향으로만 적재되므로 양쪽을 모두 부정해야
+// "어느 계열에서도 대응 슬롯이 없다"가 된다. 27001(HLS)과 42001(HS)의
+// 본문 비중첩 인증범위가 여기서 나온다. 부속서 A 통제는 슬롯 매핑이 없어 제외.
+.decl clause_without_cross_structure_counterpart(entity: symbol, reason: symbol)
+clause_without_cross_structure_counterpart(C, "slot_has_no_counterpart_in_other_structure") :-
+  relation(C, "maps_to_hls", H),
+  !relation(H, "slot_equivalent_to", _),
+  !relation(_, "slot_equivalent_to", H).
+
+// 같은 구조 계열의 두 표준을 비교할 때 남는 실제 비중첩: 공유 슬롯에 놓이지
+// 않은 표준 고유 하위분할. 27001:2022 와 42001:2023 은 HS 슬롯 39개가 완전히
+// 같으므로, 본문 차이는 전부 여기로 모인다.
+// instance_of(C,"clause") 가 HLS/HS 구조문서의 슬롯을 이미 제외한다(구조문서는
+// has_annex 가 없다). 부속서 항목은 별도 축이라 belongs_to_annex 로 뺀다.
+.decl clause_outside_shared_structure(entity: symbol, reason: symbol)
+clause_outside_shared_structure(C, "standard_specific_subdivision") :-
+  instance_of(C, "clause"),
+  !relation(C, "maps_to_hls", _),
+  !relation(C, "belongs_to_annex", _).
